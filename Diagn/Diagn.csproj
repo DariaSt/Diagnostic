@@ -67,9 +67,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Registerasarunner.cs">
+    <Compile Include="DB.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DB.Designer.cs">
+      <DependentUpon>DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registerasarunner.cs" />
     <Compile Include="Registerasarunner.Designer.cs">
       <DependentUpon>Registerasarunner.cs</DependentUpon>
     </Compile>
