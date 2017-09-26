@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Menu : MaterialSkin.Controls.MaterialForm
+    public partial class Form2 : MaterialSkin.Controls.MaterialForm
     {
-        public Menu()
+        public Form2()
         {
             InitializeComponent();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
         {
 
         }
