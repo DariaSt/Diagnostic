@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class MainScreen : Form
+    public partial class Registerasarunner : MaterialSkin.Controls.MaterialForm
     {
-        public MainScreen()
+        public Registerasarunner()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Registerasarunner_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void MainScreen_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class Form1
+    partial class MainScreen
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,12 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ClientSize = new System.Drawing.Size(584, 361);
+     //       this.Controls.Add(this.label2);
+     //       this.Controls.Add(this.label1);
+          //  this.Controls.Add(this.groupBox1);
+            this.Name = "MainScreen";
+            this.Text = "Diagnostic 2017";
+            this.Load += new System.EventHandler(this.MainScreen_Load);
+        //    this.groupBox1.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
             this.Text = "Form1";
         }
 
         #endregion
+
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
