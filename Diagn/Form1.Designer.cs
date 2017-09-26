@@ -117,6 +117,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "MainScreen";
             this.Text = "Diagnostic 2017";
+            this.Load += new System.EventHandler(this.MainScreen_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
