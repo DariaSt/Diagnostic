@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Registerasarunner : MaterialSkin.Controls.MaterialForm
+    public partial class Registerasarunner : MetroFramework.Forms.MetroForm
     {
         public Registerasarunner()
         {
