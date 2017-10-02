@@ -63,6 +63,7 @@
             this.materialLabel1.Size = new System.Drawing.Size(265, 19);
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Редактирование профиля пациента";
+            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
             // 
             // dateTimePicker1
             // 
