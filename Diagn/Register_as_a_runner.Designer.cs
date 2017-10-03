@@ -62,7 +62,7 @@
             this.materialFlatButton2.Primary = false;
             this.materialFlatButton2.Size = new System.Drawing.Size(145, 36);
             this.materialFlatButton2.TabIndex = 1;
-            this.materialFlatButton2.Text = "Я новый  пацинет";
+            this.materialFlatButton2.Text = "Я новый  пациент";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
             this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
