@@ -156,6 +156,7 @@
             this.materialFlatButton3.TabIndex = 55;
             this.materialFlatButton3.Text = "Cancel";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
             // authorization_menu
             // 
