@@ -93,11 +93,6 @@
     <Compile Include="DB.Designer.cs">
       <DependentUpon>DB.cs</DependentUpon>
     </Compile>
-    <Compile Include="DiagnosticDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DiagnosticDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DiagnosticDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
