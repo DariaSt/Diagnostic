@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Menu_pacienta : MaterialSkin.Controls.MaterialForm
+    public partial class Administrator_menu : MaterialSkin.Controls.MaterialForm
     {
-        public Menu_pacienta()
+        public Administrator_menu()
         {
             InitializeComponent();
         }
 
-        private void Menu_pacienta_Load(object sender, EventArgs e)
+        private void Form6_Load(object sender, EventArgs e)
         {
 
         }

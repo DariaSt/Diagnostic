@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class regis
+    partial class service_registration
     {
         /// <summary>
         /// Required designer variable.

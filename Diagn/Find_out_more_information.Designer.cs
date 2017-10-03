@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class Form3
+    partial class Find_out_more_information
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class Form1
+    partial class patient_registration_menu
     {
         /// <summary>
         /// Required designer variable.

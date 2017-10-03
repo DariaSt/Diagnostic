@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class yprav : MaterialSkin.Controls.MaterialForm
+    public partial class my_results : MaterialSkin.Controls.MaterialForm
     {
-        public yprav()
+        public my_results()
         {
             InitializeComponent();
         }
 
-        private void yprav_Load(object sender, EventArgs e)
+        private void my_rez_Load(object sender, EventArgs e)
         {
 
         }

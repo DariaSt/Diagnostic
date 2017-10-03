@@ -74,11 +74,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Auto.cs">
+    <Compile Include="authorization_menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Auto.Designer.cs">
-      <DependentUpon>Auto.cs</DependentUpon>
+    <Compile Include="authorization_menu.Designer.cs">
+      <DependentUpon>authorization_menu.cs</DependentUpon>
     </Compile>
     <Compile Include="DB.cs">
       <SubType>Form</SubType>
@@ -86,41 +86,47 @@
     <Compile Include="DB.Designer.cs">
       <DependentUpon>DB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="manage_a_runner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="manage_a_runner.Designer.cs">
+      <DependentUpon>manage_a_runner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="patient_registration_menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="patient_registration_menu.Designer.cs">
+      <DependentUpon>patient_registration_menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="registration_confirmation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="registration_confirmation.Designer.cs">
+      <DependentUpon>registration_confirmation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="Find_out_more_information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="Find_out_more_information.Designer.cs">
+      <DependentUpon>Find_out_more_information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="interactive_map.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="interactive_map.Designer.cs">
+      <DependentUpon>interactive_map.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="Edit_runner_profile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="Edit_runner_profile.Designer.cs">
+      <DependentUpon>Edit_runner_profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator_menu.Designer.cs">
+      <DependentUpon>Administrator_menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Form7.cs">
       <SubType>Form</SubType>
@@ -134,35 +140,35 @@
     <Compile Include="Form8.Designer.cs">
       <DependentUpon>Form8.cs</DependentUpon>
     </Compile>
-    <Compile Include="information.cs">
+    <Compile Include="about_diagnostic_2017.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="information.Designer.cs">
-      <DependentUpon>information.cs</DependentUpon>
+    <Compile Include="about_diagnostic_2017.Designer.cs">
+      <DependentUpon>about_diagnostic_2017.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main_1.cs">
+    <Compile Include="main_screen_of_the_system.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_1.Designer.cs">
-      <DependentUpon>Main_1.cs</DependentUpon>
+    <Compile Include="main_screen_of_the_system.Designer.cs">
+      <DependentUpon>main_screen_of_the_system.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Register_as_a_runner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="Register_as_a_runner.Designer.cs">
+      <DependentUpon>Register_as_a_runner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_pacienta.cs">
+    <Compile Include="runner_menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_pacienta.Designer.cs">
-      <DependentUpon>Menu_pacienta.cs</DependentUpon>
+    <Compile Include="runner_menu.Designer.cs">
+      <DependentUpon>runner_menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="my_rez.cs">
+    <Compile Include="my_results.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="my_rez.Designer.cs">
-      <DependentUpon>my_rez.cs</DependentUpon>
+    <Compile Include="my_results.Designer.cs">
+      <DependentUpon>my_results.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,44 +178,47 @@
     <Compile Include="red.Designer.cs">
       <DependentUpon>red.cs</DependentUpon>
     </Compile>
-    <Compile Include="regis.cs">
+    <Compile Include="service_registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="regis.Designer.cs">
-      <DependentUpon>regis.cs</DependentUpon>
+    <Compile Include="service_registration.Designer.cs">
+      <DependentUpon>service_registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rez.cs">
+    <Compile Include="previous_race_results.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Rez.Designer.cs">
-      <DependentUpon>Rez.cs</DependentUpon>
+    <Compile Include="previous_race_results.Designer.cs">
+      <DependentUpon>previous_race_results.cs</DependentUpon>
     </Compile>
-    <Compile Include="yprav.cs">
+    <Compile Include="runner_management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="yprav.Designer.cs">
-      <DependentUpon>yprav.cs</DependentUpon>
+    <Compile Include="runner_management.Designer.cs">
+      <DependentUpon>runner_management.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Auto.resx">
-      <DependentUpon>Auto.cs</DependentUpon>
+    <EmbeddedResource Include="authorization_menu.resx">
+      <DependentUpon>authorization_menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="manage_a_runner.resx">
+      <DependentUpon>manage_a_runner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="patient_registration_menu.resx">
+      <DependentUpon>patient_registration_menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="registration_confirmation.resx">
+      <DependentUpon>registration_confirmation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="Find_out_more_information.resx">
+      <DependentUpon>Find_out_more_information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="interactive_map.resx">
+      <DependentUpon>interactive_map.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="Edit_runner_profile.resx">
+      <DependentUpon>Edit_runner_profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator_menu.resx">
+      <DependentUpon>Administrator_menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
@@ -217,20 +226,20 @@
     <EmbeddedResource Include="Form8.resx">
       <DependentUpon>Form8.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="information.resx">
-      <DependentUpon>information.cs</DependentUpon>
+    <EmbeddedResource Include="about_diagnostic_2017.resx">
+      <DependentUpon>about_diagnostic_2017.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_1.resx">
-      <DependentUpon>Main_1.cs</DependentUpon>
+    <EmbeddedResource Include="main_screen_of_the_system.resx">
+      <DependentUpon>main_screen_of_the_system.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="Register_as_a_runner.resx">
+      <DependentUpon>Register_as_a_runner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_pacienta.resx">
-      <DependentUpon>Menu_pacienta.cs</DependentUpon>
+    <EmbeddedResource Include="runner_menu.resx">
+      <DependentUpon>runner_menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="my_rez.resx">
-      <DependentUpon>my_rez.cs</DependentUpon>
+    <EmbeddedResource Include="my_results.resx">
+      <DependentUpon>my_results.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -245,14 +254,14 @@
     <EmbeddedResource Include="red.resx">
       <DependentUpon>red.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="regis.resx">
-      <DependentUpon>regis.cs</DependentUpon>
+    <EmbeddedResource Include="service_registration.resx">
+      <DependentUpon>service_registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Rez.resx">
-      <DependentUpon>Rez.cs</DependentUpon>
+    <EmbeddedResource Include="previous_race_results.resx">
+      <DependentUpon>previous_race_results.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="yprav.resx">
-      <DependentUpon>yprav.cs</DependentUpon>
+    <EmbeddedResource Include="runner_management.resx">
+      <DependentUpon>runner_management.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

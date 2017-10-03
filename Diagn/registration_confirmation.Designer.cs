@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class Form2
+    partial class registration_confirmation
     {
         /// <summary>
         /// Required designer variable.

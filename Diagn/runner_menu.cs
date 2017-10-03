@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class information : MaterialSkin.Controls.MaterialForm
+    public partial class runner_menu : MaterialSkin.Controls.MaterialForm
     {
-        public information()
+        public runner_menu()
         {
             InitializeComponent();
         }
 
-        private void information_Load(object sender, EventArgs e)
+        private void Menu_pacienta_Load(object sender, EventArgs e)
         {
-        
+
         }
     }
 }

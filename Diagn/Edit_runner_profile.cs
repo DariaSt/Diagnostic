@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Form5 : MaterialSkin.Controls.MaterialForm
+    public partial class Edit_runner_profile : MaterialSkin.Controls.MaterialForm
     {
-        public Form5()
+        public Edit_runner_profile()
         {
             InitializeComponent();
         }
@@ -33,6 +33,11 @@ namespace Diagn
         }
 
         private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel4_Click(object sender, EventArgs e)
         {
 
         }

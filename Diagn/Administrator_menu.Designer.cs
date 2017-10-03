@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class Form6
+    partial class Administrator_menu
     {
         /// <summary>
         /// Required designer variable.
@@ -81,14 +81,13 @@
             // materialFlatButton1
             // 
             this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(217, 187);
+            this.materialFlatButton1.Location = new System.Drawing.Point(101, 187);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
             this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(89, 36);
+            this.materialFlatButton1.Size = new System.Drawing.Size(230, 36);
             this.materialFlatButton1.TabIndex = 42;
             this.materialFlatButton1.Text = "Пациенты";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
@@ -109,7 +108,7 @@
             this.materialFlatButton2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.materialFlatButton2.UseVisualStyleBackColor = true;
             // 
-            // Form6
+            // Administrator_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,7 +118,7 @@
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialFlatButton4);
             this.Controls.Add(this.materialFlatButton3);
-            this.Name = "Form6";
+            this.Name = "Administrator_menu";
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Form6_Load);
             this.ResumeLayout(false);

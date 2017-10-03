@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Form3 : MaterialSkin.Controls.MaterialForm
+    public partial class Find_out_more_information : MaterialSkin.Controls.MaterialForm
     {
-        public Form3()
+        public Find_out_more_information()
         {
             InitializeComponent();
         }

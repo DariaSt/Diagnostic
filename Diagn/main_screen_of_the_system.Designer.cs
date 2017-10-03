@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class Main_1
+    partial class main_screen_of_the_system
     {
         /// <summary>
         /// Required designer variable.

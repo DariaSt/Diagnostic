@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Form2 : MaterialSkin.Controls.MaterialForm
+    public partial class about_diagnostic_2017 : MaterialSkin.Controls.MaterialForm
     {
-        public Form2()
+        public about_diagnostic_2017()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void information_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void materialLabel1_Click(object sender, EventArgs e)
-        {
-
+        
         }
     }
 }

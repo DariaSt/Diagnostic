@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Auto : MaterialSkin.Controls.MaterialForm
+    public partial class registration_confirmation : MaterialSkin.Controls.MaterialForm
     {
-        public Auto()
+        public registration_confirmation()
         {
             InitializeComponent();
         }
 
-        private void Auto_Load(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void materialLabel2_Click(object sender, EventArgs e)
+        private void materialLabel1_Click(object sender, EventArgs e)
         {
 
         }

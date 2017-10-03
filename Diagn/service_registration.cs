@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Rez : MaterialSkin.Controls.MaterialForm
+    public partial class service_registration : MaterialSkin.Controls.MaterialForm
     {
-        public Rez()
+        public service_registration()
         {
             InitializeComponent();
         }
 
-        private void Rez_Load(object sender, EventArgs e)
+        private void regis_Load(object sender, EventArgs e)
         {
 
         }

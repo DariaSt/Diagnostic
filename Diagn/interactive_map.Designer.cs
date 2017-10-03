@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class Form4
+    partial class interactive_map
     {
         /// <summary>
         /// Required designer variable.
