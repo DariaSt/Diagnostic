@@ -86,6 +86,11 @@
     <Compile Include="DB.Designer.cs">
       <DependentUpon>DB.cs</DependentUpon>
     </Compile>
+    <Compile Include="DiagnosticDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagnosticDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="manage_a_runner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +250,17 @@
     <EmbeddedResource Include="runner_management.resx">
       <DependentUpon>runner_management.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DiagnosticDataSet.xsc">
+      <DependentUpon>DiagnosticDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DiagnosticDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiagnosticDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiagnosticDataSet.xss">
+      <DependentUpon>DiagnosticDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -260,13 +276,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>
