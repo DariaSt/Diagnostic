@@ -28,39 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(212, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Diagnostic 2017";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(276, 135);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Москва, Россия";
             // 
             // materialFlatButton1
             // 
             this.materialFlatButton1.AutoSize = true;
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(262, 204);
+            this.materialFlatButton1.Location = new System.Drawing.Point(220, 193);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
@@ -77,7 +57,7 @@
             this.materialFlatButton2.AutoSize = true;
             this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Location = new System.Drawing.Point(231, 274);
+            this.materialFlatButton2.Location = new System.Drawing.Point(189, 263);
             this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton2.Name = "materialFlatButton2";
@@ -93,7 +73,7 @@
             this.materialFlatButton3.AutoSize = true;
             this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton3.Depth = 0;
-            this.materialFlatButton3.Location = new System.Drawing.Point(617, 367);
+            this.materialFlatButton3.Location = new System.Drawing.Point(565, 311);
             this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton3.Name = "materialFlatButton3";
@@ -103,11 +83,33 @@
             this.materialFlatButton3.Text = "Login";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(241, 135);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Москва, Россия";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(173, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(287, 42);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Diagnostic 2017";
+            // 
             // main_screen_of_the_system
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 418);
+            this.ClientSize = new System.Drawing.Size(630, 362);
             this.Controls.Add(this.materialFlatButton3);
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialFlatButton1);
@@ -121,11 +123,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

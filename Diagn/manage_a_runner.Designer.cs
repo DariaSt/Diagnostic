@@ -85,6 +85,7 @@
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
+            this.materialLabel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -98,6 +99,7 @@
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
+            this.materialLabel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -111,6 +113,7 @@
             // materialLabel3
             // 
             this.materialLabel3.AutoSize = true;
+            this.materialLabel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -124,6 +127,7 @@
             // materialLabel4
             // 
             this.materialLabel4.AutoSize = true;
+            this.materialLabel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -137,6 +141,7 @@
             // materialLabel5
             // 
             this.materialLabel5.AutoSize = true;
+            this.materialLabel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -150,6 +155,7 @@
             // materialLabel6
             // 
             this.materialLabel6.AutoSize = true;
+            this.materialLabel6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -163,6 +169,7 @@
             // materialLabel7
             // 
             this.materialLabel7.AutoSize = true;
+            this.materialLabel7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -176,6 +183,7 @@
             // materialLabel8
             // 
             this.materialLabel8.AutoSize = true;
+            this.materialLabel8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -189,6 +197,7 @@
             // materialLabel9
             // 
             this.materialLabel9.AutoSize = true;
+            this.materialLabel9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel9.Depth = 0;
             this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -202,6 +211,7 @@
             // materialLabel10
             // 
             this.materialLabel10.AutoSize = true;
+            this.materialLabel10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel10.Depth = 0;
             this.materialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -215,6 +225,7 @@
             // materialLabel11
             // 
             this.materialLabel11.AutoSize = true;
+            this.materialLabel11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel11.Depth = 0;
             this.materialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -228,6 +239,7 @@
             // materialLabel12
             // 
             this.materialLabel12.AutoSize = true;
+            this.materialLabel12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel12.Depth = 0;
             this.materialLabel12.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -241,6 +253,7 @@
             // materialLabel13
             // 
             this.materialLabel13.AutoSize = true;
+            this.materialLabel13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel13.Depth = 0;
             this.materialLabel13.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -254,6 +267,7 @@
             // materialLabel14
             // 
             this.materialLabel14.AutoSize = true;
+            this.materialLabel14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel14.Depth = 0;
             this.materialLabel14.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -267,6 +281,7 @@
             // materialLabel15
             // 
             this.materialLabel15.AutoSize = true;
+            this.materialLabel15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel15.Depth = 0;
             this.materialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -280,6 +295,7 @@
             // materialLabel16
             // 
             this.materialLabel16.AutoSize = true;
+            this.materialLabel16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel16.Depth = 0;
             this.materialLabel16.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -293,6 +309,7 @@
             // materialLabel17
             // 
             this.materialLabel17.AutoSize = true;
+            this.materialLabel17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel17.Depth = 0;
             this.materialLabel17.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -306,6 +323,7 @@
             // materialLabel18
             // 
             this.materialLabel18.AutoSize = true;
+            this.materialLabel18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel18.Depth = 0;
             this.materialLabel18.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));

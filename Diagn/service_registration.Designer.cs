@@ -79,6 +79,7 @@
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
+            this.materialLabel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -92,6 +93,7 @@
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
+            this.materialLabel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -106,10 +108,11 @@
             // materialLabel3
             // 
             this.materialLabel3.AutoSize = true;
+            this.materialLabel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(121, 220);
+            this.materialLabel3.Location = new System.Drawing.Point(194, 218);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(86, 19);
@@ -119,10 +122,11 @@
             // materialLabel4
             // 
             this.materialLabel4.AutoSize = true;
+            this.materialLabel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(339, 220);
+            this.materialLabel4.Location = new System.Drawing.Point(452, 218);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(43, 19);
@@ -132,9 +136,10 @@
             // materialCheckBox1
             // 
             this.materialCheckBox1.AutoSize = true;
+            this.materialCheckBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialCheckBox1.Depth = 0;
             this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(56, 251);
+            this.materialCheckBox1.Location = new System.Drawing.Point(142, 249);
             this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -143,14 +148,15 @@
             this.materialCheckBox1.Size = new System.Drawing.Size(82, 30);
             this.materialCheckBox1.TabIndex = 6;
             this.materialCheckBox1.Text = "Рентген";
-            this.materialCheckBox1.UseVisualStyleBackColor = true;
+            this.materialCheckBox1.UseVisualStyleBackColor = false;
             // 
             // materialCheckBox2
             // 
             this.materialCheckBox2.AutoSize = true;
+            this.materialCheckBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialCheckBox2.Depth = 0;
             this.materialCheckBox2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox2.Location = new System.Drawing.Point(56, 290);
+            this.materialCheckBox2.Location = new System.Drawing.Point(142, 288);
             this.materialCheckBox2.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckBox2.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckBox2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -159,14 +165,15 @@
             this.materialCheckBox2.Size = new System.Drawing.Size(135, 30);
             this.materialCheckBox2.TabIndex = 7;
             this.materialCheckBox2.Text = "Каридиограмма";
-            this.materialCheckBox2.UseVisualStyleBackColor = true;
+            this.materialCheckBox2.UseVisualStyleBackColor = false;
             // 
             // materialCheckBox3
             // 
             this.materialCheckBox3.AutoSize = true;
+            this.materialCheckBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialCheckBox3.Depth = 0;
             this.materialCheckBox3.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox3.Location = new System.Drawing.Point(56, 332);
+            this.materialCheckBox3.Location = new System.Drawing.Point(142, 330);
             this.materialCheckBox3.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckBox3.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckBox3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -175,25 +182,25 @@
             this.materialCheckBox3.Size = new System.Drawing.Size(53, 30);
             this.materialCheckBox3.TabIndex = 8;
             this.materialCheckBox3.Text = "Узи";
-            this.materialCheckBox3.UseVisualStyleBackColor = true;
+            this.materialCheckBox3.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(315, 253);
+            this.dateTimePicker1.Location = new System.Drawing.Point(428, 251);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 9;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(315, 292);
+            this.dateTimePicker2.Location = new System.Drawing.Point(428, 290);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 10;
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(315, 334);
+            this.dateTimePicker3.Location = new System.Drawing.Point(428, 332);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker3.TabIndex = 11;

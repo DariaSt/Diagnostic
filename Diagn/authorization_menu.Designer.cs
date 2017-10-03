@@ -58,10 +58,11 @@
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
+            this.materialLabel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(251, 107);
+            this.materialLabel1.Location = new System.Drawing.Point(242, 107);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(154, 19);
@@ -71,6 +72,7 @@
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
+            this.materialLabel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -87,6 +89,7 @@
             // materialLabel3
             // 
             this.materialLabel3.AutoSize = true;
+            this.materialLabel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -100,6 +103,7 @@
             // materialLabel4
             // 
             this.materialLabel4.AutoSize = true;
+            this.materialLabel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -112,7 +116,7 @@
             // 
             // metroTextBox1
             // 
-            this.metroTextBox1.Location = new System.Drawing.Point(233, 224);
+            this.metroTextBox1.Location = new System.Drawing.Point(217, 224);
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.Size = new System.Drawing.Size(223, 23);
             this.metroTextBox1.TabIndex = 52;
@@ -120,7 +124,7 @@
             // 
             // metroTextBox2
             // 
-            this.metroTextBox2.Location = new System.Drawing.Point(233, 275);
+            this.metroTextBox2.Location = new System.Drawing.Point(217, 275);
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.Size = new System.Drawing.Size(223, 23);
             this.metroTextBox2.TabIndex = 53;

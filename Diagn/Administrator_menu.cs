@@ -32,5 +32,10 @@ namespace Diagn
         {
             MessageBox.Show("Будет добавлено в будущем");
         }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
