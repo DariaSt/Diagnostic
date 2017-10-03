@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class Form8
+    partial class certificate_preview
     {
         /// <summary>
         /// Required designer variable.

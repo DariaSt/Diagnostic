@@ -16,7 +16,7 @@ namespace Diagn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Register_as_a_runner());
+            Application.Run(new register_as_a_runner());
         }
     }
 }

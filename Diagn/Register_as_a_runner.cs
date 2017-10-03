@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Register_as_a_runner : MaterialSkin.Controls.MaterialForm
+    public partial class register_as_a_runner : MaterialSkin.Controls.MaterialForm
     {
-        public Register_as_a_runner()
+        public register_as_a_runner()
         {
             InitializeComponent();
         }

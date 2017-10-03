@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Form8 : MaterialSkin.Controls.MaterialForm
+    public partial class certificate_preview : MaterialSkin.Controls.MaterialForm
     {
-        public Form8()
+        public certificate_preview()
         {
             InitializeComponent();
         }

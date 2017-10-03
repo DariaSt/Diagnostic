@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class Register_as_a_runner
+    partial class register_as_a_runner
     {
         /// <summary>
         /// Required designer variable.
