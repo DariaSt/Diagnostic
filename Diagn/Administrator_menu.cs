@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Administrator_menu : MaterialSkin.Controls.MaterialForm
+    public partial class administrator_menu : MaterialSkin.Controls.MaterialForm
     {
-        public Administrator_menu()
+        public administrator_menu()
         {
             InitializeComponent();
         }

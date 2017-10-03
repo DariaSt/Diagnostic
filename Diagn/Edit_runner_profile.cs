@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class Edit_runner_profile : MaterialSkin.Controls.MaterialForm
+    public partial class edit_runner_profile : MaterialSkin.Controls.MaterialForm
     {
-        public Edit_runner_profile()
+        public edit_runner_profile()
         {
             InitializeComponent();
         }
