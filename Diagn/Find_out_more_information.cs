@@ -21,5 +21,29 @@ namespace Diagn
         {
 
         }
+
+        private void materialFlatButton4_Click(object sender, EventArgs e)
+        {
+            main_screen_of_the_system m = new main_screen_of_the_system();
+            m.ShowDialog();
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            previous_race_results previous = new previous_race_results();
+            previous.ShowDialog();
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            about_diagnostic_2017 about = new about_diagnostic_2017();
+            about.ShowDialog();
+        }
+
+        private void materialFlatButton3_Click(object sender, EventArgs e)
+        {
+           runner_management run = new runner_management();
+            run.ShowDialog();
+        }
     }
 }

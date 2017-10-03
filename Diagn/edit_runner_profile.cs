@@ -24,12 +24,14 @@ namespace Diagn
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
-
+            runner_menu run = new runner_menu();
+            run.ShowDialog();
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
-
+            runner_menu run = new runner_menu();
+            run.ShowDialog();
         }
 
         private void materialLabel1_Click(object sender, EventArgs e)
@@ -40,6 +42,18 @@ namespace Diagn
         private void materialLabel4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialFlatButton3_Click(object sender, EventArgs e)
+        {
+            runner_menu run = new runner_menu();
+            run.ShowDialog();
+        }
+
+        private void materialFlatButton4_Click(object sender, EventArgs e)
+        {
+            main_screen_of_the_system main = new main_screen_of_the_system();
+            main.ShowDialog();
         }
     }
 }

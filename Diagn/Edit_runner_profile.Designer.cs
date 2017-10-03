@@ -285,6 +285,7 @@
             this.materialFlatButton3.TabIndex = 38;
             this.materialFlatButton3.Text = "назад";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
             // materialFlatButton4
             // 
@@ -300,8 +301,9 @@
             this.materialFlatButton4.TabIndex = 39;
             this.materialFlatButton4.Text = "Logout";
             this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
-            // Form5
+            // edit_runner_profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -327,7 +329,8 @@
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel1);
-            this.Name = "Form5";
+            this.Name = "edit_runner_profile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.ResumeLayout(false);

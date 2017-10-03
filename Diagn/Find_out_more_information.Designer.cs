@@ -62,6 +62,7 @@
             this.materialFlatButton1.TabIndex = 1;
             this.materialFlatButton1.Text = "Diagnostic 2017";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialFlatButton2
             // 
@@ -77,6 +78,7 @@
             this.materialFlatButton2.TabIndex = 2;
             this.materialFlatButton2.Text = "Предыдущие результаты";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // materialFlatButton3
             // 
@@ -92,6 +94,7 @@
             this.materialFlatButton3.TabIndex = 3;
             this.materialFlatButton3.Text = "Правила оказания услуг";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
             // materialFlatButton4
             // 
@@ -107,8 +110,9 @@
             this.materialFlatButton4.TabIndex = 4;
             this.materialFlatButton4.Text = "Назад";
             this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
-            // Form3
+            // find_out_more_information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,7 +122,8 @@
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.materialLabel1);
-            this.Name = "Form3";
+            this.Name = "find_out_more_information";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);

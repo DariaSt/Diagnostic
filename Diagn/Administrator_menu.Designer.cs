@@ -49,6 +49,7 @@
             this.materialFlatButton3.TabIndex = 39;
             this.materialFlatButton3.Text = "назад";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
             // materialFlatButton4
             // 
@@ -108,8 +109,9 @@
             this.materialFlatButton2.Text = "Медицинское оборудование";
             this.materialFlatButton2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
-            // Administrator_menu
+            // administrator_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,7 +121,8 @@
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialFlatButton4);
             this.Controls.Add(this.materialFlatButton3);
-            this.Name = "Administrator_menu";
+            this.Name = "administrator_menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Form6_Load);
             this.ResumeLayout(false);

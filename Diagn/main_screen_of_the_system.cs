@@ -21,5 +21,13 @@ namespace Diagn
         {
 
         }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            register_as_a_runner reg = new register_as_a_runner();
+            reg.ShowDialog();
+        }
+
+
     }
 }

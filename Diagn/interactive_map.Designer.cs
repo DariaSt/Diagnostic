@@ -46,13 +46,14 @@
             this.materialFlatButton1.Text = "Назад";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
             // 
-            // Form4
+            // interactive_map
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 398);
             this.Controls.Add(this.materialFlatButton1);
-            this.Name = "Form4";
+            this.Name = "interactive_map";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Интерактивная карта Diagnostic 2017";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
