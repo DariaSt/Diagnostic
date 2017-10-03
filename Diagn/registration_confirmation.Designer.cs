@@ -90,6 +90,7 @@
             this.materialFlatButton1.TabIndex = 3;
             this.materialFlatButton1.Text = "ОК";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialFlatButton2
             // 
@@ -105,6 +106,7 @@
             this.materialFlatButton2.TabIndex = 4;
             this.materialFlatButton2.Text = "Назад";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // materialFlatButton3
             // 
@@ -120,8 +122,9 @@
             this.materialFlatButton3.TabIndex = 5;
             this.materialFlatButton3.Text = "Logout";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
-            // Form2
+            // registration_confirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,7 +135,8 @@
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Name = "Form2";
+            this.Name = "registration_confirmation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);

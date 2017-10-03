@@ -56,6 +56,7 @@
             this.materialFlatButton1.TabIndex = 0;
             this.materialFlatButton1.Text = "Logout";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialFlatButton2
             // 
@@ -71,6 +72,7 @@
             this.materialFlatButton2.TabIndex = 1;
             this.materialFlatButton2.Text = "Назад";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // materialLabel1
             // 
@@ -205,8 +207,9 @@
             this.materialFlatButton3.TabIndex = 45;
             this.materialFlatButton3.Text = "Показать все результаты";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
-            // my_rez
+            // my_results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,7 +226,8 @@
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialFlatButton1);
-            this.Name = "my_rez";
+            this.Name = "my_results";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.my_rez_Load);
             this.ResumeLayout(false);

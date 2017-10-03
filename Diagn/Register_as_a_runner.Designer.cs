@@ -48,6 +48,7 @@
             this.materialFlatButton1.TabIndex = 0;
             this.materialFlatButton1.Text = "Я был пациентом";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialFlatButton2
             // 
@@ -63,6 +64,7 @@
             this.materialFlatButton2.TabIndex = 1;
             this.materialFlatButton2.Text = "Я новый  пацинет";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // materialFlatButton3
             // 
@@ -78,6 +80,7 @@
             this.materialFlatButton3.TabIndex = 2;
             this.materialFlatButton3.Text = "Login";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
             // materialFlatButton4
             // 
@@ -93,8 +96,9 @@
             this.materialFlatButton4.TabIndex = 3;
             this.materialFlatButton4.Text = "Назад";
             this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
-            // Menu
+            // register_as_a_runner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,7 +107,8 @@
             this.Controls.Add(this.materialFlatButton3);
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialFlatButton1);
-            this.Name = "Menu";
+            this.Name = "register_as_a_runner";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);

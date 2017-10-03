@@ -72,6 +72,7 @@
             this.materialFlatButton1.TabIndex = 1;
             this.materialFlatButton1.Text = "Назад";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialLabel2
             // 
@@ -228,6 +229,7 @@
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.materialLabel1);
             this.Name = "previous_race_results";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Rez_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

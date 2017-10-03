@@ -53,6 +53,7 @@
             this.materialFlatButton1.TabIndex = 47;
             this.materialFlatButton1.Text = "Назад";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialLabel1
             // 
@@ -139,6 +140,7 @@
             this.materialFlatButton2.TabIndex = 54;
             this.materialFlatButton2.Text = "Login";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // materialFlatButton3
             // 
@@ -155,7 +157,7 @@
             this.materialFlatButton3.Text = "Cancel";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
             // 
-            // Auto
+            // authorization_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -169,7 +171,8 @@
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialFlatButton1);
-            this.Name = "Auto";
+            this.Name = "authorization_menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Auto_Load);
             this.ResumeLayout(false);

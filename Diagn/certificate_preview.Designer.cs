@@ -124,7 +124,7 @@
             this.materialLabel3.TabIndex = 55;
             this.materialLabel3.Text = "Город";
             // 
-            // Form8
+            // certificate_preview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -136,7 +136,8 @@
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialFlatButton4);
             this.Controls.Add(this.materialFlatButton3);
-            this.Name = "Form8";
+            this.Name = "certificate_preview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Form8_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

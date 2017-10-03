@@ -69,6 +69,7 @@
             this.materialFlatButton1.TabStop = false;
             this.materialFlatButton1.Text = "Я хочу быть пациентом";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialFlatButton2
             // 
@@ -84,8 +85,9 @@
             this.materialFlatButton2.TabIndex = 48;
             this.materialFlatButton2.Text = "Я хочу узнать больше о услугах";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+         
             // 
-            // Main_1
+            // main_screen_of_the_system
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -94,7 +96,8 @@
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Main_1";
+            this.Name = "main_screen_of_the_system";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Main_1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

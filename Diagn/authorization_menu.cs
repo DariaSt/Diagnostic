@@ -26,5 +26,16 @@ namespace Diagn
         {
 
         }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            main_screen_of_the_system main = new main_screen_of_the_system();
+            main.ShowDialog();
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

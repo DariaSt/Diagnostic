@@ -26,5 +26,23 @@ namespace Diagn
         {
 
         }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            service_registration service = new service_registration();
+            service.ShowDialog();
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            main_screen_of_the_system main = new main_screen_of_the_system();
+            main.ShowDialog();
+        }
+
+        private void materialFlatButton3_Click(object sender, EventArgs e)
+        {
+            main_screen_of_the_system main = new main_screen_of_the_system();
+            main.ShowDialog();
+        }
     }
 }

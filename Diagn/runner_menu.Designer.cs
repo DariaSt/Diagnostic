@@ -51,6 +51,7 @@
             this.materialFlatButton1.TabIndex = 0;
             this.materialFlatButton1.Text = "Logout";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialFlatButton2
             // 
@@ -66,6 +67,7 @@
             this.materialFlatButton2.TabIndex = 1;
             this.materialFlatButton2.Text = "Назад";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // materialLabel1
             // 
@@ -83,30 +85,34 @@
             // materialFlatButton3
             // 
             this.materialFlatButton3.AutoSize = true;
+            this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton3.Depth = 0;
             this.materialFlatButton3.Location = new System.Drawing.Point(81, 216);
             this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton3.Name = "materialFlatButton3";
             this.materialFlatButton3.Primary = false;
-            this.materialFlatButton3.Size = new System.Drawing.Size(208, 36);
+            this.materialFlatButton3.Size = new System.Drawing.Size(188, 36);
             this.materialFlatButton3.TabIndex = 3;
             this.materialFlatButton3.Text = "Регистрация на услугу";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
             // materialFlatButton4
             // 
             this.materialFlatButton4.AutoSize = true;
+            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton4.Depth = 0;
             this.materialFlatButton4.Location = new System.Drawing.Point(328, 216);
             this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton4.Name = "materialFlatButton4";
             this.materialFlatButton4.Primary = false;
-            this.materialFlatButton4.Size = new System.Drawing.Size(208, 36);
+            this.materialFlatButton4.Size = new System.Drawing.Size(136, 36);
             this.materialFlatButton4.TabIndex = 4;
             this.materialFlatButton4.Text = "Мои результаты";
             this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
             // materialFlatButton5
             // 
@@ -122,17 +128,19 @@
             this.materialFlatButton5.TabIndex = 5;
             this.materialFlatButton5.Text = "Редактирование профиля";
             this.materialFlatButton5.UseVisualStyleBackColor = true;
+            this.materialFlatButton5.Click += new System.EventHandler(this.materialFlatButton5_Click);
             // 
             // materialFlatButton6
             // 
             this.materialFlatButton6.AutoSize = true;
+            this.materialFlatButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton6.Depth = 0;
             this.materialFlatButton6.Location = new System.Drawing.Point(328, 295);
             this.materialFlatButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton6.Name = "materialFlatButton6";
             this.materialFlatButton6.Primary = false;
-            this.materialFlatButton6.Size = new System.Drawing.Size(208, 36);
+            this.materialFlatButton6.Size = new System.Drawing.Size(87, 36);
             this.materialFlatButton6.TabIndex = 6;
             this.materialFlatButton6.Text = "Контакты";
             this.materialFlatButton6.UseVisualStyleBackColor = true;
@@ -150,6 +158,7 @@
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialFlatButton1);
             this.Name = "runner_menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Menu_pacienta_Load);
             this.ResumeLayout(false);

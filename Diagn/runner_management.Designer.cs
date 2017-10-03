@@ -75,6 +75,7 @@
             this.materialFlatButton2.TabIndex = 1;
             this.materialFlatButton2.Text = "Назад";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // materialLabel1
             // 
@@ -192,13 +193,14 @@
             // materialFlatButton5
             // 
             this.materialFlatButton5.AutoSize = true;
+            this.materialFlatButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton5.Depth = 0;
             this.materialFlatButton5.Location = new System.Drawing.Point(572, 266);
             this.materialFlatButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton5.Name = "materialFlatButton5";
             this.materialFlatButton5.Primary = false;
-            this.materialFlatButton5.Size = new System.Drawing.Size(231, 36);
+            this.materialFlatButton5.Size = new System.Drawing.Size(116, 36);
             this.materialFlatButton5.TabIndex = 43;
             this.materialFlatButton5.Text = "E-mail список";
             this.materialFlatButton5.UseVisualStyleBackColor = true;
@@ -237,7 +239,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(764, 235);
             this.dataGridView1.TabIndex = 46;
             // 
-            // yprav
+            // runner_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -257,7 +259,8 @@
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialFlatButton1);
-            this.Name = "yprav";
+            this.Name = "runner_management";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.yprav_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
