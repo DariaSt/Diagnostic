@@ -32,6 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // label1
@@ -85,16 +86,32 @@
             this.materialFlatButton2.Text = "Я хочу узнать больше о услугах";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
             // 
-            // Main_1
+            // materialFlatButton3
+            // 
+            this.materialFlatButton3.AutoSize = true;
+            this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton3.Depth = 0;
+            this.materialFlatButton3.Location = new System.Drawing.Point(617, 367);
+            this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton3.Name = "materialFlatButton3";
+            this.materialFlatButton3.Primary = false;
+            this.materialFlatButton3.Size = new System.Drawing.Size(52, 36);
+            this.materialFlatButton3.TabIndex = 49;
+            this.materialFlatButton3.Text = "Login";
+            this.materialFlatButton3.UseVisualStyleBackColor = true;
+            // 
+            // main_screen_of_the_system
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 418);
+            this.Controls.Add(this.materialFlatButton3);
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Main_1";
+            this.Name = "main_screen_of_the_system";
             this.Load += new System.EventHandler(this.Main_1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -107,5 +124,6 @@
         private System.Windows.Forms.Label label2;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
     }
 }
