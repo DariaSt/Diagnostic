@@ -28,6 +28,10 @@ namespace Diagn
             reg.ShowDialog();
         }
 
-
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            find_out_more_information find_Out_ = new find_out_more_information();
+            find_Out_.ShowDialog();
+        }
     }
 }

@@ -86,7 +86,7 @@
             this.materialFlatButton2.TabIndex = 48;
             this.materialFlatButton2.Text = "Я хочу узнать больше о услугах";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
-         
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // materialFlatButton3
             // 
@@ -113,7 +113,7 @@
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Main_1";
+            this.Name = "main_screen_of_the_system";
             this.Load += new System.EventHandler(this.Main_1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
