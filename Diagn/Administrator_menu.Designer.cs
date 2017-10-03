@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class Administrator_menu
+    partial class administrator_menu
     {
         /// <summary>
         /// Required designer variable.

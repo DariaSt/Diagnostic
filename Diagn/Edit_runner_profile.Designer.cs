@@ -1,6 +1,6 @@
 ﻿namespace Diagn
 {
-    partial class Edit_runner_profile
+    partial class edit_runner_profile
     {
         /// <summary>
         /// Required designer variable.

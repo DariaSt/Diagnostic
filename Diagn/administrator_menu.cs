@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class find_out_more_information : MaterialSkin.Controls.MaterialForm
+    public partial class administrator_menu : MaterialSkin.Controls.MaterialForm
     {
-        public find_out_more_information()
+        public administrator_menu()
         {
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void Form6_Load(object sender, EventArgs e)
         {
 
         }
