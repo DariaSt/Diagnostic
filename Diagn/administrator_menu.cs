@@ -24,8 +24,9 @@ namespace Diagn
 
         private void materialFlatButton3_Click(object sender, EventArgs e)
         {
-           main_screen_of_the_system main = new main_screen_of_the_system();
-            main.ShowDialog();
+            main_screen_of_the_system main = new main_screen_of_the_system();
+            this.Hide();
+            main.Show();
         }
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
