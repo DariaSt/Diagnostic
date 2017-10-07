@@ -145,6 +145,7 @@
             this.materialFlatButton6.TabIndex = 6;
             this.materialFlatButton6.Text = "Контакты";
             this.materialFlatButton6.UseVisualStyleBackColor = true;
+            this.materialFlatButton6.Click += new System.EventHandler(this.materialFlatButton6_Click);
             // 
             // runner_menu
             // 

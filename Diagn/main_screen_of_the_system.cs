@@ -24,14 +24,27 @@ namespace Diagn
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
-            register_as_a_runner reg = new register_as_a_runner();
-            reg.ShowDialog();
+            register_as_a_runner reg = new register_as_a_runner();         
+            this.Hide();
+            reg.Show();
+
+
         }
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
             find_out_more_information find_Out_ = new find_out_more_information();
-            find_Out_.ShowDialog();
+            this.Hide();
+            find_Out_.Show();
+            
+        }
+
+        private void materialFlatButton3_Click(object sender, EventArgs e)
+        {
+            authorization_menu authorization = new authorization_menu();
+            this.Hide();
+            authorization.Show();
+            
         }
     }
 }

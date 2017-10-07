@@ -36,20 +36,30 @@ namespace Diagn
             else
             {
                 service_registration service = new service_registration();
-                service.ShowDialog();
+                this.Hide();
+                service.Show();
             }
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             main_screen_of_the_system main = new main_screen_of_the_system();
-            main.ShowDialog();
+            this.Hide();
+            main.Show();
         }
 
         private void materialFlatButton3_Click(object sender, EventArgs e)
         {
+           register_as_a_runner reg = new register_as_a_runner();
+            this.Hide();           
+            reg.Show();
+        }
+
+        private void materialFlatButton4_Click(object sender, EventArgs e)
+        {
             main_screen_of_the_system main = new main_screen_of_the_system();
-            main.ShowDialog();
+            this.Hide();
+            main.Show();
         }
     }
 }

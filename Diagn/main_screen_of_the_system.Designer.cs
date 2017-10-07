@@ -82,6 +82,7 @@
             this.materialFlatButton3.TabIndex = 49;
             this.materialFlatButton3.Text = "Login";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
             // label2
             // 
@@ -116,6 +117,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "main_screen_of_the_system";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Main_1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

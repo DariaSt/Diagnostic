@@ -43,16 +43,17 @@
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.diagnosticDataSet = new Diagn.DiagnosticDataSet();
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.diagnosticDataSet = new Diagn.DiagnosticDataSet();
-            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.genderTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.GenderTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).BeginInit();
+            this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -221,6 +222,16 @@
             this.metroComboBox1.TabIndex = 13;
             this.metroComboBox1.ValueMember = "Id";
             // 
+            // genderBindingSource
+            // 
+            this.genderBindingSource.DataMember = "Gender";
+            this.genderBindingSource.DataSource = this.diagnosticDataSet;
+            // 
+            // diagnosticDataSet
+            // 
+            this.diagnosticDataSet.DataSetName = "DiagnosticDataSet";
+            this.diagnosticDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // materialLabel9
             // 
             this.materialLabel9.AutoSize = true;
@@ -290,25 +301,32 @@
             this.materialFlatButton3.UseVisualStyleBackColor = true;
             this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
-            // diagnosticDataSet
-            // 
-            this.diagnosticDataSet.DataSetName = "DiagnosticDataSet";
-            this.diagnosticDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // genderBindingSource
-            // 
-            this.genderBindingSource.DataMember = "Gender";
-            this.genderBindingSource.DataSource = this.diagnosticDataSet;
-            // 
             // genderTableAdapter
             // 
             this.genderTableAdapter.ClearBeforeFill = true;
+            // 
+            // materialFlatButton4
+            // 
+            this.materialFlatButton4.AutoSize = true;
+            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton4.Depth = 0;
+            this.materialFlatButton4.Location = new System.Drawing.Point(692, 67);
+            this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton4.Name = "materialFlatButton4";
+            this.materialFlatButton4.Primary = false;
+            this.materialFlatButton4.Size = new System.Drawing.Size(65, 36);
+            this.materialFlatButton4.TabIndex = 19;
+            this.materialFlatButton4.Text = "Logout";
+            this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
             // patient_registration_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 481);
+            this.Controls.Add(this.materialFlatButton4);
             this.Controls.Add(this.materialFlatButton3);
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialFlatButton1);
@@ -332,8 +350,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,5 +381,6 @@
         private DiagnosticDataSet diagnosticDataSet;
         private System.Windows.Forms.BindingSource genderBindingSource;
         private DiagnosticDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
     }
 }

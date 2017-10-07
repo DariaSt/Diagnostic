@@ -25,19 +25,22 @@ namespace Diagn
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
            runner_menu menu = new runner_menu();
-            menu.ShowDialog();
+            this.Hide();
+            menu.Show();
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             main_screen_of_the_system m = new main_screen_of_the_system();
-            m.ShowDialog();
+            this.Hide();
+            m.Show();
         }
 
         private void materialFlatButton3_Click(object sender, EventArgs e)
         {
             previous_race_results previous = new previous_race_results();
-            previous.ShowDialog();
+            this.Hide();
+            previous.Show();
         }
     }
 }

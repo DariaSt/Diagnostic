@@ -30,20 +30,23 @@ namespace Diagn
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             main_screen_of_the_system main = new main_screen_of_the_system();
-            main.ShowDialog();
+            this.Hide();
+            main.Show();
         }
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
             //if admin.....
            runner_menu menu = new runner_menu();
-            menu.ShowDialog();
+            this.Hide();
+            menu.Show();
         }
 
         private void materialFlatButton3_Click(object sender, EventArgs e)
         {
             main_screen_of_the_system main = new main_screen_of_the_system();
-            main.ShowDialog();
+            this.Hide();
+            main.Show();
         }
     }
 }

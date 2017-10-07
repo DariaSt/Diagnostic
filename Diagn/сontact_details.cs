@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class сontact_details : MaterialSkin.Controls.MaterialForm
+    public partial class contact_details : MaterialSkin.Controls.MaterialForm
     {
-        public сontact_details()
+        public contact_details()
         {
             InitializeComponent();
         }
@@ -20,6 +20,13 @@ namespace Diagn
         private void сontact_details_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            runner_menu m = new runner_menu();
+            this.Hide();
+            m.Show();
         }
     }
 }

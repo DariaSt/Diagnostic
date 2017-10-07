@@ -29,7 +29,15 @@ namespace Diagn
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
             find_out_more_information f = new find_out_more_information();
-            f.ShowDialog();
+            this.Hide();
+            f.Show();
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            main_screen_of_the_system main = new main_screen_of_the_system();
+            this.Hide();
+            main.Show();
         }
     }
 }

@@ -25,25 +25,29 @@ namespace Diagn
         private void materialFlatButton3_Click(object sender, EventArgs e)
         {
             registration_confirmation confirmation = new registration_confirmation();
-            confirmation.ShowDialog();
+            this.Hide();
+            confirmation.Show();
         }
 
         private void materialFlatButton4_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system main = new main_screen_of_the_system();
-            main.ShowDialog();
+            runner_menu patient = new runner_menu();
+            this.Hide();
+            patient.Show();
         }
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
-            patient_registration_menu patient = new patient_registration_menu();
-            patient.ShowDialog();
+            runner_menu patient = new runner_menu();       
+            this.Hide();
+            patient.Show();
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             main_screen_of_the_system main = new main_screen_of_the_system();
-            main.ShowDialog();
+            this.Hide();
+            main.Show();
         }
     }
 }
