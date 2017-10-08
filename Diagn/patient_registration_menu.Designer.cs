@@ -105,7 +105,7 @@
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.Size = new System.Drawing.Size(223, 23);
             this.metroTextBox1.TabIndex = 3;
-            this.metroTextBox1.Text = "metroTextBox1";
+
             // 
             // metroTextBox2
             // 
@@ -113,7 +113,7 @@
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox2.TabIndex = 5;
-            this.metroTextBox2.Text = "metroTextBox2";
+          
             // 
             // materialLabel4
             // 
@@ -135,7 +135,6 @@
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox3.TabIndex = 7;
-            this.metroTextBox3.Text = "metroTextBox3";
             // 
             // materialLabel5
             // 
@@ -157,7 +156,8 @@
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox4.TabIndex = 9;
-            this.metroTextBox4.Text = "metroTextBox4";
+        
+            this.metroTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox4_KeyPress);
             // 
             // materialLabel6
             // 
@@ -179,7 +179,6 @@
             this.metroTextBox5.Name = "metroTextBox5";
             this.metroTextBox5.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox5.TabIndex = 11;
-            this.metroTextBox5.Text = "metroTextBox5";
             // 
             // materialLabel7
             // 
@@ -239,12 +238,12 @@
             this.materialLabel9.Depth = 0;
             this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel9.Location = new System.Drawing.Point(459, 236);
+            this.materialLabel9.Location = new System.Drawing.Point(397, 238);
             this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(51, 19);
+            this.materialLabel9.Size = new System.Drawing.Size(122, 19);
             this.materialLabel9.TabIndex = 14;
-            this.materialLabel9.Text = "Email:";
+            this.materialLabel9.Text = "Дата рождения:";
             // 
             // dateTimePicker1
             // 

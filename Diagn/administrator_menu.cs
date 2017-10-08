@@ -38,5 +38,13 @@ namespace Diagn
         {
 
         }
+
+        private void materialFlatButton5_Click(object sender, EventArgs e)
+        {
+            manage_a_runner run = new manage_a_runner();
+            this.Hide();
+            run.Show();
+
+        }
     }
 }
