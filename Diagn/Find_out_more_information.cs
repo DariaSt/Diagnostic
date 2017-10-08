@@ -49,5 +49,12 @@ namespace Diagn
             this.Hide();
             run.Show();
         }
+
+        private void materialFlatButton5_Click(object sender, EventArgs e)
+        {
+            interactive_map map= new interactive_map();
+            this.Hide();
+            map.Show();
+        }
     }
 }

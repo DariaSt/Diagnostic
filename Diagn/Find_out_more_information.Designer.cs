@@ -33,6 +33,7 @@
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton5 = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -54,7 +55,7 @@
             this.materialFlatButton1.AutoSize = true;
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(228, 223);
+            this.materialFlatButton1.Location = new System.Drawing.Point(101, 221);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
@@ -113,11 +114,28 @@
             this.materialFlatButton4.UseVisualStyleBackColor = true;
             this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
+            // materialFlatButton5
+            // 
+            this.materialFlatButton5.AutoSize = true;
+            this.materialFlatButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton5.Depth = 0;
+            this.materialFlatButton5.Location = new System.Drawing.Point(324, 221);
+            this.materialFlatButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton5.Name = "materialFlatButton5";
+            this.materialFlatButton5.Primary = false;
+            this.materialFlatButton5.Size = new System.Drawing.Size(176, 36);
+            this.materialFlatButton5.TabIndex = 5;
+            this.materialFlatButton5.Text = "Интерактивная карта";
+            this.materialFlatButton5.UseVisualStyleBackColor = true;
+            this.materialFlatButton5.Click += new System.EventHandler(this.materialFlatButton5_Click);
+            // 
             // find_out_more_information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 295);
+            this.ClientSize = new System.Drawing.Size(581, 350);
+            this.Controls.Add(this.materialFlatButton5);
             this.Controls.Add(this.materialFlatButton4);
             this.Controls.Add(this.materialFlatButton3);
             this.Controls.Add(this.materialFlatButton2);
@@ -139,5 +157,6 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton5;
     }
 }

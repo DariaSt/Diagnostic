@@ -66,6 +66,7 @@
             this.materialFlatButton1.TabIndex = 43;
             this.materialFlatButton1.Text = "Назад";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialFlatButton2
             // 
@@ -81,6 +82,7 @@
             this.materialFlatButton2.TabIndex = 44;
             this.materialFlatButton2.Text = "Logout";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // materialLabel1
             // 
@@ -348,6 +350,7 @@
             this.materialFlatButton3.TabIndex = 63;
             this.materialFlatButton3.Text = "Показ результата";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
             // materialFlatButton4
             // 
@@ -363,6 +366,7 @@
             this.materialFlatButton4.TabIndex = 64;
             this.materialFlatButton4.Text = "Редактирование\r\nпрофиля\r\n";
             this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
             // manage_a_runner
             // 

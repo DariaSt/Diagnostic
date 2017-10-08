@@ -21,5 +21,33 @@ namespace Diagn
         {
 
         }
+
+        private void materialFlatButton3_Click(object sender, EventArgs e)
+        {
+           certificate_preview preview= new certificate_preview();
+            this.Hide();
+            preview.Show();
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            runners menu = new runners();
+            this.Hide();
+            menu.Show();
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            authorization_menu m = new authorization_menu();
+            this.Hide();
+            m.Show();
+        }
+
+        private void materialFlatButton4_Click(object sender, EventArgs e)
+        {
+            edit_runner_profile profile = new edit_runner_profile();
+            this.Hide();
+            profile.Show();
+        }
     }
 }

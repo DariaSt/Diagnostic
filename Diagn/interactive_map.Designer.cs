@@ -45,6 +45,7 @@
             this.materialFlatButton1.TabIndex = 0;
             this.materialFlatButton1.Text = "Назад";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // interactive_map
             // 
