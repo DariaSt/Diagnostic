@@ -32,5 +32,16 @@ namespace Diagn.Properties {
                 return ((string)(this["DiagnosticConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MOONSOON\\SQLEXPRESS;Initial Catalog=Diagnostic;Integrated Security=Tr" +
+            "ue")]
+        public string DiagnosticConnectionString1 {
+            get {
+                return ((string)(this["DiagnosticConnectionString1"]));
+            }
+        }
     }
 }

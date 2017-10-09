@@ -28,5 +28,12 @@ namespace Diagn
             this.Hide();
             f.Show();
         }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            interactive_map map = new interactive_map();
+            this.Hide();
+            map.Show();
+        }
     }
 }

@@ -98,6 +98,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DiagnosticDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DiagnosticDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagnosticDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="manage_a_runner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +300,17 @@
     </None>
     <None Include="DiagnosticDataSet.xss">
       <DependentUpon>DiagnosticDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DiagnosticDataSet11.xsc">
+      <DependentUpon>DiagnosticDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DiagnosticDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiagnosticDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiagnosticDataSet11.xss">
+      <DependentUpon>DiagnosticDataSet11.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
