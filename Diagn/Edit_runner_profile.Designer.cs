@@ -135,6 +135,7 @@
             this.metroTextBox5.Name = "metroTextBox5";
             this.metroTextBox5.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox5.TabIndex = 25;
+            this.metroTextBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox5_KeyPress);
             // 
             // materialLabel7
             // 
@@ -156,6 +157,7 @@
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox4.TabIndex = 23;
+            this.metroTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox4_KeyPress);
             // 
             // materialLabel6
             // 

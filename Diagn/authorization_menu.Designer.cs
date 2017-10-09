@@ -37,6 +37,7 @@
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.view_UserTableAdapter1 = new Diagn.DiagnosticDataSetTableAdapters.View_UserTableAdapter();
             this.SuspendLayout();
             // 
             // materialFlatButton1
@@ -162,6 +163,10 @@
             this.materialFlatButton3.UseVisualStyleBackColor = true;
             this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
+            // view_UserTableAdapter1
+            // 
+            this.view_UserTableAdapter1.ClearBeforeFill = true;
+            // 
             // authorization_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,5 +201,6 @@
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
+        private DiagnosticDataSetTableAdapters.View_UserTableAdapter view_UserTableAdapter1;
     }
 }

@@ -76,5 +76,19 @@ namespace Diagn
             this.Hide();
             main.Show();
         }
+
+        private void metroTextBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((char)e.KeyChar == (Char)Keys.Back) return;
+            if (char.IsLetter(e.KeyChar)) return;
+            e.Handled = true;
+        }
+
+        private void metroTextBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((char)e.KeyChar == (Char)Keys.Back) return;
+            if (char.IsLetter(e.KeyChar)) return;
+            e.Handled = true;
+        }
     }
 }

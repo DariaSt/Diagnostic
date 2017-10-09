@@ -16,7 +16,10 @@ namespace Diagn
         {
             InitializeComponent();
         }
-
+        public runner_menu(int RoleId)
+        {
+            InitializeComponent();
+        }
         private void Menu_pacienta_Load(object sender, EventArgs e)
         {
 
