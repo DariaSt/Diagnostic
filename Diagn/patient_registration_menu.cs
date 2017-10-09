@@ -20,7 +20,7 @@ namespace Diagn
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet.Gender". При необходимости она может быть перемещена или удалена.
-            //this.genderTableAdapter.Fill(this.diagnosticDataSet.Gender);
+            this.genderTableAdapter.Fill(this.diagnosticDataSet.Gender);
 
         }
 
@@ -43,10 +43,13 @@ namespace Diagn
 
             else
             {
+                DiagnosticDataSet1.View_UserDataTable View_User = new DiagnosticDataSet1.View_UserDataTable();
+              //  View_User.Update_User(id, metroTextBox1.Text, metroTextBox2.Text, metroTextBox3.Text, metroTextBox4.Text, metroTextBox5.Text);
                 service_registration service = new service_registration();
                 this.Hide();
                 service.Show();
             }
+
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)

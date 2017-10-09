@@ -46,22 +46,25 @@
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.viewUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.servicesServiceTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.ServicesServiceTableAdapter();
-            this.view_UserTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.View_UserTableAdapter();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diagnosticDataSet1 = new Diagn.DiagnosticDataSet1();
             this.viewUserBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.diagnosticDataSet1 = new Diagn.DiagnosticDataSet1();
+            this.viewUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.servicesServiceTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.ServicesServiceTableAdapter();
+            this.view_UserTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.View_UserTableAdapter();
             this.view_UserTableAdapter1 = new Diagn.DiagnosticDataSet1TableAdapters.View_UserTableAdapter();
+            this.servicesServiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.servicesServiceTableAdapter1 = new Diagn.DiagnosticDataSet1TableAdapters.ServicesServiceTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialFlatButton1
@@ -168,7 +171,8 @@
             // 
             // metroComboBox1
             // 
-            this.metroComboBox1.DataSource = this.servicesServiceBindingSource;
+            this.metroComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicesServiceBindingSource1, "Service", true));
+            this.metroComboBox1.DataSource = this.servicesServiceBindingSource1;
             this.metroComboBox1.DisplayMember = "Service";
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 23;
@@ -190,12 +194,17 @@
             // 
             // metroComboBox2
             // 
+            this.metroComboBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.viewUserBindingSource1, "LastName", true));
             this.metroComboBox2.FormattingEnabled = true;
             this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "ASC",
+            "DESC"});
             this.metroComboBox2.Location = new System.Drawing.Point(120, 266);
             this.metroComboBox2.Name = "metroComboBox2";
             this.metroComboBox2.Size = new System.Drawing.Size(205, 29);
             this.metroComboBox2.TabIndex = 40;
+            this.metroComboBox2.ValueMember = "Id";
             // 
             // materialFlatButton3
             // 
@@ -211,6 +220,7 @@
             this.materialFlatButton3.TabIndex = 41;
             this.materialFlatButton3.Text = "Обновить";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
             // materialFlatButton4
             // 
@@ -285,19 +295,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(457, 235);
             this.dataGridView1.TabIndex = 46;
             // 
-            // viewUserBindingSource
-            // 
-            this.viewUserBindingSource.DataMember = "View_User";
-            this.viewUserBindingSource.DataSource = this.diagnosticDataSet;
-            // 
-            // servicesServiceTableAdapter
-            // 
-            this.servicesServiceTableAdapter.ClearBeforeFill = true;
-            // 
-            // view_UserTableAdapter
-            // 
-            this.view_UserTableAdapter.ClearBeforeFill = true;
-            // 
             // firstNameDataGridViewTextBoxColumn
             // 
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
@@ -322,19 +319,41 @@
             this.cityDataGridViewTextBoxColumn.HeaderText = "City";
             this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
             // 
-            // diagnosticDataSet1
-            // 
-            this.diagnosticDataSet1.DataSetName = "DiagnosticDataSet1";
-            this.diagnosticDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // viewUserBindingSource1
             // 
             this.viewUserBindingSource1.DataMember = "View_User";
             this.viewUserBindingSource1.DataSource = this.diagnosticDataSet1;
             // 
+            // diagnosticDataSet1
+            // 
+            this.diagnosticDataSet1.DataSetName = "DiagnosticDataSet1";
+            this.diagnosticDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewUserBindingSource
+            // 
+            this.viewUserBindingSource.DataMember = "View_User";
+            this.viewUserBindingSource.DataSource = this.diagnosticDataSet;
+            // 
+            // servicesServiceTableAdapter
+            // 
+            this.servicesServiceTableAdapter.ClearBeforeFill = true;
+            // 
+            // view_UserTableAdapter
+            // 
+            this.view_UserTableAdapter.ClearBeforeFill = true;
+            // 
             // view_UserTableAdapter1
             // 
             this.view_UserTableAdapter1.ClearBeforeFill = true;
+            // 
+            // servicesServiceBindingSource1
+            // 
+            this.servicesServiceBindingSource1.DataMember = "ServicesService";
+            this.servicesServiceBindingSource1.DataSource = this.diagnosticDataSet1;
+            // 
+            // servicesServiceTableAdapter1
+            // 
+            this.servicesServiceTableAdapter1.ClearBeforeFill = true;
             // 
             // runner_management
             // 
@@ -363,9 +382,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,5 +420,7 @@
         private DiagnosticDataSet1 diagnosticDataSet1;
         private System.Windows.Forms.BindingSource viewUserBindingSource1;
         private DiagnosticDataSet1TableAdapters.View_UserTableAdapter view_UserTableAdapter1;
+        private System.Windows.Forms.BindingSource servicesServiceBindingSource1;
+        private DiagnosticDataSet1TableAdapters.ServicesServiceTableAdapter servicesServiceTableAdapter1;
     }
 }

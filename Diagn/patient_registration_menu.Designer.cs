@@ -52,8 +52,10 @@
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
             this.genderTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.GenderTableAdapter();
             this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.diagnosticDataSet1 = new Diagn.DiagnosticDataSet1();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -103,9 +105,8 @@
             // 
             this.metroTextBox1.Location = new System.Drawing.Point(159, 190);
             this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(223, 23);
+            this.metroTextBox1.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox1.TabIndex = 3;
-
             // 
             // metroTextBox2
             // 
@@ -113,7 +114,6 @@
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox2.TabIndex = 5;
-          
             // 
             // materialLabel4
             // 
@@ -156,7 +156,6 @@
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox4.TabIndex = 9;
-        
             this.metroTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox4_KeyPress);
             // 
             // materialLabel6
@@ -320,6 +319,11 @@
             this.materialFlatButton4.UseVisualStyleBackColor = true;
             this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
+            // diagnosticDataSet1
+            // 
+            this.diagnosticDataSet1.DataSetName = "DiagnosticDataSet1";
+            this.diagnosticDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // patient_registration_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,6 +355,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,5 +386,6 @@
         private System.Windows.Forms.BindingSource genderBindingSource;
         private DiagnosticDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
+        private DiagnosticDataSet1 diagnosticDataSet1;
     }
 }

@@ -36,16 +36,22 @@
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.servicesServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.diagnosticDataSet1 = new Diagn.DiagnosticDataSet1();
             this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
+            this.genderBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.diagnosticDataSet11 = new Diagn.DiagnosticDataSet1();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.view_UserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.diagnosticDataSet1 = new Diagn.DiagnosticDataSet1();
-            this.view_UserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.viewTimesheetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_UserTableAdapter = new Diagn.DiagnosticDataSet1TableAdapters.View_UserTableAdapter();
             this.tableAdapterManager = new Diagn.DiagnosticDataSet1TableAdapters.TableAdapterManager();
+            this.genderTableAdapter = new Diagn.DiagnosticDataSet1TableAdapters.GenderTableAdapter();
+            this.servicesServiceTableAdapter = new Diagn.DiagnosticDataSet1TableAdapters.ServicesServiceTableAdapter();
             this.view_UserDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,22 +60,20 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.servicesServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.servicesServiceTableAdapter = new Diagn.DiagnosticDataSet1TableAdapters.ServicesServiceTableAdapter();
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.genderTableAdapter = new Diagn.DiagnosticDataSet1TableAdapters.GenderTableAdapter();
-            this.viewTimesheetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_TimesheetTableAdapter = new Diagn.DiagnosticDataSet1TableAdapters.View_TimesheetTableAdapter();
-            this.diagnosticDataSet11 = new Diagn.DiagnosticDataSet1();
-            this.genderBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.view_UserBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.view_UserDataGridView)).BeginInit();
+            this.genderBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.servicesServiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewTimesheetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_UserBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewTimesheetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_UserDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -161,7 +165,7 @@
             // metroComboBox1
             // 
             this.metroComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicesServiceBindingSource, "Service", true));
-            this.metroComboBox1.DataSource = this.servicesServiceBindingSource;
+            this.metroComboBox1.DataSource = this.servicesServiceBindingSource1;
             this.metroComboBox1.DisplayMember = "Service";
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 23;
@@ -171,10 +175,20 @@
             this.metroComboBox1.TabIndex = 38;
             this.metroComboBox1.ValueMember = "Id";
             // 
+            // servicesServiceBindingSource
+            // 
+            this.servicesServiceBindingSource.DataMember = "ServicesService";
+            this.servicesServiceBindingSource.DataSource = this.diagnosticDataSet1;
+            // 
+            // diagnosticDataSet1
+            // 
+            this.diagnosticDataSet1.DataSetName = "DiagnosticDataSet1";
+            this.diagnosticDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // metroComboBox3
             // 
             this.metroComboBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.genderBindingSource1, "Gender", true));
-            this.metroComboBox3.DataSource = this.genderBindingSource1;
+            this.metroComboBox3.DataSource = this.genderBindingSource2;
             this.metroComboBox3.DisplayMember = "Gender";
             this.metroComboBox3.FormattingEnabled = true;
             this.metroComboBox3.ItemHeight = 23;
@@ -184,13 +198,30 @@
             this.metroComboBox3.TabIndex = 40;
             this.metroComboBox3.ValueMember = "Id";
             // 
+            // genderBindingSource1
+            // 
+            this.genderBindingSource1.DataMember = "Gender";
+            this.genderBindingSource1.DataSource = this.diagnosticDataSet11;
+            // 
+            // diagnosticDataSet11
+            // 
+            this.diagnosticDataSet11.DataSetName = "DiagnosticDataSet1";
+            this.diagnosticDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Checked = false;
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.view_UserBindingSource, "DateOfBirth", true));
             this.dateTimePicker1.Location = new System.Drawing.Point(519, 226);
             this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowCheckBox = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 41;
+            // 
+            // view_UserBindingSource
+            // 
+            this.view_UserBindingSource.DataMember = "View_User";
+            this.view_UserBindingSource.DataSource = this.diagnosticDataSet1;
             // 
             // materialFlatButton2
             // 
@@ -238,21 +269,18 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Checked = false;
             this.dateTimePicker2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.viewTimesheetBindingSource, "StartDateTime", true));
             this.dateTimePicker2.Location = new System.Drawing.Point(132, 226);
             this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.ShowCheckBox = true;
             this.dateTimePicker2.Size = new System.Drawing.Size(205, 20);
             this.dateTimePicker2.TabIndex = 46;
             // 
-            // diagnosticDataSet1
+            // viewTimesheetBindingSource
             // 
-            this.diagnosticDataSet1.DataSetName = "DiagnosticDataSet1";
-            this.diagnosticDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // view_UserBindingSource
-            // 
-            this.view_UserBindingSource.DataMember = "View_User";
-            this.view_UserBindingSource.DataSource = this.diagnosticDataSet1;
+            this.viewTimesheetBindingSource.DataMember = "View_Timesheet";
+            this.viewTimesheetBindingSource.DataSource = this.diagnosticDataSet1;
             // 
             // view_UserTableAdapter
             // 
@@ -263,9 +291,22 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.GenderTableAdapter = this.genderTableAdapter;
             this.tableAdapterManager.MapTableAdapter = null;
+            this.tableAdapterManager.RegistrationServiceTableAdapter = null;
+            this.tableAdapterManager.RegistrationTableAdapter = null;
             this.tableAdapterManager.RoleTableAdapter = null;
             this.tableAdapterManager.ServicesServiceTableAdapter = this.servicesServiceTableAdapter;
+            this.tableAdapterManager.Staff_TableAdapter = null;
+            this.tableAdapterManager.Timesheet_TableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Diagn.DiagnosticDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UserTableAdapter = null;
+            // 
+            // genderTableAdapter
+            // 
+            this.genderTableAdapter.ClearBeforeFill = true;
+            // 
+            // servicesServiceTableAdapter
+            // 
+            this.servicesServiceTableAdapter.ClearBeforeFill = true;
             // 
             // view_UserDataGridView
             // 
@@ -327,42 +368,25 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "City";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // servicesServiceBindingSource
-            // 
-            this.servicesServiceBindingSource.DataMember = "ServicesService";
-            this.servicesServiceBindingSource.DataSource = this.diagnosticDataSet1;
-            // 
-            // servicesServiceTableAdapter
-            // 
-            this.servicesServiceTableAdapter.ClearBeforeFill = true;
-            // 
             // genderBindingSource
             // 
             this.genderBindingSource.DataMember = "Gender";
             this.genderBindingSource.DataSource = this.diagnosticDataSet1;
             // 
-            // genderTableAdapter
-            // 
-            this.genderTableAdapter.ClearBeforeFill = true;
-            // 
-            // viewTimesheetBindingSource
-            // 
-            this.viewTimesheetBindingSource.DataMember = "View_Timesheet";
-            this.viewTimesheetBindingSource.DataSource = this.diagnosticDataSet1;
-            // 
             // view_TimesheetTableAdapter
             // 
             this.view_TimesheetTableAdapter.ClearBeforeFill = true;
             // 
-            // diagnosticDataSet11
+            // genderBindingSource2
             // 
-            this.diagnosticDataSet11.DataSetName = "DiagnosticDataSet1";
-            this.diagnosticDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.genderBindingSource2.DataMember = "Gender";
+            this.genderBindingSource2.DataSource = this.diagnosticDataSet1;
             // 
-            // genderBindingSource1
+            // servicesServiceBindingSource1
             // 
-            this.genderBindingSource1.DataMember = "Gender";
-            this.genderBindingSource1.DataSource = this.diagnosticDataSet11;
+            this.servicesServiceBindingSource1.AllowNew = false;
+            this.servicesServiceBindingSource1.DataMember = "ServicesService";
+            this.servicesServiceBindingSource1.DataSource = this.diagnosticDataSet1;
             // 
             // previous_race_results
             // 
@@ -387,14 +411,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Rez_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.view_UserBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.view_UserDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewTimesheetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_UserBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewTimesheetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_UserDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,5 +461,7 @@
         private DiagnosticDataSet1TableAdapters.View_TimesheetTableAdapter view_TimesheetTableAdapter;
         private DiagnosticDataSet1 diagnosticDataSet11;
         private System.Windows.Forms.BindingSource genderBindingSource1;
+        private System.Windows.Forms.BindingSource servicesServiceBindingSource1;
+        private System.Windows.Forms.BindingSource genderBindingSource2;
     }
 }
