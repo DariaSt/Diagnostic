@@ -16,7 +16,7 @@ namespace Diagn
         {
             InitializeComponent();
         }
-
+        int RoleId;
         private void Auto_Load(object sender, EventArgs e)
         {
 
@@ -36,10 +36,27 @@ namespace Diagn
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
-            //if admin.....
-           runner_menu menu = new runner_menu();
-            this.Hide();
-            menu.Show();
+            RoleId = (int)view_UserTableAdapter1.Authorization(metroTextBox1.Text, metroTextBox2.Text);
+            switch (RoleId)
+            {
+                case 1: {
+                        main_screen_of_the_system main = new main_screen_of_the_system();
+                        this.Hide();
+                        main.Show();
+                    } break;
+                case 2: {
+                        runner_menu menu = new runner_menu(RoleId);
+                        this.Hide();
+                        menu.Show();
+                    } break;
+                case 3:
+                    {
+                        administrator_menu adm_menu = new administrator_menu(RoleId);
+                        this.Hide();
+                        adm_menu.Show();
+                    }
+                    break;
+            }
         }
 
         private void materialFlatButton3_Click(object sender, EventArgs e)
