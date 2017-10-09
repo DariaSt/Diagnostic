@@ -12,7 +12,7 @@ namespace Diagn
 {
     public partial class administrator_menu : MaterialSkin.Controls.MaterialForm
     {
-        public administrator_menu()
+        public administrator_menu(int RoleId)
         {
             InitializeComponent();
         }
