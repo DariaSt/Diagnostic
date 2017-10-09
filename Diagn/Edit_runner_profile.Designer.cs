@@ -33,6 +33,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.diagnosticDataSet = new Diagn.DiagnosticDataSet();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
@@ -50,11 +52,9 @@
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.diagnosticDataSet = new Diagn.DiagnosticDataSet();
-            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.genderTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.GenderTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -105,6 +105,16 @@
             this.metroComboBox1.TabIndex = 27;
             this.metroComboBox1.ValueMember = "Id";
             // 
+            // genderBindingSource
+            // 
+            this.genderBindingSource.DataMember = "Gender";
+            this.genderBindingSource.DataSource = this.diagnosticDataSet;
+            // 
+            // diagnosticDataSet
+            // 
+            this.diagnosticDataSet.DataSetName = "DiagnosticDataSet";
+            this.diagnosticDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // materialLabel8
             // 
             this.materialLabel8.AutoSize = true;
@@ -125,7 +135,6 @@
             this.metroTextBox5.Name = "metroTextBox5";
             this.metroTextBox5.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox5.TabIndex = 25;
-            this.metroTextBox5.Text = "metroTextBox5";
             // 
             // materialLabel7
             // 
@@ -147,7 +156,6 @@
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox4.TabIndex = 23;
-            this.metroTextBox4.Text = "metroTextBox4";
             // 
             // materialLabel6
             // 
@@ -169,7 +177,6 @@
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.Size = new System.Drawing.Size(223, 23);
             this.metroTextBox1.TabIndex = 17;
-            this.metroTextBox1.Text = "metroTextBox1";
             // 
             // materialLabel3
             // 
@@ -220,7 +227,6 @@
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox3.TabIndex = 35;
-            this.metroTextBox3.Text = "metroTextBox3";
             // 
             // materialLabel5
             // 
@@ -242,7 +248,6 @@
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox2.TabIndex = 33;
-            this.metroTextBox2.Text = "metroTextBox2";
             // 
             // materialLabel10
             // 
@@ -322,16 +327,6 @@
             this.materialFlatButton4.UseVisualStyleBackColor = true;
             this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
-            // diagnosticDataSet
-            // 
-            this.diagnosticDataSet.DataSetName = "DiagnosticDataSet";
-            this.diagnosticDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // genderBindingSource
-            // 
-            this.genderBindingSource.DataMember = "Gender";
-            this.genderBindingSource.DataSource = this.diagnosticDataSet;
-            // 
             // genderTableAdapter
             // 
             this.genderTableAdapter.ClearBeforeFill = true;
@@ -366,8 +361,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.Form5_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

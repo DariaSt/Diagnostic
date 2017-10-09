@@ -26,9 +26,24 @@ namespace Diagn
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
-            runner_menu run = new runner_menu();
-            this.Hide();
-            run.Show();
+            if ((metroComboBox1.SelectedIndex < -1) ||
+               (metroTextBox1.Text.Equals("")) || (metroTextBox4.Text.Equals("")) || (metroTextBox5.Text.Equals("")))
+            { MessageBox.Show("Вы не ввели все необходимые данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
+
+            //else if (metroTextBox2.Text.Length < 6)
+            //{ MessageBox.Show("Пароль не может содержать меньше 6 символов", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
+
+            //else if (metroTextBox2.Text != metroTextBox3.Text)
+            //{ MessageBox.Show("Пароль не совпадает! Пожалуйста, повторите пароль еще раз!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
+
+            else
+            {
+                service_registration service = new service_registration();
+                this.Hide();
+                service.Show();
+            }
+
+           
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)

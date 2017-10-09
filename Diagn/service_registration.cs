@@ -24,11 +24,17 @@ namespace Diagn
 
         private void materialFlatButton3_Click(object sender, EventArgs e)
         {
-            registration_confirmation confirmation = new registration_confirmation();
-            this.Hide();
-            confirmation.Show();
+            if (materialCheckBox1.Checked == true || materialCheckBox2.Checked == true || materialCheckBox3.Checked == true)
+            {
+                registration_confirmation confirmation = new registration_confirmation();
+                this.Hide();
+                confirmation.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберите вид услуги!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            }
         }
-
         private void materialFlatButton4_Click(object sender, EventArgs e)
         {
             runner_menu patient = new runner_menu();
