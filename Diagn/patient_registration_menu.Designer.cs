@@ -105,7 +105,6 @@
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.Size = new System.Drawing.Size(223, 23);
             this.metroTextBox1.TabIndex = 3;
-
             // 
             // metroTextBox2
             // 
@@ -113,7 +112,6 @@
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox2.TabIndex = 5;
-          
             // 
             // materialLabel4
             // 
@@ -156,7 +154,6 @@
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox4.TabIndex = 9;
-        
             this.metroTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox4_KeyPress);
             // 
             // materialLabel6
@@ -179,6 +176,8 @@
             this.metroTextBox5.Name = "metroTextBox5";
             this.metroTextBox5.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox5.TabIndex = 11;
+  
+            this.metroTextBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox5_KeyPress);
             // 
             // materialLabel7
             // 

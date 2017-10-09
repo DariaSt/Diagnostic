@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Diagn
 {
     public partial class patient_registration_menu : MaterialSkin.Controls.MaterialForm
     {
+        int? ID = null;
+
         public patient_registration_menu()
         {
             InitializeComponent();
@@ -31,15 +34,28 @@ namespace Diagn
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
-            if ((metroComboBox1.SelectedIndex < -1) ||
+            int year = DifferenceDate();
+            
+            if (!Regex.IsMatch(metroTextBox1.Text, @"\A[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\z"))
+            {
+                MessageBox.Show("Вы не правильно ввели адрес почты. Повторите попытку.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            }
+
+            else if (!Regex.IsMatch(metroTextBox2.Text, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}"))
+                {
+                MessageBox.Show("Пароль должен содержать: Минимум 6 символов. Минимум 1 прописная буква. Минимум 1 цифра. По крайней мере один из следующих символов: ! @ # $ % ^.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+
+            }
+            else if (metroTextBox2.Text != metroTextBox3.Text)
+            { MessageBox.Show("Пароль не совпадает! Пожалуйста, повторите пароль еще раз!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
+
+            else if ( year < 16 )
+            { MessageBox.Show("Для регистрации ваш возраст должен быть не менее 16 лет", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
+
+            else if ((metroComboBox1.SelectedIndex < -1) ||
                ((metroTextBox1.Text.Equals("")) || (metroTextBox2.Text.Equals("")) || (metroTextBox3.Text.Equals("")) || (metroTextBox4.Text.Equals("")) || (metroTextBox5.Text.Equals(""))))
             { MessageBox.Show("Вы не ввели все необходимые данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
 
-            else if (metroTextBox2.Text.Length < 6)
-            { MessageBox.Show("Пароль не может содержать меньше 6 символов", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
-
-            else if (metroTextBox2.Text != metroTextBox3.Text)
-            { MessageBox.Show("Пароль не совпадает! Пожалуйста, повторите пароль еще раз!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
 
             else
             {
@@ -47,6 +63,18 @@ namespace Diagn
                 this.Hide();
                 service.Show();
             }
+        }
+
+        int DifferenceDate()
+        {
+            DateTime thisdate = DateTime.Now;
+            DateTime date = dateTimePicker1.Value;
+            
+
+            TimeSpan difference = thisdate - date;
+
+            int year = difference.Days;
+            return year / 365;
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
@@ -72,19 +100,21 @@ namespace Diagn
 
         private void metroTextBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
+
+            if ((char)e.KeyChar == (Char)Keys.Back) return;
+            if (char.IsLetter(e.KeyChar)) return;
+            e.Handled = true;
+
             
-
-            //if (e.KeyChar != 8 && (e.KeyChar <= 97 || e.KeyChar >= 122))
-            //{
-            //    e.Handled = true;
-            //}
-
-
-            //char l = e.KeyChar;
-            //if ((l < 'А' || l > 'я') && l != '8')
-            //    e.Handled = true;
         }
 
 
+
+        private void metroTextBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((char)e.KeyChar == (Char)Keys.Back) return;
+            if (char.IsLetter(e.KeyChar)) return;
+            e.Handled = true;
+        }
     }
 }
