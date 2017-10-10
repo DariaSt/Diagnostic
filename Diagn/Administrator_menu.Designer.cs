@@ -65,6 +65,7 @@
             this.materialFlatButton4.TabIndex = 40;
             this.materialFlatButton4.Text = "Logout";
             this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
             // materialLabel1
             // 
