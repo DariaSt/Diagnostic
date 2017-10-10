@@ -47,5 +47,10 @@ namespace Diagn
             this.Hide();
             main.Show();
         }
+
+        private void registration_confirmation_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

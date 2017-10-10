@@ -162,6 +162,7 @@
             this.Name = "runner_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.runner_menu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_pacienta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

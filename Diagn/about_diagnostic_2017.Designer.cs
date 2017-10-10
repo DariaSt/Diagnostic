@@ -168,6 +168,7 @@
             this.Name = "about_diagnostic_2017";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.about_diagnostic_2017_FormClosing);
             this.Load += new System.EventHandler(this.information_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

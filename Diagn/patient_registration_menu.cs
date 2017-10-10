@@ -119,5 +119,10 @@ namespace Diagn
             if (char.IsLetter(e.KeyChar)) return;
             e.Handled = true;
         }
+
+        private void patient_registration_menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

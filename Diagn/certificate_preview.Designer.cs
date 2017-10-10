@@ -150,6 +150,7 @@
             this.Name = "certificate_preview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.certificate_preview_FormClosing);
             this.Load += new System.EventHandler(this.Form8_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

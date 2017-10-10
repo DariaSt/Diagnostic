@@ -46,5 +46,10 @@ namespace Diagn
             authorization.Show();
             
         }
+
+        private void main_screen_of_the_system_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

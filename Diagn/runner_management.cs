@@ -141,5 +141,10 @@ namespace Diagn
             ExcelApp.Visible = true;
             ExcelApp.UserControl = true;
         }
+
+        private void runner_management_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

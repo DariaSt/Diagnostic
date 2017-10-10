@@ -177,6 +177,7 @@
             // 
             this.metroTextBox1.Location = new System.Drawing.Point(138, 138);
             this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.ReadOnly = true;
             this.metroTextBox1.Size = new System.Drawing.Size(223, 23);
             this.metroTextBox1.TabIndex = 17;
             // 
@@ -362,6 +363,7 @@
             this.Name = "edit_runner_profile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.edit_runner_profile_FormClosing);
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).EndInit();

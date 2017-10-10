@@ -28,5 +28,10 @@ namespace Diagn
             this.Hide();
             information.Show();
         }
+
+        private void interactive_map_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

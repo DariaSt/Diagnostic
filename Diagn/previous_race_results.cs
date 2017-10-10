@@ -87,5 +87,10 @@ namespace Diagn
                 view_UserBindingSource.Filter = string.Format("Id IN {0}", ids_formatted);
             }
         }
+
+        private void previous_race_results_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

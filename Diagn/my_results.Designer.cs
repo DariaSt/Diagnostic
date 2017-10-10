@@ -239,6 +239,7 @@
             this.Name = "my_results";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.my_results_FormClosing);
             this.Load += new System.EventHandler(this.my_rez_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

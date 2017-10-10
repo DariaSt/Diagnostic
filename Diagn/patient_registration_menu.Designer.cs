@@ -178,7 +178,6 @@
             this.metroTextBox5.Name = "metroTextBox5";
             this.metroTextBox5.Size = new System.Drawing.Size(196, 23);
             this.metroTextBox5.TabIndex = 11;
-  
             this.metroTextBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox5_KeyPress);
             // 
             // materialLabel7
@@ -354,6 +353,7 @@
             this.Name = "patient_registration_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.patient_registration_menu_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).EndInit();

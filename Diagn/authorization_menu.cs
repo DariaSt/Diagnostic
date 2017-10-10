@@ -65,5 +65,10 @@ namespace Diagn
             this.Hide();
             main.Show();
         }
+
+        private void authorization_menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

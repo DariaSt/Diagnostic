@@ -50,5 +50,10 @@ namespace Diagn
             this.Hide();
             authorization.Show();
         }
+
+        private void register_as_a_runner_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

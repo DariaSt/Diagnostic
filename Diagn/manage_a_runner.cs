@@ -49,5 +49,10 @@ namespace Diagn
             this.Hide();
             profile.Show();
         }
+
+        private void manage_a_runner_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
