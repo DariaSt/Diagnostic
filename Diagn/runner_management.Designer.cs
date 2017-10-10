@@ -37,34 +37,37 @@
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.servicesServiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.diagnosticDataSet1 = new Diagn.DiagnosticDataSet1();
             this.servicesServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.diagnosticDataSet = new Diagn.DiagnosticDataSet();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.viewUserBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton5 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.viewUserBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.diagnosticDataSet1 = new Diagn.DiagnosticDataSet1();
             this.viewUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.servicesServiceTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.ServicesServiceTableAdapter();
             this.view_UserTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.View_UserTableAdapter();
             this.view_UserTableAdapter1 = new Diagn.DiagnosticDataSet1TableAdapters.View_UserTableAdapter();
-            this.servicesServiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.servicesServiceTableAdapter1 = new Diagn.DiagnosticDataSet1TableAdapters.ServicesServiceTableAdapter();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialFlatButton1
@@ -182,6 +185,16 @@
             this.metroComboBox1.TabIndex = 39;
             this.metroComboBox1.ValueMember = "Id";
             // 
+            // servicesServiceBindingSource1
+            // 
+            this.servicesServiceBindingSource1.DataMember = "ServicesService";
+            this.servicesServiceBindingSource1.DataSource = this.diagnosticDataSet1;
+            // 
+            // diagnosticDataSet1
+            // 
+            this.diagnosticDataSet1.DataSetName = "DiagnosticDataSet1";
+            this.diagnosticDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // servicesServiceBindingSource
             // 
             this.servicesServiceBindingSource.DataMember = "ServicesService";
@@ -195,6 +208,7 @@
             // metroComboBox2
             // 
             this.metroComboBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.viewUserBindingSource1, "LastName", true));
+            this.metroComboBox2.DisplayMember = "Id";
             this.metroComboBox2.FormattingEnabled = true;
             this.metroComboBox2.ItemHeight = 23;
             this.metroComboBox2.Items.AddRange(new object[] {
@@ -205,6 +219,11 @@
             this.metroComboBox2.Size = new System.Drawing.Size(205, 29);
             this.metroComboBox2.TabIndex = 40;
             this.metroComboBox2.ValueMember = "Id";
+            // 
+            // viewUserBindingSource1
+            // 
+            this.viewUserBindingSource1.DataMember = "View_User";
+            this.viewUserBindingSource1.DataSource = this.diagnosticDataSet1;
             // 
             // materialFlatButton3
             // 
@@ -236,6 +255,7 @@
             this.materialFlatButton4.TabIndex = 42;
             this.materialFlatButton4.Text = "Детальная информация(СSV)";
             this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
             // materialFlatButton5
             // 
@@ -251,6 +271,7 @@
             this.materialFlatButton5.TabIndex = 43;
             this.materialFlatButton5.Text = "E-mail список";
             this.materialFlatButton5.UseVisualStyleBackColor = true;
+            this.materialFlatButton5.Click += new System.EventHandler(this.materialFlatButton5_Click);
             // 
             // materialLabel6
             // 
@@ -282,52 +303,22 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.firstNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.dateOfBirthDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
+            this.roleNameDataGridViewTextBoxColumn,
             this.cityDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.viewUserBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(162, 349);
+            this.dataGridView1.Location = new System.Drawing.Point(35, 349);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(457, 235);
+            this.dataGridView1.Size = new System.Drawing.Size(725, 235);
             this.dataGridView1.TabIndex = 46;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            // 
-            // viewUserBindingSource1
-            // 
-            this.viewUserBindingSource1.DataMember = "View_User";
-            this.viewUserBindingSource1.DataSource = this.diagnosticDataSet1;
-            // 
-            // diagnosticDataSet1
-            // 
-            this.diagnosticDataSet1.DataSetName = "DiagnosticDataSet1";
-            this.diagnosticDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // viewUserBindingSource
             // 
@@ -346,14 +337,51 @@
             // 
             this.view_UserTableAdapter1.ClearBeforeFill = true;
             // 
-            // servicesServiceBindingSource1
-            // 
-            this.servicesServiceBindingSource1.DataMember = "ServicesService";
-            this.servicesServiceBindingSource1.DataSource = this.diagnosticDataSet1;
-            // 
             // servicesServiceTableAdapter1
             // 
             this.servicesServiceTableAdapter1.ClearBeforeFill = true;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // dateOfBirthDataGridViewTextBoxColumn
+            // 
+            this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "DateOfBirth";
+            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "DateOfBirth";
+            this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // roleNameDataGridViewTextBoxColumn
+            // 
+            this.roleNameDataGridViewTextBoxColumn.DataPropertyName = "RoleName";
+            this.roleNameDataGridViewTextBoxColumn.HeaderText = "RoleName";
+            this.roleNameDataGridViewTextBoxColumn.Name = "roleNameDataGridViewTextBoxColumn";
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
             // 
             // runner_management
             // 
@@ -379,13 +407,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.Load += new System.EventHandler(this.yprav_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,14 +441,17 @@
         private DiagnosticDataSetTableAdapters.ServicesServiceTableAdapter servicesServiceTableAdapter;
         private System.Windows.Forms.BindingSource viewUserBindingSource;
         private DiagnosticDataSetTableAdapters.View_UserTableAdapter view_UserTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
         private DiagnosticDataSet1 diagnosticDataSet1;
         private System.Windows.Forms.BindingSource viewUserBindingSource1;
         private DiagnosticDataSet1TableAdapters.View_UserTableAdapter view_UserTableAdapter1;
         private System.Windows.Forms.BindingSource servicesServiceBindingSource1;
         private DiagnosticDataSet1TableAdapters.ServicesServiceTableAdapter servicesServiceTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roleNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
     }
 }

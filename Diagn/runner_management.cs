@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Diagn.DiagnosticDataSet1TableAdapters;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Diagn
 {
@@ -31,6 +32,7 @@ namespace Diagn
 
             metroComboBox1.SelectedIndex = -1;
             metroComboBox2.SelectedIndex = -1;
+
 
         }
 
@@ -61,7 +63,7 @@ namespace Diagn
                 {
                     Uid = u.Id,
                     RegServId = rsrr?.Service_id ?? 0,
-                    Name=u.LastName,
+                    Name=u.FirstName,
                 };
             if (metroComboBox1.SelectedValue != null)
             {
@@ -76,10 +78,68 @@ namespace Diagn
                 viewUserBindingSource1.Filter = $"Id IN {ids_formatted}";
                 if (metroComboBox2.Text != "")
                 {
-                    viewUserBindingSource1.Sort = $"LastName {metroComboBox2.Text}";
+                    viewUserBindingSource1.Sort = $"FirstName {metroComboBox2.Text}";
                 }
                 
             }
+        }
+
+        private void materialFlatButton5_Click(object sender, EventArgs e)
+        {
+            Excel.Application ExcelApp = new Excel.Application();
+            Excel.Workbook ExcelWorkBook;
+            Excel.Worksheet ExcelWorkSheet;
+            ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
+            ExcelWorkSheet = (Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+            Microsoft.Office.Interop.Excel.Worksheet sheet = ExcelWorkBook.Worksheets.get_Item(1);
+            sheet.Cells.get_Range("A1", "R17").Font.Bold = true;
+            ExcelApp.Columns.ColumnWidth = 20;
+            ExcelApp.Cells[2, 1] = "Email";
+            ExcelApp.Cells[1, 1] = "ОТЧЕТ ПО КЛИЕНТАМ";
+            ExcelApp.Range[ExcelApp.Cells[1, 5], ExcelApp.Cells[1, 5]].Merge(Type.Missing);
+            for (int i = 0; i < dataGridView1.RowCount-1; i++)
+            {
+               
+                
+
+                    ExcelApp.Cells[i + 3, 1] = (dataGridView1.Rows[i].Cells[4].Value).ToString();
+                
+            }
+
+            sheet.Cells.get_Range("A1", "R20").EntireColumn.AutoFit();
+            sheet.Cells.get_Range("A1", "R20").EntireColumn.HorizontalAlignment = HorizontalAlignment.Center;
+            sheet.Cells.get_Range("A1", "R20").EntireColumn.VerticalAlignment = HorizontalAlignment.Center;
+            ExcelApp.Visible = true;
+            ExcelApp.UserControl = true;
+        }
+
+        private void materialFlatButton4_Click(object sender, EventArgs e)
+        {
+            Excel.Application ExcelApp = new Excel.Application();
+            Excel.Workbook ExcelWorkBook;
+            Excel.Worksheet ExcelWorkSheet;
+            ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
+            ExcelWorkSheet = (Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+            Microsoft.Office.Interop.Excel.Worksheet sheet = ExcelWorkBook.Worksheets.get_Item(1);
+            sheet.Cells.get_Range("A1", "R17").Font.Bold = true;
+
+            for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+            {
+                ExcelWorkSheet.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+            }
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    ExcelWorkSheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].FormattedValue.ToString();
+                }
+
+            }
+            sheet.Cells.get_Range("A1", "R20").EntireColumn.AutoFit();
+            sheet.Cells.get_Range("A1", "R20").EntireColumn.HorizontalAlignment = HorizontalAlignment.Center;
+            sheet.Cells.get_Range("A1", "R20").EntireColumn.VerticalAlignment = HorizontalAlignment.Center;
+            ExcelApp.Visible = true;
+            ExcelApp.UserControl = true;
         }
     }
 }
