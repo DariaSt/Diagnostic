@@ -47,7 +47,6 @@
             this.view_UserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.viewTimesheetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_UserTableAdapter = new Diagn.DiagnosticDataSet1TableAdapters.View_UserTableAdapter();
@@ -64,6 +63,8 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_TimesheetTableAdapter = new Diagn.DiagnosticDataSet1TableAdapters.View_TimesheetTableAdapter();
+            this.genderBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.servicesServiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).BeginInit();
@@ -264,20 +265,6 @@
             this.materialLabel6.TabIndex = 43;
             this.materialLabel6.Text = "Всего пациентов:";
             // 
-            // materialLabel7
-            // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(505, 289);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(17, 19);
-            this.materialLabel7.TabIndex = 44;
-            this.materialLabel7.Text = "1";
-            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Checked = false;
@@ -388,14 +375,25 @@
             // 
             this.view_TimesheetTableAdapter.ClearBeforeFill = true;
             // 
+            // genderBindingSource2
+            // 
+            this.genderBindingSource2.DataMember = "Gender";
+            this.genderBindingSource2.DataSource = this.diagnosticDataSet1;
+            // 
+            // servicesServiceBindingSource1
+            // 
+            this.servicesServiceBindingSource1.AllowNew = false;
+            this.servicesServiceBindingSource1.DataMember = "ServicesService";
+            this.servicesServiceBindingSource1.DataSource = this.diagnosticDataSet1;
+            // 
             // previous_race_results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 562);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.view_UserDataGridView);
             this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.materialLabel7);
             this.Controls.Add(this.materialLabel6);
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.dateTimePicker1);
@@ -440,7 +438,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private DiagnosticDataSet1 diagnosticDataSet1;
         private System.Windows.Forms.BindingSource view_UserBindingSource;
@@ -464,5 +461,6 @@
         private System.Windows.Forms.BindingSource genderBindingSource1;
         private System.Windows.Forms.BindingSource servicesServiceBindingSource1;
         private System.Windows.Forms.BindingSource genderBindingSource2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

@@ -52,6 +52,7 @@ namespace Diagn
 
         private void materialFlatButton3_Click(object sender, EventArgs e)
         {
+            
             var u_ta = new UserTableAdapter();
             var rs_ta = new RegistrationServiceTableAdapter(); 
             u_ta.Fill(diagnosticDataSet1.User);
@@ -82,6 +83,7 @@ namespace Diagn
                 }
                 
             }
+            listBox1.Items.Add(dataGridView1.Rows.Count.ToString());
         }
 
         private void materialFlatButton5_Click(object sender, EventArgs e)
@@ -140,11 +142,6 @@ namespace Diagn
             sheet.Cells.get_Range("A1", "R20").EntireColumn.VerticalAlignment = HorizontalAlignment.Center;
             ExcelApp.Visible = true;
             ExcelApp.UserControl = true;
-        }
-
-        private void runner_management_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
