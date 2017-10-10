@@ -46,5 +46,12 @@ namespace Diagn
             run.Show();
 
         }
+
+        private void materialFlatButton4_Click(object sender, EventArgs e)
+        {
+            main_screen_of_the_system main = new main_screen_of_the_system();
+            this.Hide();
+            main.Show();
+        }
     }
 }

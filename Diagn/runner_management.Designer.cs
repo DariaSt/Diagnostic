@@ -47,13 +47,7 @@
             this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton5 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.viewUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.servicesServiceTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.ServicesServiceTableAdapter();
-            this.view_UserTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.View_UserTableAdapter();
-            this.view_UserTableAdapter1 = new Diagn.DiagnosticDataSet1TableAdapters.View_UserTableAdapter();
-            this.servicesServiceTableAdapter1 = new Diagn.DiagnosticDataSet1TableAdapters.ServicesServiceTableAdapter();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +55,12 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.servicesServiceTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.ServicesServiceTableAdapter();
+            this.view_UserTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.View_UserTableAdapter();
+            this.view_UserTableAdapter1 = new Diagn.DiagnosticDataSet1TableAdapters.View_UserTableAdapter();
+            this.servicesServiceTableAdapter1 = new Diagn.DiagnosticDataSet1TableAdapters.ServicesServiceTableAdapter();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).BeginInit();
@@ -287,20 +287,6 @@
             this.materialLabel6.TabIndex = 44;
             this.materialLabel6.Text = "Total:";
             // 
-            // materialLabel7
-            // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(378, 327);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(108, 19);
-            this.materialLabel7.TabIndex = 45;
-            this.materialLabel7.Text = "materialLabel7";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -319,27 +305,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(725, 235);
             this.dataGridView1.TabIndex = 46;
-            // 
-            // viewUserBindingSource
-            // 
-            this.viewUserBindingSource.DataMember = "View_User";
-            this.viewUserBindingSource.DataSource = this.diagnosticDataSet;
-            // 
-            // servicesServiceTableAdapter
-            // 
-            this.servicesServiceTableAdapter.ClearBeforeFill = true;
-            // 
-            // view_UserTableAdapter
-            // 
-            this.view_UserTableAdapter.ClearBeforeFill = true;
-            // 
-            // view_UserTableAdapter1
-            // 
-            this.view_UserTableAdapter1.ClearBeforeFill = true;
-            // 
-            // servicesServiceTableAdapter1
-            // 
-            this.servicesServiceTableAdapter1.ClearBeforeFill = true;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
@@ -383,13 +348,43 @@
             this.cityDataGridViewTextBoxColumn.HeaderText = "City";
             this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
             // 
+            // viewUserBindingSource
+            // 
+            this.viewUserBindingSource.DataMember = "View_User";
+            this.viewUserBindingSource.DataSource = this.diagnosticDataSet;
+            // 
+            // servicesServiceTableAdapter
+            // 
+            this.servicesServiceTableAdapter.ClearBeforeFill = true;
+            // 
+            // view_UserTableAdapter
+            // 
+            this.view_UserTableAdapter.ClearBeforeFill = true;
+            // 
+            // view_UserTableAdapter1
+            // 
+            this.view_UserTableAdapter1.ClearBeforeFill = true;
+            // 
+            // servicesServiceTableAdapter1
+            // 
+            this.servicesServiceTableAdapter1.ClearBeforeFill = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(378, 326);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 17);
+            this.listBox1.TabIndex = 47;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // runner_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 612);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.materialLabel7);
             this.Controls.Add(this.materialLabel6);
             this.Controls.Add(this.materialFlatButton5);
             this.Controls.Add(this.materialFlatButton4);
@@ -434,7 +429,6 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton5;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DiagnosticDataSet diagnosticDataSet;
         private System.Windows.Forms.BindingSource servicesServiceBindingSource;
@@ -453,5 +447,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
