@@ -39,15 +39,16 @@ namespace Diagn
             RoleId = (int)view_UserTableAdapter1.Authorization(metroTextBox1.Text, metroTextBox2.Text);
             switch (RoleId)
             {
-                case 1: {
+                case 1:
+                    {
                         main_screen_of_the_system main = new main_screen_of_the_system();
-                        this.Hide();
-                        main.Show();
-                    } break;
+            this.Hide();
+            main.Show();
+        } break;
                 case 2: {
                         runner_menu menu = new runner_menu(RoleId);
                         this.Hide();
-                        menu.Show();
+        menu.Show();
                     } break;
                 case 3:
                     {
