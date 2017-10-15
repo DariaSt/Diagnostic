@@ -35,5 +35,10 @@ namespace Diagn
             this.Hide();
             map.Show();
         }
+
+        private void about_diagnostic_2017_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

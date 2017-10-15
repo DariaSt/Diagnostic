@@ -259,6 +259,7 @@
             this.Name = "service_registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.service_registration_FormClosing);
             this.Load += new System.EventHandler(this.regis_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

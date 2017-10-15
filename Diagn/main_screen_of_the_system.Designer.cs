@@ -118,6 +118,7 @@
             this.Controls.Add(this.label1);
             this.Name = "main_screen_of_the_system";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.main_screen_of_the_system_FormClosing);
             this.Load += new System.EventHandler(this.Main_1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

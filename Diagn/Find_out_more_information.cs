@@ -56,5 +56,10 @@ namespace Diagn
             this.Hide();
             map.Show();
         }
+
+        private void find_out_more_information_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

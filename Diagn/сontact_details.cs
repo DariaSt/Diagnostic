@@ -28,5 +28,10 @@ namespace Diagn
             this.Hide();
             m.Show();
         }
+
+        private void contact_details_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

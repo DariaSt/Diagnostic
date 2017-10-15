@@ -21,5 +21,10 @@ namespace Diagn
         {
 
         }
+
+        private void certificate_preview_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -63,7 +63,8 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_TimesheetTableAdapter = new Diagn.DiagnosticDataSet1TableAdapters.View_TimesheetTableAdapter();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.genderBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.servicesServiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).BeginInit();
@@ -374,13 +375,16 @@
             // 
             this.view_TimesheetTableAdapter.ClearBeforeFill = true;
             // 
-            // listBox1
+            // genderBindingSource2
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(496, 289);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(55, 17);
-            this.listBox1.TabIndex = 48;
+            this.genderBindingSource2.DataMember = "Gender";
+            this.genderBindingSource2.DataSource = this.diagnosticDataSet1;
+            // 
+            // servicesServiceBindingSource1
+            // 
+            this.servicesServiceBindingSource1.AllowNew = false;
+            this.servicesServiceBindingSource1.DataMember = "ServicesService";
+            this.servicesServiceBindingSource1.DataSource = this.diagnosticDataSet1;
             // 
             // previous_race_results
             // 
@@ -404,6 +408,7 @@
             this.Name = "previous_race_results";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.previous_race_results_FormClosing);
             this.Load += new System.EventHandler(this.Rez_Load);
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).EndInit();

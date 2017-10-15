@@ -55,5 +55,10 @@ namespace Diagn
             this.Hide();
             main.Show();
         }
+
+        private void service_registration_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

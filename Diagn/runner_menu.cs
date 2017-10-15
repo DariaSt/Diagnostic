@@ -66,5 +66,10 @@ namespace Diagn
             this.Hide();
             contact.Show();
         }
+
+        private void runner_menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -143,16 +143,5 @@ namespace Diagn
             ExcelApp.Visible = true;
             ExcelApp.UserControl = true;
         }
-
-        private void materialLabel7_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-
-        }
     }
 }

@@ -89,5 +89,10 @@ namespace Diagn
             listBox1.Items.Add(view_UserDataGridView.Rows.Count.ToString());
 
         }
+
+        private void previous_race_results_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

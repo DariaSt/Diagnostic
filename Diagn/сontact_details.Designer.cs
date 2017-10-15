@@ -149,6 +149,7 @@
             this.Controls.Add(this.materialLabel1);
             this.Name = "contact_details";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.contact_details_FormClosing);
             this.Load += new System.EventHandler(this.сontact_details_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
