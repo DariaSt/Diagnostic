@@ -143,5 +143,10 @@ comboBox1.SelectedIndex = -1;
             }
             listBox1.Items.Add(dataGridView1.Rows.Count.ToString());
         }
+
+        private void runner_management_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -305,6 +305,7 @@ namespace Diagn
             this.Name = "runner_management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.runner_management_FormClosing);
             this.Load += new System.EventHandler(this.yprav_Load);
             ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).EndInit();
