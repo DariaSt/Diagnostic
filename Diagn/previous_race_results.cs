@@ -12,7 +12,7 @@ using Diagn.DiagnosticDataSet1TableAdapters;
 
 namespace Diagn
 {
-    public partial class previous_race_results : MaterialSkin.Controls.MaterialForm
+    public partial class previous_race_results : Form
     {
         public previous_race_results()
         {
@@ -30,20 +30,22 @@ namespace Diagn
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.View_User". При необходимости она может быть перемещена или удалена.
             this.view_UserTableAdapter.Fill(this.diagnosticDataSet1.View_User);
             
-            metroComboBox1.SelectedIndex = -1;
-            metroComboBox3.SelectedIndex = -1;
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
             dateTimePicker2.Checked = false;
             dateTimePicker1.Checked = true;
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
+       
+
+      
+
+        private void previous_race_results_FormClosing(object sender, FormClosingEventArgs e)
         {
-            find_out_more_information find = new find_out_more_information();
-            this.Hide();
-            find.Show();
+            Application.Exit();
         }
 
-        private void materialFlatButton2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             var u_ta = new UserTableAdapter();
             var rs_ta = new RegistrationServiceTableAdapter();
@@ -64,13 +66,13 @@ namespace Diagn
                         UDTBirth = u.DateOfBirth,
                         RegDT = rrr?.RegistrationDateTime ?? DateTime.MinValue,
                     };
-            if (metroComboBox1.SelectedValue != null)
+            if (comboBox1.SelectedValue != null)
             {
-                q = q.Where(x => x.RegServId == (int)metroComboBox1.SelectedValue);
+                q = q.Where(x => x.RegServId == (int)comboBox1.SelectedValue);
             }
-            if (metroComboBox3.SelectedValue != null)
+            if (comboBox2.SelectedValue != null)
             {
-                q = q.Where(x => x.GenderID == (int)metroComboBox3.SelectedValue);
+                q = q.Where(x => x.GenderID == (int)comboBox2.SelectedValue);
             }
             if (dateTimePicker2.Checked)
             {
@@ -87,12 +89,13 @@ namespace Diagn
                 view_UserBindingSource.Filter = string.Format("Id IN {0}", ids_formatted);
             }
             listBox1.Items.Add(view_UserDataGridView.Rows.Count.ToString());
-
         }
 
-        private void previous_race_results_FormClosing(object sender, FormClosingEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            find_out_more_information find = new find_out_more_information();
+            this.Hide();
+            find.Show();
         }
     }
 }

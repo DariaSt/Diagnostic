@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class contact_details : MaterialSkin.Controls.MaterialForm
+    public partial class contact_details : Form
     {
         public contact_details()
         {
@@ -22,16 +22,18 @@ namespace Diagn
 
         }
 
-        private void materialFlatButton2_Click(object sender, EventArgs e)
-        {
-            runner_menu m = new runner_menu();
-            this.Hide();
-            m.Show();
-        }
+       
 
         private void contact_details_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            runner_menu m = new runner_menu();
+            this.Hide();
+            m.Show();
         }
     }
 }

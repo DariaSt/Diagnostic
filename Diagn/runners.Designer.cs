@@ -41,8 +41,9 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.view_RegistrationTableAdapter1 = new Diagn.DiagnosticDataSet1TableAdapters.View_RegistrationTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.view_UserBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.view_UserDataGridView)).BeginInit();
@@ -85,7 +86,7 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.view_UserDataGridView.DataSource = this.view_UserBindingSource;
-            this.view_UserDataGridView.Location = new System.Drawing.Point(33, 125);
+            this.view_UserDataGridView.Location = new System.Drawing.Point(33, 79);
             this.view_UserDataGridView.Name = "view_UserDataGridView";
             this.view_UserDataGridView.Size = new System.Drawing.Size(846, 220);
             this.view_UserDataGridView.TabIndex = 1;
@@ -133,43 +134,35 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "City";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // materialFlatButton4
+            // button1
             // 
-            this.materialFlatButton4.AutoSize = true;
-            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton4.Depth = 0;
-            this.materialFlatButton4.Location = new System.Drawing.Point(829, 70);
-            this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton4.Name = "materialFlatButton4";
-            this.materialFlatButton4.Primary = false;
-            this.materialFlatButton4.Size = new System.Drawing.Size(65, 36);
-            this.materialFlatButton4.TabIndex = 41;
-            this.materialFlatButton4.Text = "Logout";
-            this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(22, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // materialFlatButton1
+            // view_RegistrationTableAdapter1
             // 
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(13, 70);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(59, 36);
-            this.materialFlatButton1.TabIndex = 42;
-            this.materialFlatButton1.Text = "Назад";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.view_RegistrationTableAdapter1.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(804, 22);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 44;
+            this.button2.Text = "Logout";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // runners
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 369);
-            this.Controls.Add(this.materialFlatButton1);
-            this.Controls.Add(this.materialFlatButton4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.view_UserDataGridView);
             this.Name = "runners";
             this.Text = "Diagnostic 2017";
@@ -179,7 +172,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.view_UserBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.view_UserDataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -190,8 +182,6 @@
         private DiagnosticDataSetTableAdapters.View_UserTableAdapter view_UserTableAdapter;
         private DiagnosticDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView view_UserDataGridView;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
@@ -199,5 +189,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.Button button1;
+        private DiagnosticDataSet1TableAdapters.View_RegistrationTableAdapter view_RegistrationTableAdapter1;
+        private System.Windows.Forms.Button button2;
     }
 }

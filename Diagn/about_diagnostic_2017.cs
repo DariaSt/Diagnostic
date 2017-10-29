@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class about_diagnostic_2017 : MaterialSkin.Controls.MaterialForm
+    public partial class about_diagnostic_2017 : Form
     {
         public about_diagnostic_2017()
         {
@@ -22,12 +22,6 @@ namespace Diagn
         
         }
 
-        private void materialFlatButton4_Click(object sender, EventArgs e)
-        {
-            find_out_more_information f = new find_out_more_information();
-            this.Hide();
-            f.Show();
-        }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
@@ -40,5 +34,14 @@ namespace Diagn
         {
             Application.Exit();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            find_out_more_information f = new find_out_more_information();
+            this.Hide();
+            f.Show();
+        }
+
+       
     }
 }

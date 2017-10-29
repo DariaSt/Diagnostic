@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class my_results : MaterialSkin.Controls.MaterialForm
+    public partial class my_results : Form
     {
         public my_results()
         {
@@ -22,30 +22,30 @@ namespace Diagn
 
         }
 
-        private void materialFlatButton2_Click(object sender, EventArgs e)
+        private void my_results_FormClosing(object sender, FormClosingEventArgs e)
         {
-           runner_menu menu = new runner_menu();
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            runner_menu menu = new runner_menu();
             this.Hide();
             menu.Show();
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system m = new main_screen_of_the_system();
+            runner_menu menu = new runner_menu();
             this.Hide();
-            m.Show();
+            menu.Show();
         }
 
-        private void materialFlatButton3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             previous_race_results previous = new previous_race_results();
             this.Hide();
             previous.Show();
-        }
-
-        private void my_results_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

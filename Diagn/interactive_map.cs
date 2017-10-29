@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class interactive_map : MaterialSkin.Controls.MaterialForm
+    public partial class interactive_map : Form
     {
         public interactive_map()
         {
@@ -22,12 +22,7 @@ namespace Diagn
 
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-            find_out_more_information information = new find_out_more_information();
-            this.Hide();
-            information.Show();
-        }
+      
 
         private void pictureBox6_MouseHover(object sender, EventArgs e)
         {
@@ -106,6 +101,13 @@ namespace Diagn
             label6.BackColor = Color.WhiteSmoke;
            
           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            find_out_more_information information = new find_out_more_information();
+            this.Hide();
+            information.Show();
         }
     }
 }

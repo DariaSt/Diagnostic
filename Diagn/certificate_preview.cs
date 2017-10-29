@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class certificate_preview : MaterialSkin.Controls.MaterialForm
+    public partial class certificate_preview : Form
     {
         public certificate_preview()
         {
@@ -26,5 +26,8 @@ namespace Diagn
         {
             Application.Exit();
         }
+
+   
+       
     }
 }

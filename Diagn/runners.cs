@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class runners : MaterialSkin.Controls.MaterialForm
+    public partial class runners : Form
     {
         public runners()
         {
@@ -35,5 +35,7 @@ namespace Diagn
         {
             Application.Exit();
         }
+
+     
     }
 }

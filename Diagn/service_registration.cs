@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class service_registration : MaterialSkin.Controls.MaterialForm
+    public partial class service_registration : Form
     {
         public service_registration()
         {
@@ -22,9 +22,30 @@ namespace Diagn
 
         }
 
-        private void materialFlatButton3_Click(object sender, EventArgs e)
+  
+
+        private void service_registration_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (materialCheckBox1.Checked == true || materialCheckBox2.Checked == true || materialCheckBox3.Checked == true)
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            runner_menu patient = new runner_menu();
+            this.Hide();
+            patient.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            main_screen_of_the_system main = new main_screen_of_the_system();
+            this.Hide();
+            main.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true)
             {
                 registration_confirmation confirmation = new registration_confirmation();
                 this.Hide();
@@ -35,30 +56,12 @@ namespace Diagn
                 MessageBox.Show("Выберите вид услуги!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             }
         }
-        private void materialFlatButton4_Click(object sender, EventArgs e)
+
+        private void button4_Click(object sender, EventArgs e)
         {
             runner_menu patient = new runner_menu();
             this.Hide();
             patient.Show();
-        }
-
-        private void materialFlatButton2_Click(object sender, EventArgs e)
-        {
-            runner_menu patient = new runner_menu();       
-            this.Hide();
-            patient.Show();
-        }
-
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-            main_screen_of_the_system main = new main_screen_of_the_system();
-            this.Hide();
-            main.Show();
-        }
-
-        private void service_registration_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

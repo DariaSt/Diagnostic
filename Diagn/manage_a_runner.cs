@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class manage_a_runner : MaterialSkin.Controls.MaterialForm
+    public partial class manage_a_runner : Form
     {
         public manage_a_runner()
         {
@@ -22,37 +22,31 @@ namespace Diagn
 
         }
 
-        private void materialFlatButton3_Click(object sender, EventArgs e)
+
+        private void manage_a_runner_FormClosing(object sender, FormClosingEventArgs e)
         {
-           certificate_preview preview= new certificate_preview();
-            this.Hide();
-            preview.Show();
+            Application.Exit();
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             runners menu = new runners();
             this.Hide();
             menu.Show();
         }
 
-        private void materialFlatButton2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             authorization_menu m = new authorization_menu();
             this.Hide();
             m.Show();
         }
 
-        private void materialFlatButton4_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            edit_runner_profile profile = new edit_runner_profile();
+            certificate_preview preview = new certificate_preview();
             this.Hide();
-            profile.Show();
-        }
-
-        private void manage_a_runner_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
+            preview.Show();
         }
     }
 }
