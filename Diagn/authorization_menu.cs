@@ -15,6 +15,8 @@ namespace Diagn
         public authorization_menu()
         {
             InitializeComponent();
+            metroTextBox1.Text = "";
+            metroTextBox2.Text = "";
         }
         int RoleId;
         private void Auto_Load(object sender, EventArgs e)
@@ -41,14 +43,13 @@ namespace Diagn
             {
                 case 1:
                     {
-                        main_screen_of_the_system main = new main_screen_of_the_system();
-            this.Hide();
-            main.Show();
-        } break;
-                case 2: {
+                        MessageBox.Show("Неверные данные");
+                    } break;
+                case 2:
+                    {
                         runner_menu menu = new runner_menu(RoleId);
                         this.Hide();
-        menu.Show();
+                        menu.Show();
                     } break;
                 case 3:
                     {
