@@ -226,6 +226,9 @@
     <EmbeddedResource Include="authorization_menu.resx">
       <DependentUpon>authorization_menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DB.resx">
+      <DependentUpon>DB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="manage_a_runner.resx">
       <DependentUpon>manage_a_runner.cs</DependentUpon>
     </EmbeddedResource>
