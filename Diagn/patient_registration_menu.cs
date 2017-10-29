@@ -109,5 +109,12 @@ namespace Diagn
             if (char.IsLetter(e.KeyChar)) return;
             e.Handled = true;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            register_as_a_runner back = new register_as_a_runner();
+            this.Hide();
+            back.Show();
+        }
     }
 }

@@ -66,20 +66,21 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(67, 161);
+            this.button3.Location = new System.Drawing.Point(148, 161);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(118, 39);
             this.button3.TabIndex = 47;
             this.button3.Text = "Пациенты";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(344, 161);
+            this.button4.Location = new System.Drawing.Point(272, 161);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(118, 39);
             this.button4.TabIndex = 48;
-            this.button4.Text = "Пациенты";
+            this.button4.Text = "Медицинское оборудование";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

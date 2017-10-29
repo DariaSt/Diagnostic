@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registration_confirmation));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -68,17 +68,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 77);
+            this.label1.Location = new System.Drawing.Point(121, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(383, 104);
+            this.label1.Size = new System.Drawing.Size(383, 52);
             this.label1.TabIndex = 9;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.label1.Text = "       Спасибо за вашу регистрацию в качестве пациента в Diagnostic 2017!\r\n\r\n\r\n  " +
+    "               С вами свяжутся по поводу дополнительной информации";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(177, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(273, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Спасибо за вашу регистрацию в качестве пациента!";
             // 
             // registration_confirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 287);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -98,5 +109,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
