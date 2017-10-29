@@ -353,6 +353,6 @@ namespace Diagn
         private Button button5;
         private Label label6;
 
-        public FormClosingEventHandler runner_management_FormClosing { get; private set; }
+       
     }
 }

@@ -258,6 +258,6 @@ namespace Diagn
         private System.Windows.Forms.GroupBox groupBox1;
         private Button button1;
 
-        public FormClosingEventHandler interactive_map_FormClosing { get; private set; }
+       
     }
 }
