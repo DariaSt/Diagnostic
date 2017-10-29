@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Diagn
 {
-    public partial class edit_runner_profile : MaterialSkin.Controls.MaterialForm
+    public partial class edit_runner_profile : Form
     {
         public edit_runner_profile()
         {
@@ -24,10 +24,40 @@ namespace Diagn
 
         }
 
-        private void materialFlatButton2_Click(object sender, EventArgs e)
+     
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            if ((metroComboBox1.SelectedIndex < -1) ||
-               (metroTextBox1.Text.Equals("")) || (metroTextBox4.Text.Equals("")) || (metroTextBox5.Text.Equals("")))
+            runner_menu run = new runner_menu();
+            this.Hide();
+            run.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            main_screen_of_the_system main = new main_screen_of_the_system();
+            this.Hide();
+            main.Show();
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((char)e.KeyChar == (Char)Keys.Back) return;
+            if (char.IsLetter(e.KeyChar)) return;
+            e.Handled = true;
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((char)e.KeyChar == (Char)Keys.Back) return;
+            if (char.IsLetter(e.KeyChar)) return;
+            e.Handled = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if ((comboBox1.SelectedIndex < -1) ||
+               (textBox3.Text.Equals("")) || (textBox2.Text.Equals("")) || (textBox1.Text.Equals("")))
             { MessageBox.Show("Вы не ввели все необходимые данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
 
             //else if (metroTextBox2.Text.Length < 6)
@@ -43,52 +73,8 @@ namespace Diagn
                 service.Show();
             }
 
-           
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-            runner_menu run = new runner_menu();
-            this.Hide();
-            run.Show();
-        }
-
-        private void materialLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialFlatButton3_Click(object sender, EventArgs e)
-        {
-            runner_menu run = new runner_menu();
-            this.Hide();
-            run.Show();
-        }
-
-        private void materialFlatButton4_Click(object sender, EventArgs e)
-        {
-            main_screen_of_the_system main = new main_screen_of_the_system();
-            this.Hide();
-            main.Show();
-        }
-
-        private void metroTextBox4_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((char)e.KeyChar == (Char)Keys.Back) return;
-            if (char.IsLetter(e.KeyChar)) return;
-            e.Handled = true;
-        }
-
-        private void metroTextBox5_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((char)e.KeyChar == (Char)Keys.Back) return;
-            if (char.IsLetter(e.KeyChar)) return;
-            e.Handled = true;
-        }
+       
     }
 }
