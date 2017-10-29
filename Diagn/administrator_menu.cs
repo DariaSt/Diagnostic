@@ -45,5 +45,10 @@ namespace Diagn
         {
 
         }
+
+        private void administrator_menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -81,5 +81,7 @@ namespace Diagn
             this.Hide();
             run.Show();
         }
+
+        
     }
 }
