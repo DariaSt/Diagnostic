@@ -75,6 +75,11 @@ namespace Diagn
 
         }
 
-       
+        private void button4_Click(object sender, EventArgs e)
+        {
+            runner_menu run = new runner_menu();
+            this.Hide();
+            run.Show();
+        }
     }
 }
