@@ -60,6 +60,7 @@ namespace Diagn
         private void button2_Click(object sender, EventArgs e)
         {
             RoleId = (int)view_UserTableAdapter1.Authorization(textBox1.Text, textBox2.Text);
+            
             switch (RoleId)
             {
                 case 1:
@@ -69,14 +70,17 @@ namespace Diagn
                     break;
                 case 2:
                     {
-                        runner_menu menu = new runner_menu(RoleId);
+                        DiagnosticDataSetTableAdapters.View_UserTableAdapter _UserTableAdapter = new DiagnosticDataSetTableAdapters.View_UserTableAdapter();
+                        int id=_UserTableAdapter.GetId(textBox1.Text).Value;
+
+                        runner_menu menu = new runner_menu(RoleId, id);
                         this.Hide();
                         menu.Show();
                     }
                     break;
                 case 3:
                     {
-                        administrator_menu adm_menu = new administrator_menu(RoleId);
+                        administrator_menu adm_menu = new administrator_menu(RoleId, textBox1.Text);
                         this.Hide();
                         adm_menu.Show();
                     }

@@ -12,7 +12,7 @@ namespace Diagn
 {
     public partial class administrator_menu : Form
     {
-        public administrator_menu(int RoleId)
+        public administrator_menu(int RoleId, string Login)
         {
             InitializeComponent();
         }

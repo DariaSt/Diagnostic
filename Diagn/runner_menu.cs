@@ -16,9 +16,11 @@ namespace Diagn
         {
             InitializeComponent();
         }
-        public runner_menu(int RoleId)
+        int User_id;
+        public runner_menu(int RoleId, int User)
         {
             InitializeComponent();
+            User_id = User;
         }
         private void Menu_pacienta_Load(object sender, EventArgs e)
         {
@@ -48,7 +50,7 @@ namespace Diagn
 
         private void button3_Click(object sender, EventArgs e)
         {
-            service_registration serv = new service_registration();
+            service_registration serv = new service_registration(User_id);
             this.Hide();
             serv.Show();
         }
@@ -62,7 +64,7 @@ namespace Diagn
 
         private void button5_Click(object sender, EventArgs e)
         {
-            edit_runner_profile edit = new edit_runner_profile();
+            edit_runner_profile edit = new edit_runner_profile(User_id);
             this.Hide();
             edit.Show();
         }
