@@ -16,7 +16,12 @@ namespace Diagn
         {
             InitializeComponent();
         }
-
+        int? User_id;
+        public service_registration(int? Id_User)
+        {
+            InitializeComponent();
+            User_id = Id_User;
+        }
         private void regis_Load(object sender, EventArgs e)
         {
 
@@ -47,6 +52,25 @@ namespace Diagn
         {
             if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true)
             {
+                int id_Service;
+                if (checkBox1.Checked)
+                {
+                    id_Service = 1;
+                    DiagnosticDataSetTableAdapters.View_RegistrationServiceTableAdapter registrationServiceTableAdapter = new DiagnosticDataSetTableAdapters.View_RegistrationServiceTableAdapter();
+                    registrationServiceTableAdapter.Insert_RegistrationService(User_id, id_Service, dateTimePicker1.Value);
+                }
+                if (checkBox2.Checked)
+                {
+                    id_Service = 2;
+                    DiagnosticDataSetTableAdapters.View_RegistrationServiceTableAdapter registrationServiceTableAdapter = new DiagnosticDataSetTableAdapters.View_RegistrationServiceTableAdapter();
+                    registrationServiceTableAdapter.Insert_RegistrationService(User_id, id_Service, dateTimePicker2.Value);
+                }
+                if (checkBox3.Checked)
+                {
+                    id_Service = 3;
+                    DiagnosticDataSetTableAdapters.View_RegistrationServiceTableAdapter registrationServiceTableAdapter = new DiagnosticDataSetTableAdapters.View_RegistrationServiceTableAdapter();
+                    registrationServiceTableAdapter.Insert_RegistrationService(User_id, id_Service, dateTimePicker3.Value);
+                }
                 registration_confirmation confirmation = new registration_confirmation();
                 this.Hide();
                 confirmation.Show();

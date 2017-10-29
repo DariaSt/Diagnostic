@@ -105,9 +105,9 @@ namespace Diagn
             this.roleNameDataGridViewTextBoxColumn,
             this.cityDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.viewUserBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 349);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 312);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(725, 235);
+            this.dataGridView1.Size = new System.Drawing.Size(725, 283);
             this.dataGridView1.TabIndex = 46;
             // 
             // firstNameDataGridViewTextBoxColumn
@@ -157,23 +157,23 @@ namespace Diagn
             this.comboBox1.DataSource = this.servicesServiceBindingSource1;
             this.comboBox1.DisplayMember = "Service";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(147, 230);
+            this.comboBox1.Location = new System.Drawing.Point(203, 188);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 22);
             this.comboBox1.TabIndex = 47;
             this.comboBox1.ValueMember = "Id";
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(147, 277);
+            this.comboBox2.Location = new System.Drawing.Point(203, 238);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.Size = new System.Drawing.Size(121, 22);
             this.comboBox2.TabIndex = 48;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(391, 323);
+            this.textBox1.Location = new System.Drawing.Point(407, 275);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(41, 20);
             this.textBox1.TabIndex = 49;
@@ -181,53 +181,56 @@ namespace Diagn
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 166);
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(141, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 13);
+            this.label1.Size = new System.Drawing.Size(183, 16);
             this.label1.TabIndex = 50;
             this.label1.Text = "Сортировка и фильтрация";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 238);
+            this.label2.Location = new System.Drawing.Point(113, 196);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(44, 14);
             this.label2.TabIndex = 51;
             this.label2.Text = "Услуга:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 280);
+            this.label3.Location = new System.Drawing.Point(113, 242);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.Size = new System.Drawing.Size(71, 14);
             this.label3.TabIndex = 52;
             this.label3.Text = "Сортировка:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(578, 166);
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(567, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.Size = new System.Drawing.Size(70, 16);
             this.label4.TabIndex = 53;
             this.label4.Text = "Выгрузка";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(303, 113);
+            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(214, 61);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 13);
+            this.label5.Size = new System.Drawing.Size(378, 23);
             this.label5.TabIndex = 54;
             this.label5.Text = "Просмотр информации о пациентах";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(52, 77);
+            this.button1.Location = new System.Drawing.Point(12, 32);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 27);
             this.button1.TabIndex = 55;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = true;
@@ -235,9 +238,9 @@ namespace Diagn
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(675, 77);
+            this.button2.Location = new System.Drawing.Point(686, 32);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 25);
             this.button2.TabIndex = 56;
             this.button2.Text = "Logout";
             this.button2.UseVisualStyleBackColor = true;
@@ -245,9 +248,9 @@ namespace Diagn
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(535, 195);
+            this.button3.Location = new System.Drawing.Point(536, 182);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 39);
+            this.button3.Size = new System.Drawing.Size(145, 42);
             this.button3.TabIndex = 57;
             this.button3.Text = "Детальная информация(СSV)";
             this.button3.UseVisualStyleBackColor = true;
@@ -255,9 +258,9 @@ namespace Diagn
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(535, 256);
+            this.button4.Location = new System.Drawing.Point(536, 227);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(145, 39);
+            this.button4.Size = new System.Drawing.Size(145, 42);
             this.button4.TabIndex = 58;
             this.button4.Text = "E-mail список";
             this.button4.UseVisualStyleBackColor = true;
@@ -265,9 +268,9 @@ namespace Diagn
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(341, 254);
+            this.button5.Location = new System.Drawing.Point(361, 196);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(104, 39);
+            this.button5.Size = new System.Drawing.Size(104, 42);
             this.button5.TabIndex = 59;
             this.button5.Text = "Обновить";
             this.button5.UseVisualStyleBackColor = true;
@@ -276,17 +279,17 @@ namespace Diagn
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(338, 323);
+            this.label6.Location = new System.Drawing.Point(358, 278);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.Size = new System.Drawing.Size(32, 14);
             this.label6.TabIndex = 60;
             this.label6.Text = "Total:";
             // 
             // runner_management
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 612);
+            this.ClientSize = new System.Drawing.Size(773, 623);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -302,6 +305,7 @@ namespace Diagn
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "runner_management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";

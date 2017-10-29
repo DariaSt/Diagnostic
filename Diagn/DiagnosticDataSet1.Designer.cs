@@ -6533,6 +6533,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Role_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Map_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.InputOutput, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "dbo.Update_User";
@@ -6616,7 +6617,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Insert_User(string FirstName, string LastName, global::System.Nullable<int> Gender_id, global::System.Nullable<global::System.DateTime> DateOfBirth, string Email, string Password, global::System.Nullable<int> Role_Id, global::System.Nullable<int> Map_Id) {
+        public virtual int Insert_User(string FirstName, string LastName, global::System.Nullable<int> Gender_id, global::System.Nullable<global::System.DateTime> DateOfBirth, string Email, string Password, global::System.Nullable<int> Role_Id, global::System.Nullable<int> Map_Id, ref global::System.Nullable<int> UserId) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((FirstName == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
@@ -6666,6 +6667,12 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
             else {
                 command.Parameters[8].Value = global::System.DBNull.Value;
             }
+            if ((UserId.HasValue == true)) {
+                command.Parameters[9].Value = ((int)(UserId.Value));
+            }
+            else {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6679,6 +6686,13 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     command.Connection.Close();
                 }
+            }
+            if (((command.Parameters[9].Value == null) 
+                        || (command.Parameters[9].Value.GetType() == typeof(global::System.DBNull)))) {
+                UserId = new global::System.Nullable<int>();
+            }
+            else {
+                UserId = new global::System.Nullable<int>(((int)(command.Parameters[9].Value)));
             }
             return returnValue;
         }

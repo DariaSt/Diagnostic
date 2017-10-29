@@ -70,11 +70,11 @@ namespace Diagn
                 MessageBox.Show("Вы не правильно ввели адрес почты. Повторите попытку.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
             }
 
-            else if (!Regex.IsMatch(textBox5.Text, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}"))
+            /*else if (!Regex.IsMatch(textBox5.Text, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}"))
             {
                 MessageBox.Show("Пароль должен содержать: Минимум 6 символов. Минимум 1 прописная буква. Минимум 1 цифра. По крайней мере один из следующих символов: ! @ # $ % ^.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
-            }
+            }*/
             else if (textBox5.Text != textBox4.Text)
             { MessageBox.Show("Пароль не совпадает! Пожалуйста, повторите пароль еще раз!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
 
@@ -88,9 +88,21 @@ namespace Diagn
 
             else
             {
-                DiagnosticDataSet1.View_UserDataTable View_User = new DiagnosticDataSet1.View_UserDataTable();
+               
+                string LastName = textBox1.Text;
+                string FirstName = textBox2.Text;
+                string Email = textBox3.Text;
+                string Pass = textBox4.Text;
+                int id_Gender = (int)comboBox1.SelectedValue;
+                DateTime DateOfBirth = dateTimePicker2.Value;
+                int? UserId = null;
+                DiagnosticDataSetTableAdapters.View_UserTableAdapter view_UserTableAdapter = new DiagnosticDataSetTableAdapters.View_UserTableAdapter();
+                view_UserTableAdapter.Insert_User(FirstName, LastName, id_Gender, DateOfBirth, Email, Pass, 2, null, ref UserId);
+
+
+               // DiagnosticDataSet1.View_UserDataTable View_User = new DiagnosticDataSet1.View_UserDataTable();
                 //  View_User.Update_User(id, metroTextBox1.Text, metroTextBox2.Text, metroTextBox3.Text, metroTextBox4.Text, metroTextBox5.Text);
-                service_registration service = new service_registration();
+                service_registration service = new service_registration(UserId);
                 this.Hide();
                 service.Show();
             }
@@ -98,16 +110,16 @@ namespace Diagn
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((char)e.KeyChar == (Char)Keys.Back) return;
+            /*if ((char)e.KeyChar == (Char)Keys.Back) return;
             if (char.IsLetter(e.KeyChar)) return;
-            e.Handled = true;
+            e.Handled = true;*/
         }
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((char)e.KeyChar == (Char)Keys.Back) return;
+            /*if ((char)e.KeyChar == (Char)Keys.Back) return;
             if (char.IsLetter(e.KeyChar)) return;
-            e.Handled = true;
+            e.Handled = true;*/
         }
 
         private void button4_Click(object sender, EventArgs e)

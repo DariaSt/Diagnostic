@@ -47,18 +47,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(267, 38);
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(219, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 13);
+            this.label1.Size = new System.Drawing.Size(212, 23);
             this.label1.TabIndex = 56;
             this.label1.Text = "Форма авторизации";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(175, 70);
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(103, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(391, 26);
+            this.label2.Size = new System.Drawing.Size(459, 32);
             this.label2.TabIndex = 57;
             this.label2.Text = "Пожалуйста , авторизуйтесь в системе,используя ваш адрес электронной \r\nпочты и па" +
     "роль";
@@ -67,40 +69,40 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(191, 157);
+            this.label3.Location = new System.Drawing.Point(176, 196);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(34, 14);
             this.label3.TabIndex = 58;
             this.label3.Text = "Email:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(191, 190);
+            this.label4.Location = new System.Drawing.Point(176, 230);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.Size = new System.Drawing.Size(60, 14);
             this.label4.TabIndex = 59;
             this.label4.Text = "Password:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(246, 150);
+            this.textBox1.Location = new System.Drawing.Point(242, 190);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(199, 20);
             this.textBox1.TabIndex = 60;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(246, 190);
+            this.textBox2.Location = new System.Drawing.Point(242, 227);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(199, 20);
             this.textBox2.TabIndex = 61;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(26, 73);
+            this.button1.Location = new System.Drawing.Point(12, 34);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 62;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = true;
@@ -108,9 +110,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(163, 270);
+            this.button2.Location = new System.Drawing.Point(256, 291);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 25);
             this.button2.TabIndex = 63;
             this.button2.Text = "Login";
             this.button2.UseVisualStyleBackColor = true;
@@ -118,9 +120,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(356, 270);
+            this.button3.Location = new System.Drawing.Point(337, 291);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(75, 25);
             this.button3.TabIndex = 64;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = true;
@@ -128,9 +130,9 @@
             // 
             // authorization_menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 404);
+            this.ClientSize = new System.Drawing.Size(632, 435);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -140,6 +142,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "authorization_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
