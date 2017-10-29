@@ -1,4 +1,6 @@
-﻿namespace Diagn
+﻿using System.Windows.Forms;
+
+namespace Diagn
 {
     partial class edit_runner_profile
     {
@@ -398,5 +400,7 @@
         private DiagnosticDataSet diagnosticDataSet;
         private System.Windows.Forms.BindingSource genderBindingSource;
         private DiagnosticDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
+
+        public FormClosingEventHandler edit_runner_profile_FormClosing { get; private set; }
     }
 }

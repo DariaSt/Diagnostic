@@ -28,5 +28,84 @@ namespace Diagn
             this.Hide();
             information.Show();
         }
+
+        private void pictureBox6_MouseHover(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.WhiteSmoke;
+            label2.BackColor = Color.Orange;
+            label3.BackColor = Color.WhiteSmoke;
+            label4.BackColor = Color.WhiteSmoke;
+            label5.BackColor = Color.WhiteSmoke;
+            label6.BackColor = Color.WhiteSmoke;
+           
+            
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            label2.BackColor = Color.WhiteSmoke;
+            label1.BackColor = Color.Orange;
+            label3.BackColor = Color.WhiteSmoke;
+            label4.BackColor = Color.WhiteSmoke;
+            label5.BackColor = Color.WhiteSmoke;
+            label6.BackColor = Color.WhiteSmoke;
+
+        }
+
+        private void pictureBox5_MouseHover(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.WhiteSmoke;
+            label5.BackColor = Color.Orange;
+            label3.BackColor = Color.WhiteSmoke;
+            label4.BackColor = Color.WhiteSmoke;
+            label2.BackColor = Color.WhiteSmoke;
+            label6.BackColor = Color.WhiteSmoke;
+
+        }
+
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.WhiteSmoke;
+            label6.BackColor = Color.Orange;
+            label3.BackColor = Color.WhiteSmoke;
+            label4.BackColor = Color.WhiteSmoke;
+            label5.BackColor = Color.WhiteSmoke;
+            label2.BackColor = Color.WhiteSmoke;
+
+        }
+
+        private void pictureBox7_MouseHover(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.WhiteSmoke;
+            label4.BackColor = Color.Orange;
+            label3.BackColor = Color.WhiteSmoke;
+            label2.BackColor = Color.WhiteSmoke;
+            label5.BackColor = Color.WhiteSmoke;
+            label6.BackColor = Color.WhiteSmoke;
+
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.WhiteSmoke;
+            label3.BackColor = Color.Orange;
+            label2.BackColor = Color.WhiteSmoke;
+            label4.BackColor = Color.WhiteSmoke;
+            label5.BackColor = Color.WhiteSmoke;
+            label6.BackColor = Color.WhiteSmoke;
+
+        }
+
+        private void pictureBox6_MouseLeave(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.WhiteSmoke;
+            label2.BackColor = Color.WhiteSmoke;
+            label3.BackColor = Color.WhiteSmoke;
+            label4.BackColor = Color.WhiteSmoke;
+            label5.BackColor = Color.WhiteSmoke;
+            label6.BackColor = Color.WhiteSmoke;
+           
+          
+        }
     }
 }

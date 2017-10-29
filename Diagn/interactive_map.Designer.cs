@@ -1,4 +1,6 @@
-﻿namespace Diagn
+﻿using System.Windows.Forms;
+
+namespace Diagn
 {
     partial class interactive_map
     {
@@ -78,8 +80,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(17, 15);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // pictureBox3
@@ -178,6 +178,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(17, 16);
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave);
             this.pictureBox6.MouseHover += new System.EventHandler(this.pictureBox6_MouseHover);
             // 
             // pictureBox7
@@ -213,7 +214,6 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Местоположение";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // interactive_map
             // 
@@ -232,7 +232,6 @@
             this.Name = "interactive_map";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Интерактивная карта Diagnostic 2017";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.interactive_map_FormClosing);
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -265,5 +264,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
+
+        public FormClosingEventHandler interactive_map_FormClosing { get; private set; }
     }
 }

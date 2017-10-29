@@ -1,4 +1,6 @@
-﻿namespace Diagn
+﻿using System.Windows.Forms;
+
+namespace Diagn
 {
     partial class runner_management
     {
@@ -413,5 +415,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn roleNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
         private System.Windows.Forms.ListBox listBox1;
+
+        public FormClosingEventHandler runner_management_FormClosing { get; private set; }
     }
 }
