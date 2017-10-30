@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.view_RegistrationServiceTableAdapter1 = new Diagn.DiagnosticDataSet1TableAdapters.View_RegistrationServiceTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,10 +60,6 @@
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // view_RegistrationServiceTableAdapter1
-            // 
-            this.view_RegistrationServiceTableAdapter1.ClearBeforeFill = true;
             // 
             // button2
             // 
@@ -294,7 +289,6 @@
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private DiagnosticDataSet1TableAdapters.View_RegistrationServiceTableAdapter view_RegistrationServiceTableAdapter1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -57,7 +57,7 @@ namespace Diagn
 
         private void button4_Click(object sender, EventArgs e)
         {
-            my_results results = new my_results();
+            my_results results = new my_results(User_id);
             this.Hide();
             results.Show();
         }

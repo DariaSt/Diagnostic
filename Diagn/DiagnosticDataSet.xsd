@@ -331,7 +331,7 @@ SELECT Id, Service, Description FROM ServicesService WHERE (Id = @Id)</CommandTe
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DiagnosticConnectionString (Settings)" DbObjectName="Diagnostic.dbo.View_User" DbObjectType="View" GenerateShortCommands="true" GeneratorSourceName="GetId" Modifier="Public" Name="GetId" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="GetId">
+              <DbSource ConnectionRef="DiagnosticConnectionString (Settings)" DbObjectName="Diagnostic.dbo.View_User" DbObjectType="View" GenerateShortCommands="true" GeneratorSourceName="GetId" Modifier="Public" Name="GetId" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetId">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Id
@@ -343,7 +343,7 @@ WHERE        (Email = @Email)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DiagnosticConnectionString (Settings)" DbObjectName="Diagnostic.dbo.Insert_User" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Insert_User" Modifier="Public" Name="Insert_User" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Insert_User">
+              <DbSource ConnectionRef="DiagnosticConnectionString (Settings)" DbObjectName="Diagnostic.dbo.Insert_User" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Insert_User" Modifier="Public" Name="Insert_User" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Insert_User">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.Insert_User</CommandText>
@@ -362,7 +362,7 @@ WHERE        (Email = @Email)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DiagnosticConnectionString (Settings)" DbObjectName="Diagnostic.dbo.Update_User" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Update_User" Modifier="Public" Name="Update_User" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Update_User">
+              <DbSource ConnectionRef="DiagnosticConnectionString (Settings)" DbObjectName="Diagnostic.dbo.Update_User" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Update_User" Modifier="Public" Name="Update_User" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="Update_User">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.Update_User</CommandText>
@@ -383,6 +383,27 @@ WHERE        (Email = @Email)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RegistrationServiceTableAdapter" GeneratorDataComponentClassName="RegistrationServiceTableAdapter" Name="RegistrationService" UserDataComponentName="RegistrationServiceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DiagnosticConnectionString (Settings)" DbObjectName="Diagnostic.dbo.RegistrationService" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        User_id, Service_id, COUNT(Service_id) AS service_count, MAX(Date) AS last_service_date
+FROM            RegistrationService
+GROUP BY User_id, Service_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="User_id" DataSetColumn="User_id" />
+              <Mapping SourceColumn="Service_id" DataSetColumn="Service_id" />
+              <Mapping SourceColumn="service_count" DataSetColumn="service_count" />
+              <Mapping SourceColumn="last_service_date" DataSetColumn="last_service_date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -391,7 +412,7 @@ WHERE        (Email = @Email)</CommandText>
   <xs:element name="DiagnosticDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DiagnosticDataSet" msprop:Generator_UserDSName="DiagnosticDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_UserTableName="Gender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_RowEvArgName="GenderRowChangeEvent" msprop:Generator_RowClassName="GenderRow">
+        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_RowClassName="GenderRow" msprop:Generator_UserTableName="Gender" msprop:Generator_RowEvArgName="GenderRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -405,7 +426,7 @@ WHERE        (Email = @Email)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Map" msprop:Generator_TableClassName="MapDataTable" msprop:Generator_TableVarName="tableMap" msprop:Generator_TablePropName="Map" msprop:Generator_RowDeletingName="MapRowDeleting" msprop:Generator_RowChangingName="MapRowChanging" msprop:Generator_RowEvHandlerName="MapRowChangeEventHandler" msprop:Generator_RowDeletedName="MapRowDeleted" msprop:Generator_UserTableName="Map" msprop:Generator_RowChangedName="MapRowChanged" msprop:Generator_RowEvArgName="MapRowChangeEvent" msprop:Generator_RowClassName="MapRow">
+        <xs:element name="Map" msprop:Generator_TableClassName="MapDataTable" msprop:Generator_TableVarName="tableMap" msprop:Generator_RowChangedName="MapRowChanged" msprop:Generator_TablePropName="Map" msprop:Generator_RowDeletingName="MapRowDeleting" msprop:Generator_RowChangingName="MapRowChanging" msprop:Generator_RowEvHandlerName="MapRowChangeEventHandler" msprop:Generator_RowDeletedName="MapRowDeleted" msprop:Generator_RowClassName="MapRow" msprop:Generator_UserTableName="Map" msprop:Generator_RowEvArgName="MapRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -427,7 +448,7 @@ WHERE        (Email = @Email)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Role" msprop:Generator_TableClassName="RoleDataTable" msprop:Generator_TableVarName="tableRole" msprop:Generator_TablePropName="Role" msprop:Generator_RowDeletingName="RoleRowDeleting" msprop:Generator_RowChangingName="RoleRowChanging" msprop:Generator_RowEvHandlerName="RoleRowChangeEventHandler" msprop:Generator_RowDeletedName="RoleRowDeleted" msprop:Generator_UserTableName="Role" msprop:Generator_RowChangedName="RoleRowChanged" msprop:Generator_RowEvArgName="RoleRowChangeEvent" msprop:Generator_RowClassName="RoleRow">
+        <xs:element name="Role" msprop:Generator_TableClassName="RoleDataTable" msprop:Generator_TableVarName="tableRole" msprop:Generator_RowChangedName="RoleRowChanged" msprop:Generator_TablePropName="Role" msprop:Generator_RowDeletingName="RoleRowDeleting" msprop:Generator_RowChangingName="RoleRowChanging" msprop:Generator_RowEvHandlerName="RoleRowChangeEventHandler" msprop:Generator_RowDeletedName="RoleRowDeleted" msprop:Generator_RowClassName="RoleRow" msprop:Generator_UserTableName="Role" msprop:Generator_RowEvArgName="RoleRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -441,7 +462,7 @@ WHERE        (Email = @Email)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ServicesService" msprop:Generator_TableClassName="ServicesServiceDataTable" msprop:Generator_TableVarName="tableServicesService" msprop:Generator_TablePropName="ServicesService" msprop:Generator_RowDeletingName="ServicesServiceRowDeleting" msprop:Generator_RowChangingName="ServicesServiceRowChanging" msprop:Generator_RowEvHandlerName="ServicesServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="ServicesServiceRowDeleted" msprop:Generator_UserTableName="ServicesService" msprop:Generator_RowChangedName="ServicesServiceRowChanged" msprop:Generator_RowEvArgName="ServicesServiceRowChangeEvent" msprop:Generator_RowClassName="ServicesServiceRow">
+        <xs:element name="ServicesService" msprop:Generator_TableClassName="ServicesServiceDataTable" msprop:Generator_TableVarName="tableServicesService" msprop:Generator_RowChangedName="ServicesServiceRowChanged" msprop:Generator_TablePropName="ServicesService" msprop:Generator_RowDeletingName="ServicesServiceRowDeleting" msprop:Generator_RowChangingName="ServicesServiceRowChanging" msprop:Generator_RowEvHandlerName="ServicesServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="ServicesServiceRowDeleted" msprop:Generator_RowClassName="ServicesServiceRow" msprop:Generator_UserTableName="ServicesService" msprop:Generator_RowEvArgName="ServicesServiceRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -462,7 +483,7 @@ WHERE        (Email = @Email)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View_Registration" msprop:Generator_TableClassName="View_RegistrationDataTable" msprop:Generator_TableVarName="tableView_Registration" msprop:Generator_TablePropName="View_Registration" msprop:Generator_RowDeletingName="View_RegistrationRowDeleting" msprop:Generator_RowChangingName="View_RegistrationRowChanging" msprop:Generator_RowEvHandlerName="View_RegistrationRowChangeEventHandler" msprop:Generator_RowDeletedName="View_RegistrationRowDeleted" msprop:Generator_UserTableName="View_Registration" msprop:Generator_RowChangedName="View_RegistrationRowChanged" msprop:Generator_RowEvArgName="View_RegistrationRowChangeEvent" msprop:Generator_RowClassName="View_RegistrationRow">
+        <xs:element name="View_Registration" msprop:Generator_TableClassName="View_RegistrationDataTable" msprop:Generator_TableVarName="tableView_Registration" msprop:Generator_RowChangedName="View_RegistrationRowChanged" msprop:Generator_TablePropName="View_Registration" msprop:Generator_RowDeletingName="View_RegistrationRowDeleting" msprop:Generator_RowChangingName="View_RegistrationRowChanging" msprop:Generator_RowEvHandlerName="View_RegistrationRowChangeEventHandler" msprop:Generator_RowDeletedName="View_RegistrationRowDeleted" msprop:Generator_RowClassName="View_RegistrationRow" msprop:Generator_UserTableName="View_Registration" msprop:Generator_RowEvArgName="View_RegistrationRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -478,7 +499,7 @@ WHERE        (Email = @Email)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View_RegistrationService" msprop:Generator_TableClassName="View_RegistrationServiceDataTable" msprop:Generator_TableVarName="tableView_RegistrationService" msprop:Generator_TablePropName="View_RegistrationService" msprop:Generator_RowDeletingName="View_RegistrationServiceRowDeleting" msprop:Generator_RowChangingName="View_RegistrationServiceRowChanging" msprop:Generator_RowEvHandlerName="View_RegistrationServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="View_RegistrationServiceRowDeleted" msprop:Generator_UserTableName="View_RegistrationService" msprop:Generator_RowChangedName="View_RegistrationServiceRowChanged" msprop:Generator_RowEvArgName="View_RegistrationServiceRowChangeEvent" msprop:Generator_RowClassName="View_RegistrationServiceRow">
+        <xs:element name="View_RegistrationService" msprop:Generator_TableClassName="View_RegistrationServiceDataTable" msprop:Generator_TableVarName="tableView_RegistrationService" msprop:Generator_RowChangedName="View_RegistrationServiceRowChanged" msprop:Generator_TablePropName="View_RegistrationService" msprop:Generator_RowDeletingName="View_RegistrationServiceRowDeleting" msprop:Generator_RowChangingName="View_RegistrationServiceRowChanging" msprop:Generator_RowEvHandlerName="View_RegistrationServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="View_RegistrationServiceRowDeleted" msprop:Generator_RowClassName="View_RegistrationServiceRow" msprop:Generator_UserTableName="View_RegistrationService" msprop:Generator_RowEvArgName="View_RegistrationServiceRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -500,7 +521,7 @@ WHERE        (Email = @Email)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View_Staff" msprop:Generator_TableClassName="View_StaffDataTable" msprop:Generator_TableVarName="tableView_Staff" msprop:Generator_TablePropName="View_Staff" msprop:Generator_RowDeletingName="View_StaffRowDeleting" msprop:Generator_RowChangingName="View_StaffRowChanging" msprop:Generator_RowEvHandlerName="View_StaffRowChangeEventHandler" msprop:Generator_RowDeletedName="View_StaffRowDeleted" msprop:Generator_UserTableName="View_Staff" msprop:Generator_RowChangedName="View_StaffRowChanged" msprop:Generator_RowEvArgName="View_StaffRowChangeEvent" msprop:Generator_RowClassName="View_StaffRow">
+        <xs:element name="View_Staff" msprop:Generator_TableClassName="View_StaffDataTable" msprop:Generator_TableVarName="tableView_Staff" msprop:Generator_RowChangedName="View_StaffRowChanged" msprop:Generator_TablePropName="View_Staff" msprop:Generator_RowDeletingName="View_StaffRowDeleting" msprop:Generator_RowChangingName="View_StaffRowChanging" msprop:Generator_RowEvHandlerName="View_StaffRowChangeEventHandler" msprop:Generator_RowDeletedName="View_StaffRowDeleted" msprop:Generator_RowClassName="View_StaffRow" msprop:Generator_UserTableName="View_Staff" msprop:Generator_RowEvArgName="View_StaffRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -524,7 +545,7 @@ WHERE        (Email = @Email)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View_Timesheet" msprop:Generator_TableClassName="View_TimesheetDataTable" msprop:Generator_TableVarName="tableView_Timesheet" msprop:Generator_TablePropName="View_Timesheet" msprop:Generator_RowDeletingName="View_TimesheetRowDeleting" msprop:Generator_RowChangingName="View_TimesheetRowChanging" msprop:Generator_RowEvHandlerName="View_TimesheetRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TimesheetRowDeleted" msprop:Generator_UserTableName="View_Timesheet" msprop:Generator_RowChangedName="View_TimesheetRowChanged" msprop:Generator_RowEvArgName="View_TimesheetRowChangeEvent" msprop:Generator_RowClassName="View_TimesheetRow">
+        <xs:element name="View_Timesheet" msprop:Generator_TableClassName="View_TimesheetDataTable" msprop:Generator_TableVarName="tableView_Timesheet" msprop:Generator_RowChangedName="View_TimesheetRowChanged" msprop:Generator_TablePropName="View_Timesheet" msprop:Generator_RowDeletingName="View_TimesheetRowDeleting" msprop:Generator_RowChangingName="View_TimesheetRowChanging" msprop:Generator_RowEvHandlerName="View_TimesheetRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TimesheetRowDeleted" msprop:Generator_RowClassName="View_TimesheetRow" msprop:Generator_UserTableName="View_Timesheet" msprop:Generator_RowEvArgName="View_TimesheetRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -539,7 +560,7 @@ WHERE        (Email = @Email)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View_User" msprop:Generator_TableClassName="View_UserDataTable" msprop:Generator_TableVarName="tableView_User" msprop:Generator_TablePropName="View_User" msprop:Generator_RowDeletingName="View_UserRowDeleting" msprop:Generator_RowChangingName="View_UserRowChanging" msprop:Generator_RowEvHandlerName="View_UserRowChangeEventHandler" msprop:Generator_RowDeletedName="View_UserRowDeleted" msprop:Generator_UserTableName="View_User" msprop:Generator_RowChangedName="View_UserRowChanged" msprop:Generator_RowEvArgName="View_UserRowChangeEvent" msprop:Generator_RowClassName="View_UserRow">
+        <xs:element name="View_User" msprop:Generator_TableClassName="View_UserDataTable" msprop:Generator_TableVarName="tableView_User" msprop:Generator_RowChangedName="View_UserRowChanged" msprop:Generator_TablePropName="View_User" msprop:Generator_RowDeletingName="View_UserRowDeleting" msprop:Generator_RowChangingName="View_UserRowChanging" msprop:Generator_RowEvHandlerName="View_UserRowChangeEventHandler" msprop:Generator_RowDeletedName="View_UserRowDeleted" msprop:Generator_RowClassName="View_UserRow" msprop:Generator_UserTableName="View_User" msprop:Generator_RowEvArgName="View_UserRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -596,6 +617,16 @@ WHERE        (Email = @Email)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="RegistrationService" msprop:Generator_TableClassName="RegistrationServiceDataTable" msprop:Generator_TableVarName="tableRegistrationService" msprop:Generator_TablePropName="RegistrationService" msprop:Generator_RowDeletingName="RegistrationServiceRowDeleting" msprop:Generator_RowChangingName="RegistrationServiceRowChanging" msprop:Generator_RowEvHandlerName="RegistrationServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="RegistrationServiceRowDeleted" msprop:Generator_UserTableName="RegistrationService" msprop:Generator_RowChangedName="RegistrationServiceRowChanged" msprop:Generator_RowEvArgName="RegistrationServiceRowChangeEvent" msprop:Generator_RowClassName="RegistrationServiceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="User_id" msprop:Generator_ColumnVarNameInTable="columnUser_id" msprop:Generator_ColumnPropNameInRow="User_id" msprop:Generator_ColumnPropNameInTable="User_idColumn" msprop:Generator_UserColumnName="User_id" type="xs:int" />
+              <xs:element name="Service_id" msprop:Generator_ColumnVarNameInTable="columnService_id" msprop:Generator_ColumnPropNameInRow="Service_id" msprop:Generator_ColumnPropNameInTable="Service_idColumn" msprop:Generator_UserColumnName="Service_id" type="xs:int" />
+              <xs:element name="service_count" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnservice_count" msprop:Generator_ColumnPropNameInRow="service_count" msprop:Generator_ColumnPropNameInTable="service_countColumn" msprop:Generator_UserColumnName="service_count" type="xs:int" minOccurs="0" />
+              <xs:element name="last_service_date" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnlast_service_date" msprop:Generator_ColumnPropNameInRow="last_service_date" msprop:Generator_ColumnPropNameInTable="last_service_dateColumn" msprop:Generator_UserColumnName="last_service_date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -635,4 +666,9 @@ WHERE        (Email = @Email)</CommandText>
       <xs:field xpath="mstns:Id" />
     </xs:unique>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_RegistrationService_ServicesService" msdata:parent="ServicesService" msdata:child="RegistrationService" msdata:parentkey="Id" msdata:childkey="Service_id" msprop:Generator_UserChildTable="RegistrationService" msprop:Generator_ChildPropName="GetRegistrationServiceRows" msprop:Generator_UserRelationName="FK_RegistrationService_ServicesService" msprop:Generator_ParentPropName="ServicesServiceRow" msprop:Generator_RelationVarName="relationFK_RegistrationService_ServicesService" msprop:Generator_UserParentTable="ServicesService" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>
