@@ -43,7 +43,9 @@ namespace Diagn
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            runners runners = new runners();
+            this.Hide();
+            runners.Show();
         }
 
         private void administrator_menu_FormClosing(object sender, FormClosingEventArgs e)

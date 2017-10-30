@@ -33,7 +33,7 @@ namespace Diagn
             this.components = new System.ComponentModel.Container();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.diagnosticDataSet = new Diagn.DiagnosticDataSet();
+            this.diagnosticDataSet = new Diagn.DiagnosticDataSet11();
             this.genderTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.GenderTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -144,7 +144,7 @@ namespace Diagn
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(187, 188);
+            this.textBox2.Location = new System.Drawing.Point(187, 191);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(199, 20);
             this.textBox2.TabIndex = 47;
@@ -152,7 +152,7 @@ namespace Diagn
             // textBox3
             // 
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(187, 150);
+            this.textBox3.Location = new System.Drawing.Point(187, 153);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(199, 20);
             this.textBox3.TabIndex = 48;
@@ -301,8 +301,7 @@ namespace Diagn
         }
 
         #endregion
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private DiagnosticDataSet diagnosticDataSet;
+        private DiagnosticDataSet11 diagnosticDataSet;
         private System.Windows.Forms.BindingSource genderBindingSource;
         private DiagnosticDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
         private Label label1;
@@ -311,10 +310,6 @@ namespace Diagn
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private ComboBox comboBox1;
         private Label label7;
         private Label label8;
         private Label label9;
@@ -325,6 +320,11 @@ namespace Diagn
         private Button button2;
         private Button button3;
         private Button button4;
+        public DateTimePicker dateTimePicker1;
+        public TextBox textBox1;
+        public TextBox textBox2;
+        public TextBox textBox3;
+        public ComboBox comboBox1;
 
         public FormClosingEventHandler edit_runner_profile_FormClosing { get; private set; }
     }

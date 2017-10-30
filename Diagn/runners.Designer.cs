@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.diagnosticDataSet = new Diagn.DiagnosticDataSet();
+            this.diagnosticDataSet = new Diagn.DiagnosticDataSet11();
             this.view_UserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_UserTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.View_UserTableAdapter();
             this.tableAdapterManager = new Diagn.DiagnosticDataSetTableAdapters.TableAdapterManager();
@@ -178,7 +178,7 @@
 
         #endregion
 
-        private DiagnosticDataSet diagnosticDataSet;
+        private DiagnosticDataSet11 diagnosticDataSet;
         private System.Windows.Forms.BindingSource view_UserBindingSource;
         private DiagnosticDataSetTableAdapters.View_UserTableAdapter view_UserTableAdapter;
         private DiagnosticDataSetTableAdapters.TableAdapterManager tableAdapterManager;

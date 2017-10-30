@@ -45,8 +45,28 @@ namespace Diagn
         private void button3_Click(object sender, EventArgs e)
         {
             certificate_preview preview = new certificate_preview();
+            preview.textBox1.Text = this.textBox1.Text;
+            preview.textBox2.Text = this.textBox2.Text;
             this.Hide();
             preview.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            edit_runner_profile preview = new edit_runner_profile();
+        
+            preview.comboBox1.Text = this.textBox3.Text;
+            preview.textBox1.Text = this.textBox2.Text;
+            preview.textBox2.Text = this.textBox1.Text;
+            preview.dateTimePicker1.Text = this.textBox4.Text;
+            preview.textBox3.Text = this.textBox5.Text;
+            this.Hide();
+            preview.Show();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -27,7 +27,11 @@ namespace Diagn
             Application.Exit();
         }
 
-   
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            manage_a_runner f = new manage_a_runner();
+            this.Hide();
+            f.Show();
+        }
     }
 }

@@ -22,15 +22,14 @@ namespace Diagn
         private void yprav_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.ServicesService". При необходимости она может быть перемещена или удалена.
-            this.servicesServiceTableAdapter1.Fill(this.diagnosticDataSet1.ServicesService);
+            this.servicesServiceTableAdapter2.Fill(this.diagnosticDataSet1.ServicesService);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.View_User". При необходимости она может быть перемещена или удалена.
-            this.view_UserTableAdapter1.Fill(this.diagnosticDataSet1.View_User);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet.View_User". При необходимости она может быть перемещена или удалена.
-            this.view_UserTableAdapter.Fill(this.diagnosticDataSet.View_User);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet.ServicesService". При необходимости она может быть перемещена или удалена.
-            this.servicesServiceTableAdapter.Fill(this.diagnosticDataSet.ServicesService);
-comboBox1.SelectedIndex = -1;
+            this.view_UserTableAdapter2.Fill(this.diagnosticDataSet1.View_User);
+
+            comboBox1.SelectedIndex = -1;
             comboBox2.SelectedIndex = -1;
+          ////  listBox2.Items.Add(dataGridView1.Rows.Count.ToString());
+
 
 
         }
@@ -92,13 +91,13 @@ comboBox1.SelectedIndex = -1;
             ExcelApp.Columns.ColumnWidth = 20;
             ExcelApp.Cells[2, 1] = "Email";
             ExcelApp.Cells[1, 1] = "ОТЧЕТ ПО КЛИЕНТАМ";
-            ExcelApp.Range[ExcelApp.Cells[1, 5], ExcelApp.Cells[1, 5]].Merge(Type.Missing);
+            ExcelApp.Range[ExcelApp.Cells[1, 6], ExcelApp.Cells[1, 6]].Merge(Type.Missing);
             for (int i = 0; i < dataGridView1.RowCount - 1; i++)
             {
 
 
 
-                ExcelApp.Cells[i + 3, 1] = (dataGridView1.Rows[i].Cells[4].Value).ToString();
+                ExcelApp.Cells[i + 3, 1] = (dataGridView1.Rows[i].Cells[5].Value).ToString();
 
             }
 
@@ -139,14 +138,34 @@ comboBox1.SelectedIndex = -1;
                 {
                     viewUserBindingSource1.Sort = $"FirstName {comboBox2.Text}";
                 }
+               listBox2.Items.Add(dataGridView1.Rows.Count.ToString());
 
             }
-            listBox1.Items.Add(dataGridView1.Rows.Count.ToString());
+          
         }
 
         private void runner_management_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            manage_a_runner f = new manage_a_runner();
+            this.Hide();
+            f.Show();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            manage_a_runner f = new manage_a_runner();
+            f.textBox5.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            f.textBox1.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            f.textBox2.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            f.textBox3.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            f.textBox4.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            this.Hide();
+            f.Show();
         }
     }
 }

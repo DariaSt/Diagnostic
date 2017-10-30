@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace Diagn {
     
     
@@ -22,7 +24,7 @@ namespace Diagn {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("DiagnosticDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DiagnosticDataSet : global::System.Data.DataSet {
+    public partial class DiagnosticDataSet11 : global::System.Data.DataSet {
         
         private GenderDataTable tableGender;
         
@@ -46,7 +48,7 @@ namespace Diagn {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DiagnosticDataSet() {
+        public DiagnosticDataSet11() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -57,7 +59,7 @@ namespace Diagn {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DiagnosticDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DiagnosticDataSet11(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -247,7 +249,7 @@ namespace Diagn {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DiagnosticDataSet cln = ((DiagnosticDataSet)(base.Clone()));
+            DiagnosticDataSet11 cln = ((DiagnosticDataSet11)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -481,7 +483,7 @@ namespace Diagn {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DiagnosticDataSet ds = new DiagnosticDataSet();
+            DiagnosticDataSet11 ds = new DiagnosticDataSet11();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -771,7 +773,7 @@ namespace Diagn {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DiagnosticDataSet ds = new DiagnosticDataSet();
+                DiagnosticDataSet11 ds = new DiagnosticDataSet11();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1080,7 +1082,7 @@ namespace Diagn {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DiagnosticDataSet ds = new DiagnosticDataSet();
+                DiagnosticDataSet11 ds = new DiagnosticDataSet11();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1358,7 +1360,7 @@ namespace Diagn {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DiagnosticDataSet ds = new DiagnosticDataSet();
+                DiagnosticDataSet11 ds = new DiagnosticDataSet11();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1652,7 +1654,7 @@ namespace Diagn {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DiagnosticDataSet ds = new DiagnosticDataSet();
+                DiagnosticDataSet11 ds = new DiagnosticDataSet11();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1955,7 +1957,7 @@ namespace Diagn {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DiagnosticDataSet ds = new DiagnosticDataSet();
+                DiagnosticDataSet11 ds = new DiagnosticDataSet11();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2259,7 +2261,7 @@ namespace Diagn {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DiagnosticDataSet ds = new DiagnosticDataSet();
+                DiagnosticDataSet11 ds = new DiagnosticDataSet11();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2592,7 +2594,7 @@ namespace Diagn {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DiagnosticDataSet ds = new DiagnosticDataSet();
+                DiagnosticDataSet11 ds = new DiagnosticDataSet11();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2879,7 +2881,7 @@ namespace Diagn {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DiagnosticDataSet ds = new DiagnosticDataSet();
+                DiagnosticDataSet11 ds = new DiagnosticDataSet11();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3261,7 +3263,7 @@ namespace Diagn {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DiagnosticDataSet ds = new DiagnosticDataSet();
+                DiagnosticDataSet11 ds = new DiagnosticDataSet11();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4495,7 +4497,7 @@ namespace Diagn.DiagnosticDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DiagnosticDataSet.GenderDataTable dataTable) {
+        public virtual int Fill(DiagnosticDataSet11.GenderDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4508,9 +4510,9 @@ namespace Diagn.DiagnosticDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DiagnosticDataSet.GenderDataTable GetData() {
+        public virtual DiagnosticDataSet11.GenderDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DiagnosticDataSet.GenderDataTable dataTable = new DiagnosticDataSet.GenderDataTable();
+            DiagnosticDataSet11.GenderDataTable dataTable = new DiagnosticDataSet11.GenderDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4518,14 +4520,14 @@ namespace Diagn.DiagnosticDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DiagnosticDataSet.GenderDataTable dataTable) {
+        public virtual int Update(DiagnosticDataSet11.GenderDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DiagnosticDataSet dataSet) {
+        public virtual int Update(DiagnosticDataSet11 dataSet) {
             return this.Adapter.Update(dataSet, "Gender");
         }
         
@@ -4822,7 +4824,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DiagnosticDataSet.MapDataTable dataTable) {
+        public virtual int Fill(DiagnosticDataSet11.MapDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4835,9 +4837,9 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DiagnosticDataSet.MapDataTable GetData() {
+        public virtual DiagnosticDataSet11.MapDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DiagnosticDataSet.MapDataTable dataTable = new DiagnosticDataSet.MapDataTable();
+            DiagnosticDataSet11.MapDataTable dataTable = new DiagnosticDataSet11.MapDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4845,14 +4847,14 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DiagnosticDataSet.MapDataTable dataTable) {
+        public virtual int Update(DiagnosticDataSet11.MapDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DiagnosticDataSet dataSet) {
+        public virtual int Update(DiagnosticDataSet11 dataSet) {
             return this.Adapter.Update(dataSet, "Map");
         }
         
@@ -5168,7 +5170,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DiagnosticDataSet.RoleDataTable dataTable) {
+        public virtual int Fill(DiagnosticDataSet11.RoleDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5181,9 +5183,9 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DiagnosticDataSet.RoleDataTable GetData() {
+        public virtual DiagnosticDataSet11.RoleDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DiagnosticDataSet.RoleDataTable dataTable = new DiagnosticDataSet.RoleDataTable();
+            DiagnosticDataSet11.RoleDataTable dataTable = new DiagnosticDataSet11.RoleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5191,14 +5193,14 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DiagnosticDataSet.RoleDataTable dataTable) {
+        public virtual int Update(DiagnosticDataSet11.RoleDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DiagnosticDataSet dataSet) {
+        public virtual int Update(DiagnosticDataSet11 dataSet) {
             return this.Adapter.Update(dataSet, "Role");
         }
         
@@ -5487,7 +5489,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DiagnosticDataSet.ServicesServiceDataTable dataTable) {
+        public virtual int Fill(DiagnosticDataSet11.ServicesServiceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5500,9 +5502,9 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DiagnosticDataSet.ServicesServiceDataTable GetData() {
+        public virtual DiagnosticDataSet11.ServicesServiceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DiagnosticDataSet.ServicesServiceDataTable dataTable = new DiagnosticDataSet.ServicesServiceDataTable();
+            DiagnosticDataSet11.ServicesServiceDataTable dataTable = new DiagnosticDataSet11.ServicesServiceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5510,14 +5512,14 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DiagnosticDataSet.ServicesServiceDataTable dataTable) {
+        public virtual int Update(DiagnosticDataSet11.ServicesServiceDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DiagnosticDataSet dataSet) {
+        public virtual int Update(DiagnosticDataSet11 dataSet) {
             return this.Adapter.Update(dataSet, "ServicesService");
         }
         
@@ -5632,6 +5634,11 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string Service, string Description, int Original_Id) {
             return this.Update(Service, Description, Original_Id, Original_Id);
+        }
+
+        internal void Fill(DiagnosticDataSet1.ServicesServiceDataTable servicesService)
+        {
+            throw new NotImplementedException();
         }
     }
     
@@ -5785,7 +5792,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DiagnosticDataSet.View_RegistrationDataTable dataTable) {
+        public virtual int Fill(DiagnosticDataSet11.View_RegistrationDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5798,9 +5805,9 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DiagnosticDataSet.View_RegistrationDataTable GetData() {
+        public virtual DiagnosticDataSet11.View_RegistrationDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DiagnosticDataSet.View_RegistrationDataTable dataTable = new DiagnosticDataSet.View_RegistrationDataTable();
+            DiagnosticDataSet11.View_RegistrationDataTable dataTable = new DiagnosticDataSet11.View_RegistrationDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5963,7 +5970,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DiagnosticDataSet.View_RegistrationServiceDataTable dataTable) {
+        public virtual int Fill(DiagnosticDataSet11.View_RegistrationServiceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5976,9 +5983,9 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DiagnosticDataSet.View_RegistrationServiceDataTable GetData() {
+        public virtual DiagnosticDataSet11.View_RegistrationServiceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DiagnosticDataSet.View_RegistrationServiceDataTable dataTable = new DiagnosticDataSet.View_RegistrationServiceDataTable();
+            DiagnosticDataSet11.View_RegistrationServiceDataTable dataTable = new DiagnosticDataSet11.View_RegistrationServiceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6175,7 +6182,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DiagnosticDataSet.View_StaffDataTable dataTable) {
+        public virtual int Fill(DiagnosticDataSet11.View_StaffDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6188,9 +6195,9 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DiagnosticDataSet.View_StaffDataTable GetData() {
+        public virtual DiagnosticDataSet11.View_StaffDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DiagnosticDataSet.View_StaffDataTable dataTable = new DiagnosticDataSet.View_StaffDataTable();
+            DiagnosticDataSet11.View_StaffDataTable dataTable = new DiagnosticDataSet11.View_StaffDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6344,7 +6351,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DiagnosticDataSet.View_TimesheetDataTable dataTable) {
+        public virtual int Fill(DiagnosticDataSet11.View_TimesheetDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6357,9 +6364,9 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DiagnosticDataSet.View_TimesheetDataTable GetData() {
+        public virtual DiagnosticDataSet11.View_TimesheetDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DiagnosticDataSet.View_TimesheetDataTable dataTable = new DiagnosticDataSet.View_TimesheetDataTable();
+            DiagnosticDataSet11.View_TimesheetDataTable dataTable = new DiagnosticDataSet11.View_TimesheetDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6559,7 +6566,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DiagnosticDataSet.View_UserDataTable dataTable) {
+        public virtual int Fill(DiagnosticDataSet11.View_UserDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6572,9 +6579,9 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DiagnosticDataSet.View_UserDataTable GetData() {
+        public virtual DiagnosticDataSet11.View_UserDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DiagnosticDataSet.View_UserDataTable dataTable = new DiagnosticDataSet.View_UserDataTable();
+            DiagnosticDataSet11.View_UserDataTable dataTable = new DiagnosticDataSet11.View_UserDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6811,6 +6818,11 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
             }
             return returnValue;
         }
+
+        internal void Fill(DiagnosticDataSet1.View_UserDataTable view_User)
+        {
+            throw new NotImplementedException();
+        }
     }
     
     /// <summary>
@@ -6973,7 +6985,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DiagnosticDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DiagnosticDataSet11 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._genderTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Gender.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -7019,7 +7031,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DiagnosticDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DiagnosticDataSet11 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._genderTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Gender.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -7061,7 +7073,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DiagnosticDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DiagnosticDataSet11 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._servicesServiceTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.ServicesService.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -7127,7 +7139,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DiagnosticDataSet dataSet) {
+        public virtual int UpdateAll(DiagnosticDataSet11 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
