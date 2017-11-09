@@ -22,19 +22,9 @@ namespace Diagn
         private void yprav_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.ServicesService". При необходимости она может быть перемещена или удалена.
-            this.servicesServiceTableAdapter.Fill(this.diagnosticDataSet.ServicesService);
+            this.servicesServiceTableAdapter2.Fill(this.diagnosticDataSet1.ServicesService);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.View_User". При необходимости она может быть перемещена или удалена.
-            this.view_UserTableAdapter.Fill(this.diagnosticDataSet.View_User);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.View_User". При необходимости она может быть перемещена или удалена.
-            this.view_UserTableAdapter.Fill(this.diagnosticDataSet.View_User);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.View_User". При необходимости она может быть перемещена или удалена.
-            //this.view_UserTableAdapter2.Fill(this.diagnosticDataSet1.View_User);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.ServicesService". При необходимости она может быть перемещена или удалена.
-            //  this.servicesServiceTableAdapter2.Fill(this.diagnosticDataSet1.ServicesService);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.View_User". При необходимости она может быть перемещена или удалена.
-            // this.view_UserTableAdapter2.Fill(this.diagnosticDataSet1.View_User);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.View_User". При необходимости она может быть перемещена или удалена.
-
+            this.view_UserTableAdapter2.Fill(this.diagnosticDataSet1.View_User);
             comboBox1.SelectedIndex = -1;
             comboBox2.SelectedIndex = -1;
           listBox2.Items.Add(dataGridView1.Rows.Count.ToString());
