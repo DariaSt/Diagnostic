@@ -68,5 +68,13 @@ namespace Diagn
         {
             
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (textBox5.Text != null)
+            {
+                checkBox1.Checked = true;
+            }
+        }
     }
 }

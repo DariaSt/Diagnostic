@@ -58,9 +58,12 @@ namespace Diagn
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.servicesServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.servicesServiceTableAdapter2 = new Diagn.DiagnosticDataSet1TableAdapters.ServicesServiceTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -87,6 +90,8 @@ namespace Diagn
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.servicesServiceBindingSource;
+            this.comboBox1.DisplayMember = "Service";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(203, 188);
             this.comboBox1.Name = "comboBox1";
@@ -96,6 +101,7 @@ namespace Diagn
             // 
             // comboBox2
             // 
+            this.comboBox2.DisplayMember = "Id";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(203, 238);
             this.comboBox2.Name = "comboBox2";
@@ -199,7 +205,6 @@ namespace Diagn
             this.button5.TabIndex = 59;
             this.button5.Text = "Обновить";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label6
             // 
@@ -287,6 +292,15 @@ namespace Diagn
             this.cityDataGridViewTextBoxColumn.HeaderText = "City";
             this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
             // 
+            // servicesServiceBindingSource
+            // 
+            this.servicesServiceBindingSource.DataMember = "ServicesService";
+            this.servicesServiceBindingSource.DataSource = this.diagnosticDataSet1;
+            // 
+            // servicesServiceTableAdapter2
+            // 
+            this.servicesServiceTableAdapter2.ClearBeforeFill = true;
+            // 
             // runner_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -316,6 +330,7 @@ namespace Diagn
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +370,7 @@ namespace Diagn
         private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn roleNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
+        private BindingSource servicesServiceBindingSource;
+        private DiagnosticDataSet1TableAdapters.ServicesServiceTableAdapter servicesServiceTableAdapter2;
     }
 }

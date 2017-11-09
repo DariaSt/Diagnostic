@@ -3601,7 +3601,7 @@ namespace Diagn {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DiagnosticDataSet ds = new DiagnosticDataSet();
+                DiagnosticDataSet11 ds = new DiagnosticDataSet11();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -7465,7 +7465,7 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DiagnosticDataSet.RegistrationServiceDataTable dataTable) {
+        public virtual int Fill(DiagnosticDataSet11.RegistrationServiceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7478,9 +7478,9 @@ SELECT Id, City, Date, Address FROM Map WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DiagnosticDataSet.RegistrationServiceDataTable GetData() {
+        public virtual DiagnosticDataSet11.RegistrationServiceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DiagnosticDataSet.RegistrationServiceDataTable dataTable = new DiagnosticDataSet.RegistrationServiceDataTable();
+            DiagnosticDataSet11.RegistrationServiceDataTable dataTable = new DiagnosticDataSet11.RegistrationServiceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
