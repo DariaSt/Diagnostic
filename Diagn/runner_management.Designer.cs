@@ -30,6 +30,7 @@ namespace Diagn
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -45,13 +46,44 @@ namespace Diagn
             this.button5 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.diagnosticDataSet2 = new Diagn.DiagnosticDataSet2();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.view_UserTableAdapter2 = new Diagn.DiagnosticDataSet2TableAdapters.View_UserTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.servicesServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.servicesServiceTableAdapter2 = new Diagn.DiagnosticDataSet2TableAdapters.ServicesServiceTableAdapter();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.dateOfBirthDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.roleNameDataGridViewTextBoxColumn,
+            this.cityDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.bindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(17, 298);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(744, 283);
@@ -60,7 +92,8 @@ namespace Diagn
             // 
             // comboBox1
             // 
-            this.comboBox1.DisplayMember = "Id";
+            this.comboBox1.DataSource = this.servicesServiceBindingSource;
+            this.comboBox1.DisplayMember = "Service";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(203, 188);
             this.comboBox1.Name = "comboBox1";
@@ -70,7 +103,8 @@ namespace Diagn
             // 
             // comboBox2
             // 
-            this.comboBox2.DisplayMember = "Id";
+            this.comboBox2.DataSource = this.bindingSource2;
+            this.comboBox2.DisplayMember = "FirstName";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(203, 238);
             this.comboBox2.Name = "comboBox2";
@@ -174,6 +208,7 @@ namespace Diagn
             this.button5.TabIndex = 59;
             this.button5.Text = "Обновить";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label6
             // 
@@ -192,6 +227,88 @@ namespace Diagn
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(56, 18);
             this.listBox2.TabIndex = 61;
+            // 
+            // diagnosticDataSet2
+            // 
+            this.diagnosticDataSet2.DataSetName = "DiagnosticDataSet2";
+            this.diagnosticDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "View_User";
+            this.bindingSource1.DataSource = this.diagnosticDataSet2;
+            // 
+            // view_UserTableAdapter2
+            // 
+            this.view_UserTableAdapter2.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // dateOfBirthDataGridViewTextBoxColumn
+            // 
+            this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "DateOfBirth";
+            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "DateOfBirth";
+            this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // roleNameDataGridViewTextBoxColumn
+            // 
+            this.roleNameDataGridViewTextBoxColumn.DataPropertyName = "RoleName";
+            this.roleNameDataGridViewTextBoxColumn.HeaderText = "RoleName";
+            this.roleNameDataGridViewTextBoxColumn.Name = "roleNameDataGridViewTextBoxColumn";
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            // 
+            // servicesServiceBindingSource
+            // 
+            this.servicesServiceBindingSource.DataMember = "ServicesService";
+            this.servicesServiceBindingSource.DataSource = this.diagnosticDataSet2;
+            // 
+            // servicesServiceTableAdapter2
+            // 
+            this.servicesServiceTableAdapter2.ClearBeforeFill = true;
+            // 
+            // bindingSource2
+            // 
+            this.bindingSource2.DataMember = "View_User";
+            this.bindingSource2.DataSource = this.diagnosticDataSet2;
             // 
             // runner_management
             // 
@@ -220,6 +337,10 @@ namespace Diagn
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.runner_management_FormClosing);
             this.Load += new System.EventHandler(this.yprav_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicesServiceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,5 +368,20 @@ namespace Diagn
         private Button button5;
         private Label label6;
         private ListBox listBox2;
+        private DiagnosticDataSet2 diagnosticDataSet2;
+        private BindingSource bindingSource1;
+        private DiagnosticDataSet2TableAdapters.View_UserTableAdapter view_UserTableAdapter2;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn roleNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
+        private BindingSource servicesServiceBindingSource;
+        private DiagnosticDataSet2TableAdapters.ServicesServiceTableAdapter servicesServiceTableAdapter2;
+        private BindingSource bindingSource2;
     }
 }

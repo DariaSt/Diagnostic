@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Diagn.DiagnosticDataSet1TableAdapters;
+//using Diagn.DiagnosticDataSet1TableAdapters;
+using Diagn.DiagnosticDataSet2TableAdapters;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Diagn
@@ -21,10 +22,14 @@ namespace Diagn
 
         private void yprav_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet2.ServicesService". При необходимости она может быть перемещена или удалена.
+            this.servicesServiceTableAdapter2.Fill(this.diagnosticDataSet2.ServicesService);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet2.View_User". При необходимости она может быть перемещена или удалена.
+            this.view_UserTableAdapter2.Fill(this.diagnosticDataSet2.View_User);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.ServicesService". При необходимости она может быть перемещена или удалена.
-           // this.servicesServiceTableAdapter2.Fill(this.diagnosticDataSet1.ServicesService);
+            // this.servicesServiceTableAdapter2.Fill(this.diagnosticDataSet1.ServicesService);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.View_User". При необходимости она может быть перемещена или удалена.
-          //  this.view_UserTableAdapter2.Fill(this.diagnosticDataSet1.View_User);
+            //  this.view_UserTableAdapter2.Fill(this.diagnosticDataSet1.View_User);
             comboBox1.SelectedIndex = -1;
             comboBox2.SelectedIndex = -1;
           listBox2.Items.Add(dataGridView1.Rows.Count.ToString());
@@ -104,41 +109,43 @@ namespace Diagn
             ExcelApp.UserControl = true;
         }
 
-        //private void button5_Click(object sender, EventArgs e)
-        //{
-        //    var u_ta = new UserTableAdapter();
-        //    var rs_ta = new RegistrationServiceTableAdapter();
-        //    u_ta.Fill(diagnosticDataSet11.User);
-        //    rs_ta.Fill(diagnosticDataSet11.RegistrationService);
-        //    var q = from u in diagnosticDataSet11.User
-        //            join rs in diagnosticDataSet11.RegistrationService on u.Id equals rs.User_id into rsr
-        //            from rsrr in rsr.DefaultIfEmpty()
-        //            select new
-        //            {
-        //                Uid = u.Id,
-        //                RegServId = rsrr?.Service_id ?? 0,
-        //                Name = u.FirstName,
-        //            };
-        //    if (comboBox1.SelectedValue != null)
-        //    {
-        //        q = q.Where(x => x.RegServId == (int)comboBox1.SelectedValue);
-        //    }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var u_ta = new UserTableAdapter();
+            var rs_ta = new RegistrationServiceTableAdapter();
+            u_ta.Fill(diagnosticDataSet2.User);
+            rs_ta.Fill(diagnosticDataSet2.RegistrationService);
+            var q = from u in diagnosticDataSet2.User
+                    join rs in diagnosticDataSet2.RegistrationService on u.Id equals rs.User_id into rsr
+                    from rsrr in rsr.DefaultIfEmpty()
+                    select new
+                    {
+                        Uid = u.Id,
+                        RegServId = rsrr?.Service_id ?? 0,
+                        Name = u.FirstName,
+                    };
+            // вот такой конструкцией
+            if (comboBox1.SelectedValue != null)
+            {
+                q = q.Where(x => x.RegServId == (int)comboBox1.SelectedValue);
+            }
 
 
-        //    var user_ids = q.Select(x => x.Uid).ToList();
-        //    var ids_formatted = $"({string.Join(", ", user_ids)})";
-        //    if (ids_formatted != "()")
-        //    {
-        //        bindingSource.Filter = $"Id IN {ids_formatted}";
-        //        if (comboBox2.Text != "")
-        //        {
-        //            bindingSource.Sort = $"FirstName {comboBox2.Text}";
-        //        }
-        //       listBox2.Items.Add(dataGridView1.Rows.Count.ToString());
+            var user_ids = q.Select(x => x.Uid).ToList();
+            var ids_formatted = $"({string.Join(", ", user_ids)})";
+            if (ids_formatted != "()")
+            {
+                bindingSource1.Filter = $"Id IN {ids_formatted}";
+                if (comboBox2.Text != "")
+                {
+                   // bindingSource1.Sort = $"FirstName {comboBox2.Text}";
+                   bindingSource1.Filter= $"FirstName='"+comboBox2.Text+"'";
+                }
+                listBox2.Items.Add(dataGridView1.Rows.Count.ToString());
 
-        //    }
-          
-        //}
+            }
+
+        }
 
         private void runner_management_FormClosing(object sender, FormClosingEventArgs e)
         {
