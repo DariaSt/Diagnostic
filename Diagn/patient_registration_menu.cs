@@ -78,9 +78,9 @@ namespace Diagn
             else if (textBox5.Text != textBox4.Text)
             { MessageBox.Show("Пароль не совпадает! Пожалуйста, повторите пароль еще раз!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
 
-            else if (year < 16)
+           /* else if (year < 16)
             { MessageBox.Show("Для регистрации ваш возраст должен быть не менее 16 лет", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
-
+            */
             else if ((comboBox1.SelectedIndex < -1) ||
                ((textBox3.Text.Equals("")) || (textBox2.Text.Equals("")) || (textBox1.Text.Equals("")) || (textBox4.Text.Equals("")) || (textBox5.Text.Equals(""))))
             { MessageBox.Show("Вы не ввели все необходимые данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }

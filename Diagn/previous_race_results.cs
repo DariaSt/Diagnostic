@@ -8,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Diagn.DiagnosticDataSet1TableAdapters;
+//using Diagn.DiagnosticDataSet1TableAdapters;
+using Diagn.DiagnosticDataSet2TableAdapters;
 
 namespace Diagn
 {
@@ -21,6 +22,15 @@ namespace Diagn
 
         private void Rez_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet2.View_Timesheet". При необходимости она может быть перемещена или удалена.
+            this.view_TimesheetTableAdapter.Fill(this.diagnosticDataSet2.View_Timesheet);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet2.View_User". При необходимости она может быть перемещена или удалена.
+            this.view_UserTableAdapter.Fill(this.diagnosticDataSet2.View_User);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet2.Gender". При необходимости она может быть перемещена или удалена.
+            this.genderTableAdapter.Fill(this.diagnosticDataSet2.Gender);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet2.ServicesService". При необходимости она может быть перемещена или удалена.
+            this.servicesServiceTableAdapter.Fill(this.diagnosticDataSet2.ServicesService);
+            /*Надя
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.View_Timesheet". При необходимости она может быть перемещена или удалена.
             this.view_TimesheetTableAdapter.Fill(this.diagnosticDataSet1.View_Timesheet);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.Gender". При необходимости она может быть перемещена или удалена.
@@ -29,7 +39,7 @@ namespace Diagn
             this.servicesServiceTableAdapter.Fill(this.diagnosticDataSet1.ServicesService);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.View_User". При необходимости она может быть перемещена или удалена.
             this.view_UserTableAdapter.Fill(this.diagnosticDataSet1.View_User);
-            
+            */
             comboBox1.SelectedIndex = -1;
             comboBox2.SelectedIndex = -1;
             dateTimePicker2.Checked = false;
@@ -50,20 +60,20 @@ namespace Diagn
             var u_ta = new UserTableAdapter();
             var rs_ta = new RegistrationServiceTableAdapter();
             var r_ta = new RegistrationTableAdapter();
-            u_ta.Fill(diagnosticDataSet1.User);
-            rs_ta.Fill(diagnosticDataSet1.RegistrationService);
-            r_ta.Fill(diagnosticDataSet1.Registration);
-            var q = from u in diagnosticDataSet1.User
-                    join rs in diagnosticDataSet1.RegistrationService on u.Id equals rs.User_id into rsr
+            u_ta.Fill(diagnosticDataSet2.User);
+            rs_ta.Fill(diagnosticDataSet2.RegistrationService);
+            r_ta.Fill(diagnosticDataSet2.Registration);
+            var q = from u in diagnosticDataSet2.User
+                    join rs in diagnosticDataSet2.RegistrationService on u.Id equals rs.User_id into rsr
                     from rsrr in rsr.DefaultIfEmpty()
-                    join r in diagnosticDataSet1.Registration on u.Id equals r.User_Id into rr
+                    join r in diagnosticDataSet2.Registration on u.Id equals r.User_Id into rr
                     from rrr in rr.DefaultIfEmpty()
                     select new
                     {
                         Uid = u.Id,
                         GenderID = u.Gender_Id,
                         RegServId = rsrr?.Service_id ?? 0,
-                        UDTBirth = u.DateOfBirth,
+                       UDTBirth = u.DateOfBirth,// вот тут она хранится
                         RegDT = rrr?.RegistrationDateTime ?? DateTime.MinValue,
                     };
             if (comboBox1.SelectedValue != null)
@@ -86,7 +96,7 @@ namespace Diagn
             var ids_formatted = string.Format("({0})", string.Join(", ", user_ids));
             if (ids_formatted != "()")
             {
-                view_UserBindingSource.Filter = string.Format("Id IN {0}", ids_formatted);
+                viewUserBindingSource.Filter = string.Format("Id IN {0}", ids_formatted);
             }
             listBox1.Items.Add(view_UserDataGridView.Rows.Count.ToString());
         }
