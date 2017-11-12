@@ -87,13 +87,10 @@
     <Compile Include="authorization_menu.Designer.cs">
       <DependentUpon>authorization_menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="DB.cs">
-      <SubType>Form</SubType>
+    <Compile Include="DiagnosticDataSet.cs">
+      <DependentUpon>DiagnosticDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DB.Designer.cs">
-      <DependentUpon>DB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DiagnosticDataSet1.Designer.cs">
+    <Compile Include="DiagnosticDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DiagnosticDataSet.xsd</DependentUpon>
@@ -226,14 +223,12 @@
     <EmbeddedResource Include="authorization_menu.resx">
       <DependentUpon>authorization_menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DB.resx">
-      <DependentUpon>DB.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="manage_a_runner.resx">
       <DependentUpon>manage_a_runner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="patient_registration_menu.resx">
       <DependentUpon>patient_registration_menu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="registration_confirmation.resx">
       <DependentUpon>registration_confirmation.cs</DependentUpon>
@@ -377,6 +372,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DiagnosticDataSet\" />
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

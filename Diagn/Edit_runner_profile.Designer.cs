@@ -33,7 +33,7 @@ namespace Diagn
             this.components = new System.ComponentModel.Container();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.diagnosticDataSet = new Diagn.DiagnosticDataSet11();
+            this.diagnosticDataSet = new Diagn.DiagnosticDataSet();
             this.genderTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.GenderTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -301,7 +301,7 @@ namespace Diagn
         }
 
         #endregion
-        private DiagnosticDataSet11 diagnosticDataSet;
+        private DiagnosticDataSet diagnosticDataSet;
         private System.Windows.Forms.BindingSource genderBindingSource;
         private DiagnosticDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
         private Label label1;

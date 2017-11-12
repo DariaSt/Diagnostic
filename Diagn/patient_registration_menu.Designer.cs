@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.diagnosticDataSet = new Diagn.DiagnosticDataSet11();
+            this.diagnosticDataSet = new Diagn.DiagnosticDataSet();
             this.genderTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.GenderTableAdapter();
             this.diagnosticDataSet1 = new Diagn.DiagnosticDataSet1();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -296,7 +296,7 @@
         }
 
         #endregion
-        private DiagnosticDataSet11 diagnosticDataSet;
+        private DiagnosticDataSet diagnosticDataSet;
         private System.Windows.Forms.BindingSource genderBindingSource;
         private DiagnosticDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
         private DiagnosticDataSet1 diagnosticDataSet1;

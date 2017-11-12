@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Diagn.DiagnosticDataSetTableAdapters;
 
 namespace Diagn
 {
@@ -19,8 +20,12 @@ namespace Diagn
 
         private void runners_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet.View_RegistrationService". При необходимости она может быть перемещена или удалена.
+            this.view_RegistrationServiceTableAdapter.Fill(this.diagnosticDataSet.View_RegistrationService);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet1.View_Registration". При необходимости она может быть перемещена или удалена.
+            //   this.view_RegistrationTableAdapter.Fill(this.diagnosticDataSet1.View_Registration);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "diagnosticDataSet.View_User". При необходимости она может быть перемещена или удалена.
-            this.view_UserTableAdapter.Fill(this.diagnosticDataSet.View_User);
+            //    this.view_UserTableAdapter.Fill(this.diagnosticDataSet.View_User);
 
         }
 
