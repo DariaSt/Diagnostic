@@ -12,28 +12,63 @@ namespace Diagn
 {
     public partial class administrator_menu : Form
     {
-        public administrator_menu(int RoleId, string Login)
+        public administrator_menu()
         {
             InitializeComponent();
         }
-
-        private void Form6_Load(object sender, EventArgs e)
+        int Role_;
+        public administrator_menu(int RoleId, string Login)
         {
-
+            Role_ = ClassRole.Role;
+            InitializeComponent();
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system main = new main_screen_of_the_system();
             this.Hide();
-            main.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                main_screen_of_the_system main = new main_screen_of_the_system(Role_);
+               
+                main.Show();
+            }
+            //main_screen_of_the_system main = new main_screen_of_the_system(Role_);
+            //this.Hide();
+            //main.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system main = new main_screen_of_the_system();
+            ClassRole.Role = 1;
             this.Hide();
-            main.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                main_screen_of_the_system main = new main_screen_of_the_system();
+               
+                main.Show();
+            }
+            //main_screen_of_the_system main = new main_screen_of_the_system();
+            //this.Hide();
+            //main.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -43,9 +78,25 @@ namespace Diagn
 
         private void button3_Click(object sender, EventArgs e)
         {
-            runners runners = new runners();
             this.Hide();
-            runners.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is runners);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                runners runners = new runners();
+               // this.Hide();
+                runners.Show();
+            }
+            //runners runners = new runners();
+            //this.Hide();
+            //runners.Show();
         }
 
         private void administrator_menu_FormClosing(object sender, FormClosingEventArgs e)
