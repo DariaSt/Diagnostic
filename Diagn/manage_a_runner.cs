@@ -17,12 +17,7 @@ namespace Diagn
             InitializeComponent();
         }
 
-        private void manage_a_runner_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
+        
         private void manage_a_runner_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -30,16 +25,48 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            runners menu = new runners();
             this.Hide();
-            menu.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is runners);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                runners menu = new runners();
+               
+                menu.Show();
+            }
+            //runners menu = new runners();
+            //this.Hide();
+            //menu.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            authorization_menu m = new authorization_menu();
             this.Hide();
-            m.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                main_screen_of_the_system m = new main_screen_of_the_system();
+               
+                m.Show();
+            }
+            //authorization_menu m = new authorization_menu();
+            //this.Hide();
+            //m.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -63,12 +90,7 @@ namespace Diagn
             this.Hide();
             preview.Show();
         }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (textBox5.Text != null)

@@ -87,6 +87,7 @@
     <Compile Include="authorization_menu.Designer.cs">
       <DependentUpon>authorization_menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassRole.cs" />
     <Compile Include="DiagnosticDataSet.cs">
       <DependentUpon>DiagnosticDataSet.xsd</DependentUpon>
     </Compile>

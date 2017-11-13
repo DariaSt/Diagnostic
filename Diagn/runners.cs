@@ -29,18 +29,35 @@ namespace Diagn
 
         }
 
-        private void view_UserDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+       /* private void view_UserDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
            manage_a_runner run = new manage_a_runner();
             this.Hide();
             run.Show();
-        }
+        }*/
 
         private void runners_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
 
-     
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is administrator_menu);
+            if (formToShow != null)
+            {
+                
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                administrator_menu main = new administrator_menu();
+                main.Show();
+            }
+        }
     }
 }

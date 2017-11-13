@@ -16,10 +16,12 @@ namespace Diagn
         {
             InitializeComponent();
         }
-
-        private void Main_1_Load(object sender, EventArgs e)
+        int Role_=1;
+        public main_screen_of_the_system(int RoleId)
         {
-
+            InitializeComponent();
+            // Role_=RoleId;
+            Role_ = ClassRole.Role;
         }
 
         private void main_screen_of_the_system_FormClosing(object sender, FormClosingEventArgs e)
@@ -29,23 +31,71 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            register_as_a_runner reg = new register_as_a_runner();
             this.Hide();
-            reg.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is register_as_a_runner);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                register_as_a_runner reg = new register_as_a_runner();
+                
+                reg.Show();
+            }
+            //register_as_a_runner reg = new register_as_a_runner();
+            //this.Hide();
+            //reg.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            find_out_more_information find_Out_ = new find_out_more_information();
             this.Hide();
-            find_Out_.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is find_out_more_information);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                find_out_more_information find_Out_ = new find_out_more_information(Role_);
+                
+                find_Out_.Show();
+            }
+            //find_out_more_information find_Out_ = new find_out_more_information(Role_);
+            //this.Hide();
+            //find_Out_.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            authorization_menu authorization = new authorization_menu();
             this.Hide();
-            authorization.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is authorization_menu);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                authorization_menu authorization = new authorization_menu();
+               
+                authorization.Show();
+            }
+            //authorization_menu authorization = new authorization_menu();
+            //this.Hide();
+            //authorization.Show();
         }
     }
 }

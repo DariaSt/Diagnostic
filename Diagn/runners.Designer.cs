@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.view_UserDataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.diagnosticDataSet = new Diagn.DiagnosticDataSet();
-            this.viewUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.view_UserTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.View_UserTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,9 +39,13 @@
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.diagnosticDataSet = new Diagn.DiagnosticDataSet();
+            this.button1 = new System.Windows.Forms.Button();
+            this.view_UserTableAdapter = new Diagn.DiagnosticDataSetTableAdapters.View_UserTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.view_UserDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // view_UserDataGridView
@@ -67,30 +67,7 @@
             this.view_UserDataGridView.Name = "view_UserDataGridView";
             this.view_UserDataGridView.Size = new System.Drawing.Size(846, 263);
             this.view_UserDataGridView.TabIndex = 1;
-            this.view_UserDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_UserDataGridView_CellDoubleClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Назад";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // diagnosticDataSet
-            // 
-            this.diagnosticDataSet.DataSetName = "DiagnosticDataSet";
-            this.diagnosticDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewUserBindingSource
-            // 
-            this.viewUserBindingSource.DataMember = "View_User";
-            this.viewUserBindingSource.DataSource = this.diagnosticDataSet;
-            // 
-            // view_UserTableAdapter
-            // 
-            this.view_UserTableAdapter.ClearBeforeFill = true;
+//            this.view_UserDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_UserDataGridView_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -146,6 +123,30 @@
             this.cityDataGridViewTextBoxColumn.HeaderText = "City";
             this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
             // 
+            // viewUserBindingSource
+            // 
+            this.viewUserBindingSource.DataMember = "View_User";
+            this.viewUserBindingSource.DataSource = this.diagnosticDataSet;
+            // 
+            // diagnosticDataSet
+            // 
+            this.diagnosticDataSet.DataSetName = "DiagnosticDataSet";
+            this.diagnosticDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 25);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // view_UserTableAdapter
+            // 
+            this.view_UserTableAdapter.ClearBeforeFill = true;
+            // 
             // runners
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -159,8 +160,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.runners_FormClosing);
             this.Load += new System.EventHandler(this.runners_Load);
             ((System.ComponentModel.ISupportInitialize)(this.view_UserDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewUserBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diagnosticDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

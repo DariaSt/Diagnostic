@@ -16,18 +16,28 @@ namespace Diagn
         {
             InitializeComponent();
         }
-
-        private void information_Load(object sender, EventArgs e)
-        {
         
-        }
-
-
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
-            interactive_map map = new interactive_map();
             this.Hide();
-            map.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is interactive_map);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                interactive_map map = new interactive_map();
+               
+                map.Show();
+            }
+            //interactive_map map = new interactive_map();
+            //this.Hide();
+            //map.Show();
         }
 
         private void about_diagnostic_2017_FormClosing(object sender, FormClosingEventArgs e)
@@ -37,9 +47,25 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            find_out_more_information f = new find_out_more_information();
             this.Hide();
-            f.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is find_out_more_information);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                find_out_more_information f = new find_out_more_information();
+                
+                f.Show();
+            }
+            //find_out_more_information f = new find_out_more_information();
+            //this.Hide();
+            //f.Show();
         }
 
        

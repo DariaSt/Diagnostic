@@ -110,7 +110,6 @@
             this.label1.Size = new System.Drawing.Size(171, 23);
             this.label1.TabIndex = 13;
             this.label1.Text = "Меню пациента";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // runner_menu
             // 
@@ -129,7 +128,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diagnostic 2017";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.runner_menu_FormClosing);
-            this.Load += new System.EventHandler(this.Menu_pacienta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

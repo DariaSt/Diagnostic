@@ -16,10 +16,24 @@ namespace Diagn
         {
             InitializeComponent();
         }
-
+        int Role_ = 1;
+        public find_out_more_information(int role)
+        {
+            InitializeComponent();
+      //      Role_ = role;
+        }
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            Role_ = ClassRole.Role;
+            if (Role_ == 3)
+            {
+                button2.Visible = true;
+                button3.Visible = true;
+            }
+            else {
+                button2.Visible = false;
+                button3.Visible = false;
+            }
         }
 
 
@@ -30,37 +44,117 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system m = new main_screen_of_the_system();
             this.Hide();
-            m.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                main_screen_of_the_system m = new main_screen_of_the_system();
+               
+                m.Show();
+            }
+            //main_screen_of_the_system m = new main_screen_of_the_system();
+            //this.Hide();
+            //m.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            previous_race_results previous = new previous_race_results();
             this.Hide();
-            previous.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is previous_race_results);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                previous_race_results previous = new previous_race_results();
+               // this.Hide();
+                previous.Show();
+            }
+            //previous_race_results previous = new previous_race_results();
+            //this.Hide();
+            //previous.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            runner_management run = new runner_management();
             this.Hide();
-            run.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is runner_management);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                runner_management run = new runner_management();
+               
+                run.Show();
+            }
+            //runner_management run = new runner_management();
+            //this.Hide();
+            //run.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            about_diagnostic_2017 about = new about_diagnostic_2017();
             this.Hide();
-            about.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is about_diagnostic_2017);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                about_diagnostic_2017 about = new about_diagnostic_2017();
+               
+                about.Show();
+            }
+            //about_diagnostic_2017 about = new about_diagnostic_2017();
+            //this.Hide();
+            //about.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            interactive_map map = new interactive_map();
             this.Hide();
-            map.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is interactive_map);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                interactive_map map = new interactive_map();
+               
+                map.Show();
+            }
+            //interactive_map map = new interactive_map();
+            //this.Hide();
+            //map.Show();
         }
     }
 }

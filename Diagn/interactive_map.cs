@@ -17,13 +17,6 @@ namespace Diagn
             InitializeComponent();
         }
 
-        private void Form4_Load(object sender, EventArgs e)
-        {
-
-        }
-
-      
-
         private void pictureBox6_MouseHover(object sender, EventArgs e)
         {
             label1.BackColor = Color.WhiteSmoke;
@@ -105,9 +98,25 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            find_out_more_information information = new find_out_more_information();
             this.Hide();
-            information.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is find_out_more_information);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                find_out_more_information information = new find_out_more_information();
+               
+                information.Show();
+            }
+            //find_out_more_information information = new find_out_more_information();
+            //this.Hide();
+            //information.Show();
         }
 
         private void interactive_map_FormClosing(object sender, FormClosingEventArgs e)

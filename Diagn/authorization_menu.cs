@@ -19,27 +19,7 @@ namespace Diagn
             textBox2.Text = "";
         }
         int RoleId;
-        private void Auto_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-            main_screen_of_the_system main = new main_screen_of_the_system();
-            this.Hide();
-            main.Show();
-        }
-
-        
-
-       
-
+    
         private void authorization_menu_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -52,15 +32,25 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system main = new main_screen_of_the_system();
-            this.Hide();
-            main.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.TopMost = false;
+            }
+            else
+            {
+                main_screen_of_the_system main = new main_screen_of_the_system();
+                main.Show();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             RoleId = (int)view_UserTableAdapter1.Authorization(textBox1.Text, textBox2.Text);
-            
+            ClassRole.Role = RoleId;
             switch (RoleId)
             {
                 case 1:
@@ -72,7 +62,7 @@ namespace Diagn
                     {
                         DiagnosticDataSetTableAdapters.View_UserTableAdapter _UserTableAdapter = new DiagnosticDataSetTableAdapters.View_UserTableAdapter();
                         int id=_UserTableAdapter.GetId(textBox1.Text).Value;
-
+                        ClassRole._UserID = id;
                         runner_menu menu = new runner_menu(RoleId, id);
                         this.Hide();
                         menu.Show();
@@ -90,9 +80,21 @@ namespace Diagn
 
         private void button3_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system main = new main_screen_of_the_system();
             this.Hide();
-            main.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                main_screen_of_the_system main = new main_screen_of_the_system();
+                main.Show();
+            }
         }
     }
 }

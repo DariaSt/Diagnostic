@@ -20,7 +20,7 @@ namespace Diagn
         public my_results(int? Id_User)
         {
             InitializeComponent();
-            User_id = Id_User;
+            User_id = ClassRole._UserID;//Id_User;
             People();
         }
         public void People() {
@@ -87,23 +87,70 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            runner_menu menu = new runner_menu();
             this.Hide();
-            menu.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is runner_menu);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                runner_menu menu = new runner_menu();
+                
+                menu.Show();
+            }
+            //runner_menu menu = new runner_menu();
+            //this.Hide();
+            //menu.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            runner_menu menu = new runner_menu();
+            ClassRole._UserID = 0;
+            ClassRole.Role = 1;
             this.Hide();
-            menu.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                main_screen_of_the_system m = new main_screen_of_the_system();
+
+                m.Show();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            previous_race_results previous = new previous_race_results();
             this.Hide();
-            previous.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is previous_race_results);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                previous_race_results previous = new previous_race_results();
+               
+                previous.Show();
+            }
+            //previous_race_results previous = new previous_race_results();
+            //this.Hide();
+            //previous.Show();
         }
     }
 }
