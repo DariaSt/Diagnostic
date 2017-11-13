@@ -66,6 +66,11 @@ namespace Diagn
             main.Show();
         }
 
+        public object TextBoxsProverka(string v)
+        {
+            throw new NotImplementedException();
+        }
+
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((char)e.KeyChar == (Char)Keys.Back) return;
@@ -80,11 +85,17 @@ namespace Diagn
             e.Handled = true;
         }
 
+        public bool TextBoxsProverka(string tx1, string tx2, string tx3)
+        {
+            return  (tx1.Equals("") || tx2.Equals("") || tx3.Equals("")) ;
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            if ((comboBox1.SelectedIndex < -1) ||
-               (textBox3.Text.Equals("")) || (textBox2.Text.Equals("")) || (textBox1.Text.Equals("")))
-            { MessageBox.Show("Вы не ввели все необходимые данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
+            if ((comboBox1.SelectedIndex < -1) || TextBoxsProverka(textBox1.Text, textBox2.Text, textBox3.Text))
+            {
+                MessageBox.Show("Вы не ввели все необходимые данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            }
 
             //else if (metroTextBox2.Text.Length < 6)
             //{ MessageBox.Show("Пароль не может содержать меньше 6 символов", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }

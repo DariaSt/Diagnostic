@@ -60,7 +60,14 @@ namespace Diagn
             this.Hide();
             main.Show();
         }
-
+        public bool Age(int age_)
+        {
+            return (age_ < 16);
+        }
+        public bool PassEqual(string Pass_1, string Pass_2)
+        {
+            return (Pass_1 != Pass_2);
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             int year = DifferenceDate();
@@ -75,12 +82,12 @@ namespace Diagn
                 MessageBox.Show("Пароль должен содержать: Минимум 6 символов. Минимум 1 прописная буква. Минимум 1 цифра. По крайней мере один из следующих символов: ! @ # $ % ^.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
             }*/
-            else if (textBox5.Text != textBox4.Text)
+            else if (PassEqual(textBox5.Text, textBox4.Text))
             { MessageBox.Show("Пароль не совпадает! Пожалуйста, повторите пароль еще раз!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
 
-           /* else if (year < 16)
+           else if (Age(year))
             { MessageBox.Show("Для регистрации ваш возраст должен быть не менее 16 лет", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
-            */
+            
             else if ((comboBox1.SelectedIndex < -1) ||
                ((textBox3.Text.Equals("")) || (textBox2.Text.Equals("")) || (textBox1.Text.Equals("")) || (textBox4.Text.Equals("")) || (textBox5.Text.Equals(""))))
             { MessageBox.Show("Вы не ввели все необходимые данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1); }
