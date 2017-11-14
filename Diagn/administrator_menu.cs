@@ -50,6 +50,7 @@ namespace Diagn
         private void button2_Click(object sender, EventArgs e)
         {
             ClassRole.Role = 1;
+            ClassRole._UserID = 0;
             this.Hide();
             var formToShow = Application.OpenForms.Cast<Form>()
            .FirstOrDefault(c => c is main_screen_of_the_system);
