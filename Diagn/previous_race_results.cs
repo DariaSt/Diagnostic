@@ -103,9 +103,25 @@ namespace Diagn
 
         private void button2_Click(object sender, EventArgs e)
         {
-            find_out_more_information find = new find_out_more_information();
             this.Hide();
-            find.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is find_out_more_information);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                find_out_more_information find = new find_out_more_information();
+                
+                find.Show();
+            }
+            //find_out_more_information find = new find_out_more_information();
+            //this.Hide();
+            //find.Show();
         }
     }
 }

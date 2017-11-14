@@ -49,16 +49,50 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            register_as_a_runner reg = new register_as_a_runner();
             this.Hide();
-            reg.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is register_as_a_runner);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                register_as_a_runner reg = new register_as_a_runner();
+               
+                reg.Show();
+            }
+            //register_as_a_runner reg = new register_as_a_runner();
+            //this.Hide();
+            //reg.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system main = new main_screen_of_the_system();
+            ClassRole.Role = 1;
+            ClassRole._UserID = 0;
             this.Hide();
-            main.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                main_screen_of_the_system main = new main_screen_of_the_system();
+               
+                main.Show();
+            }
+            //main_screen_of_the_system main = new main_screen_of_the_system();
+            //this.Hide();
+            //main.Show();
         }
         public bool Age(int age_)
         {
@@ -131,9 +165,25 @@ namespace Diagn
 
         private void button4_Click(object sender, EventArgs e)
         {
-            register_as_a_runner back = new register_as_a_runner();
             this.Hide();
-            back.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is administrator_menu);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                register_as_a_runner back = new register_as_a_runner();
+               // this.Hide();
+                back.Show();
+            }
+            //register_as_a_runner back = new register_as_a_runner();
+            //this.Hide();
+            //back.Show();
         }
     }
 }

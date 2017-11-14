@@ -21,6 +21,7 @@ namespace Diagn
         {
             InitializeComponent();
             User_id = Id_User;
+            ClassRole._UserID = (int)User_id;
         }
         private void regis_Load(object sender, EventArgs e)
         {
@@ -36,16 +37,50 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            runner_menu patient = new runner_menu();
             this.Hide();
-            patient.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is runner_menu);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                runner_menu patient = new runner_menu();
+               
+                patient.Show();
+            }
+            //runner_menu patient = new runner_menu();
+            //this.Hide();
+            //patient.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system main = new main_screen_of_the_system();
+            ClassRole.Role = 1;
+            ClassRole._UserID = 0;
             this.Hide();
-            main.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                main_screen_of_the_system main = new main_screen_of_the_system();
+               
+                main.Show();
+            }
+            //main_screen_of_the_system main = new main_screen_of_the_system();
+            //this.Hide();
+            //main.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -83,9 +118,25 @@ namespace Diagn
 
         private void button4_Click(object sender, EventArgs e)
         {
-            runner_menu patient = new runner_menu();
             this.Hide();
-            patient.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is runner_menu);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                runner_menu patient = new runner_menu();
+               
+                patient.Show();
+            }
+            //runner_menu patient = new runner_menu();
+            //this.Hide();
+            //patient.Show();
         }
     }
 }

@@ -67,7 +67,7 @@ namespace Diagn
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            /*this.Hide();
             var formToShow = Application.OpenForms.Cast<Form>()
            .FirstOrDefault(c => c is previous_race_results);
             if (formToShow != null)
@@ -82,15 +82,15 @@ namespace Diagn
                 previous_race_results previous = new previous_race_results();
                // this.Hide();
                 previous.Show();
-            }
-            //previous_race_results previous = new previous_race_results();
-            //this.Hide();
-            //previous.Show();
+            }*/
+            previous_race_results previous = new previous_race_results();
+            this.Hide();
+            previous.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            /*this.Hide();
             var formToShow = Application.OpenForms.Cast<Form>()
            .FirstOrDefault(c => c is runner_management);
             if (formToShow != null)
@@ -105,10 +105,10 @@ namespace Diagn
                 runner_management run = new runner_management();
                
                 run.Show();
-            }
-            //runner_management run = new runner_management();
-            //this.Hide();
-            //run.Show();
+            }*/
+            runner_management run = new runner_management();
+            this.Hide();
+            run.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

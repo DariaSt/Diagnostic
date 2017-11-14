@@ -31,9 +31,25 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            runner_menu m = new runner_menu();
             this.Hide();
-            m.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is runner_menu);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                runner_menu m = new runner_menu();
+                
+                m.Show();
+            }
+            //runner_menu m = new runner_menu();
+            //this.Hide();
+            //m.Show();
         }
     }
 }

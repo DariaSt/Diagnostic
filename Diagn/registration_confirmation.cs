@@ -31,23 +31,73 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            service_registration ser = new service_registration();
             this.Hide();
-            ser.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is service_registration);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                service_registration ser = new service_registration();
+               
+                ser.Show();
+            }
+            //service_registration ser = new service_registration();
+            //this.Hide();
+            //ser.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system main = new main_screen_of_the_system();
+            ClassRole.Role = 1;
+            ClassRole._UserID = 0;
             this.Hide();
-            main.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                main_screen_of_the_system main = new main_screen_of_the_system();
+               
+                main.Show();
+            }
+            //main_screen_of_the_system main = new main_screen_of_the_system();
+            //this.Hide();
+            //main.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            runner_menu runner = new runner_menu();
             this.Hide();
-            runner.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is runner_menu);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                runner_menu runner = new runner_menu();
+               
+                runner.Show();
+            }
+            //runner_menu runner = new runner_menu();
+            //this.Hide();
+            //runner.Show();
         }
 
         private void materialLabel2_Click(object sender, EventArgs e)

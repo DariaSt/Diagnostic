@@ -30,9 +30,25 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system main = new main_screen_of_the_system();
             this.Hide();
-            main.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                main_screen_of_the_system main = new main_screen_of_the_system();
+               
+                main.Show();
+            }
+            //main_screen_of_the_system main = new main_screen_of_the_system();
+            //this.Hide();
+            //main.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

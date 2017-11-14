@@ -39,16 +39,50 @@ namespace Diagn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            find_out_more_information f = new find_out_more_information();
             this.Hide();
-            f.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is find_out_more_information);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                find_out_more_information f = new find_out_more_information();
+               
+                f.Show();
+            }
+            //find_out_more_information f = new find_out_more_information();
+            //this.Hide();
+            //f.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            main_screen_of_the_system main = new main_screen_of_the_system();
+            ClassRole.Role = 1;
+            ClassRole._UserID = 0;
             this.Hide();
-            main.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is main_screen_of_the_system);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                main_screen_of_the_system main = new main_screen_of_the_system();
+               
+                main.Show();
+            }
+            //main_screen_of_the_system main = new main_screen_of_the_system();
+            //this.Hide();
+            //main.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -154,9 +188,25 @@ namespace Diagn
 
         private void button6_Click(object sender, EventArgs e)
         {
-            manage_a_runner f = new manage_a_runner();
             this.Hide();
-            f.Show();
+            var formToShow = Application.OpenForms.Cast<Form>()
+           .FirstOrDefault(c => c is manage_a_runner);
+            if (formToShow != null)
+            {
+
+                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                formToShow.TopMost = true;
+                formToShow.Visible = true;
+            }
+            else
+            {
+                manage_a_runner f = new manage_a_runner();
+               
+                f.Show();
+            }
+            //manage_a_runner f = new manage_a_runner();
+            //this.Hide();
+            //f.Show();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
