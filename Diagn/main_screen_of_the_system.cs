@@ -77,25 +77,35 @@ namespace Diagn
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var formToShow = Application.OpenForms.Cast<Form>()
-           .FirstOrDefault(c => c is authorization_menu);
-            if (formToShow != null)
+            if (ClassRole._role == 1)
             {
+                this.Hide();
+                authorization_menu authorization = new authorization_menu();
 
-                if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
-                formToShow.TopMost = true;
-                formToShow.Visible = true;
+                authorization.Show();
             }
             else
             {
-                authorization_menu authorization = new authorization_menu();
-               
-                authorization.Show();
+                this.Hide();
+                var formToShow = Application.OpenForms.Cast<Form>()
+               .FirstOrDefault(c => c is authorization_menu);
+                if (formToShow != null)
+                {
+
+                    if (formToShow.WindowState == FormWindowState.Minimized) formToShow.WindowState = FormWindowState.Normal;
+                    formToShow.TopMost = true;
+                    formToShow.Visible = true;
+                }
+                else
+                {
+                    authorization_menu authorization = new authorization_menu();
+
+                    authorization.Show();
+                }
+                //authorization_menu authorization = new authorization_menu();
+                //this.Hide();
+                //authorization.Show();
             }
-            //authorization_menu authorization = new authorization_menu();
-            //this.Hide();
-            //authorization.Show();
         }
     }
 }
