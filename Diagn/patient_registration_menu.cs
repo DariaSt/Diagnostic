@@ -129,7 +129,7 @@ namespace Diagn
 
             else
             {
-               
+
                 string LastName = textBox1.Text;
                 string FirstName = textBox2.Text;
                 string Email = textBox3.Text;
@@ -140,13 +140,31 @@ namespace Diagn
                 DiagnosticDataSetTableAdapters.View_UserTableAdapter view_UserTableAdapter = new DiagnosticDataSetTableAdapters.View_UserTableAdapter();
                 view_UserTableAdapter.Insert_User(FirstName, LastName, id_Gender, DateOfBirth, Email, Pass, 2, null, ref UserId);
 
-
-               // DiagnosticDataSet1.View_UserDataTable View_User = new DiagnosticDataSet1.View_UserDataTable();
+                // DiagnosticDataSet1.View_UserDataTable View_User = new DiagnosticDataSet1.View_UserDataTable();
                 //  View_User.Update_User(id, metroTextBox1.Text, metroTextBox2.Text, metroTextBox3.Text, metroTextBox4.Text, metroTextBox5.Text);
                 service_registration service = new service_registration(UserId);
                 this.Hide();
                 service.Show();
             }
+        }
+        public void Add(string LN, string FN, string Em, string Pas, int G, DateTime date) {
+            string LastName = LN;
+            string FirstName = FN;
+            string Email = Em;
+            string Pass = Pas;
+            int id_Gender = G;
+            DateTime DateOfBirth = date;
+            int? UserId = null;
+            DiagnosticDataSetTableAdapters.View_UserTableAdapter view_UserTableAdapter = new DiagnosticDataSetTableAdapters.View_UserTableAdapter();
+            view_UserTableAdapter.Insert_User(FirstName, LastName, id_Gender, DateOfBirth, Email, Pass, 2, null, ref UserId);
+        }
+        public int AddPatient()
+        {
+            DiagnosticDataSet2TableAdapters.UserTableAdapter us = new DiagnosticDataSet2TableAdapters.UserTableAdapter();
+            int count = (int)us.CountUser();//.ScalarQuery(id);
+            Add("Lnm", "Tim", "qweqr@mail.ru", "123qwer", 1, DateTime.Now);
+                int countNew = (int)us.CountUser();
+            return countNew - count; //1
         }
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)

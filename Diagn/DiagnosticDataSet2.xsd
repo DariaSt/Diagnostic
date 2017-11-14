@@ -302,7 +302,17 @@ SELECT Id, FirstName, LastName, Gender_Id, DateOfBirth, Email, Password, Role_Id
               <Mapping SourceColumn="Role_Id" DataSetColumn="Role_Id" />
               <Mapping SourceColumn="Map_Id" DataSetColumn="Map_Id" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="DiagnosticConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="CountUser" Modifier="Public" Name="CountUser" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="CountUser">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        COUNT(Id) AS Expr1
+FROM            [User]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_UserTableAdapter" GeneratorDataComponentClassName="View_UserTableAdapter" Name="View_User" UserDataComponentName="View_UserTableAdapter">
             <MainSource>
@@ -355,7 +365,7 @@ FROM            View_Timesheet</CommandText>
   <xs:element name="DiagnosticDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DiagnosticDataSet2" msprop:Generator_UserDSName="DiagnosticDataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_RowClassName="GenderRow" msprop:Generator_UserTableName="Gender" msprop:Generator_RowEvArgName="GenderRowChangeEvent">
+        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_UserTableName="Gender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_RowEvArgName="GenderRowChangeEvent" msprop:Generator_RowClassName="GenderRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -369,7 +379,7 @@ FROM            View_Timesheet</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Registration" msprop:Generator_TableClassName="RegistrationDataTable" msprop:Generator_TableVarName="tableRegistration" msprop:Generator_RowChangedName="RegistrationRowChanged" msprop:Generator_TablePropName="Registration" msprop:Generator_RowDeletingName="RegistrationRowDeleting" msprop:Generator_RowChangingName="RegistrationRowChanging" msprop:Generator_RowEvHandlerName="RegistrationRowChangeEventHandler" msprop:Generator_RowDeletedName="RegistrationRowDeleted" msprop:Generator_RowClassName="RegistrationRow" msprop:Generator_UserTableName="Registration" msprop:Generator_RowEvArgName="RegistrationRowChangeEvent">
+        <xs:element name="Registration" msprop:Generator_TableClassName="RegistrationDataTable" msprop:Generator_TableVarName="tableRegistration" msprop:Generator_TablePropName="Registration" msprop:Generator_RowDeletingName="RegistrationRowDeleting" msprop:Generator_RowChangingName="RegistrationRowChanging" msprop:Generator_RowEvHandlerName="RegistrationRowChangeEventHandler" msprop:Generator_RowDeletedName="RegistrationRowDeleted" msprop:Generator_UserTableName="Registration" msprop:Generator_RowChangedName="RegistrationRowChanged" msprop:Generator_RowEvArgName="RegistrationRowChangeEvent" msprop:Generator_RowClassName="RegistrationRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -379,7 +389,7 @@ FROM            View_Timesheet</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RegistrationService" msprop:Generator_TableClassName="RegistrationServiceDataTable" msprop:Generator_TableVarName="tableRegistrationService" msprop:Generator_RowChangedName="RegistrationServiceRowChanged" msprop:Generator_TablePropName="RegistrationService" msprop:Generator_RowDeletingName="RegistrationServiceRowDeleting" msprop:Generator_RowChangingName="RegistrationServiceRowChanging" msprop:Generator_RowEvHandlerName="RegistrationServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="RegistrationServiceRowDeleted" msprop:Generator_RowClassName="RegistrationServiceRow" msprop:Generator_UserTableName="RegistrationService" msprop:Generator_RowEvArgName="RegistrationServiceRowChangeEvent">
+        <xs:element name="RegistrationService" msprop:Generator_TableClassName="RegistrationServiceDataTable" msprop:Generator_TableVarName="tableRegistrationService" msprop:Generator_TablePropName="RegistrationService" msprop:Generator_RowDeletingName="RegistrationServiceRowDeleting" msprop:Generator_RowChangingName="RegistrationServiceRowChanging" msprop:Generator_RowEvHandlerName="RegistrationServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="RegistrationServiceRowDeleted" msprop:Generator_UserTableName="RegistrationService" msprop:Generator_RowChangedName="RegistrationServiceRowChanged" msprop:Generator_RowEvArgName="RegistrationServiceRowChangeEvent" msprop:Generator_RowClassName="RegistrationServiceRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -389,7 +399,7 @@ FROM            View_Timesheet</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ServicesService" msprop:Generator_TableClassName="ServicesServiceDataTable" msprop:Generator_TableVarName="tableServicesService" msprop:Generator_RowChangedName="ServicesServiceRowChanged" msprop:Generator_TablePropName="ServicesService" msprop:Generator_RowDeletingName="ServicesServiceRowDeleting" msprop:Generator_RowChangingName="ServicesServiceRowChanging" msprop:Generator_RowEvHandlerName="ServicesServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="ServicesServiceRowDeleted" msprop:Generator_RowClassName="ServicesServiceRow" msprop:Generator_UserTableName="ServicesService" msprop:Generator_RowEvArgName="ServicesServiceRowChangeEvent">
+        <xs:element name="ServicesService" msprop:Generator_TableClassName="ServicesServiceDataTable" msprop:Generator_TableVarName="tableServicesService" msprop:Generator_TablePropName="ServicesService" msprop:Generator_RowDeletingName="ServicesServiceRowDeleting" msprop:Generator_RowChangingName="ServicesServiceRowChanging" msprop:Generator_RowEvHandlerName="ServicesServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="ServicesServiceRowDeleted" msprop:Generator_UserTableName="ServicesService" msprop:Generator_RowChangedName="ServicesServiceRowChanged" msprop:Generator_RowEvArgName="ServicesServiceRowChangeEvent" msprop:Generator_RowClassName="ServicesServiceRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -410,7 +420,7 @@ FROM            View_Timesheet</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="User" msprop:Generator_TableClassName="UserDataTable" msprop:Generator_TableVarName="tableUser" msprop:Generator_RowChangedName="UserRowChanged" msprop:Generator_TablePropName="User" msprop:Generator_RowDeletingName="UserRowDeleting" msprop:Generator_RowChangingName="UserRowChanging" msprop:Generator_RowEvHandlerName="UserRowChangeEventHandler" msprop:Generator_RowDeletedName="UserRowDeleted" msprop:Generator_RowClassName="UserRow" msprop:Generator_UserTableName="User" msprop:Generator_RowEvArgName="UserRowChangeEvent">
+        <xs:element name="User" msprop:Generator_TableClassName="UserDataTable" msprop:Generator_TableVarName="tableUser" msprop:Generator_TablePropName="User" msprop:Generator_RowDeletingName="UserRowDeleting" msprop:Generator_RowChangingName="UserRowChanging" msprop:Generator_RowEvHandlerName="UserRowChangeEventHandler" msprop:Generator_RowDeletedName="UserRowDeleted" msprop:Generator_UserTableName="User" msprop:Generator_RowChangedName="UserRowChanged" msprop:Generator_RowEvArgName="UserRowChangeEvent" msprop:Generator_RowClassName="UserRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -449,7 +459,7 @@ FROM            View_Timesheet</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View_User" msprop:Generator_TableClassName="View_UserDataTable" msprop:Generator_TableVarName="tableView_User" msprop:Generator_RowChangedName="View_UserRowChanged" msprop:Generator_TablePropName="View_User" msprop:Generator_RowDeletingName="View_UserRowDeleting" msprop:Generator_RowChangingName="View_UserRowChanging" msprop:Generator_RowEvHandlerName="View_UserRowChangeEventHandler" msprop:Generator_RowDeletedName="View_UserRowDeleted" msprop:Generator_RowClassName="View_UserRow" msprop:Generator_UserTableName="View_User" msprop:Generator_RowEvArgName="View_UserRowChangeEvent">
+        <xs:element name="View_User" msprop:Generator_TableClassName="View_UserDataTable" msprop:Generator_TableVarName="tableView_User" msprop:Generator_TablePropName="View_User" msprop:Generator_RowDeletingName="View_UserRowDeleting" msprop:Generator_RowChangingName="View_UserRowChanging" msprop:Generator_RowEvHandlerName="View_UserRowChangeEventHandler" msprop:Generator_RowDeletedName="View_UserRowDeleted" msprop:Generator_UserTableName="View_User" msprop:Generator_RowChangedName="View_UserRowChanged" msprop:Generator_RowEvArgName="View_UserRowChangeEvent" msprop:Generator_RowClassName="View_UserRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -506,7 +516,7 @@ FROM            View_Timesheet</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="View_Timesheet" msprop:Generator_TableClassName="View_TimesheetDataTable" msprop:Generator_TableVarName="tableView_Timesheet" msprop:Generator_TablePropName="View_Timesheet" msprop:Generator_RowDeletingName="View_TimesheetRowDeleting" msprop:Generator_RowChangingName="View_TimesheetRowChanging" msprop:Generator_RowEvHandlerName="View_TimesheetRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TimesheetRowDeleted" msprop:Generator_UserTableName="View_Timesheet" msprop:Generator_RowChangedName="View_TimesheetRowChanged" msprop:Generator_RowEvArgName="View_TimesheetRowChangeEvent" msprop:Generator_RowClassName="View_TimesheetRow">
+        <xs:element name="View_Timesheet" msprop:Generator_TableClassName="View_TimesheetDataTable" msprop:Generator_TableVarName="tableView_Timesheet" msprop:Generator_RowChangedName="View_TimesheetRowChanged" msprop:Generator_TablePropName="View_Timesheet" msprop:Generator_RowDeletingName="View_TimesheetRowDeleting" msprop:Generator_RowChangingName="View_TimesheetRowChanging" msprop:Generator_RowEvHandlerName="View_TimesheetRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TimesheetRowDeleted" msprop:Generator_RowClassName="View_TimesheetRow" msprop:Generator_UserTableName="View_Timesheet" msprop:Generator_RowEvArgName="View_TimesheetRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -554,10 +564,10 @@ FROM            View_Timesheet</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Registration_User" msdata:parent="User" msdata:child="Registration" msdata:parentkey="Id" msdata:childkey="User_Id" msprop:Generator_UserChildTable="Registration" msprop:Generator_ChildPropName="GetRegistrationRows" msprop:Generator_UserRelationName="FK_Registration_User" msprop:Generator_ParentPropName="UserRow" msprop:Generator_RelationVarName="relationFK_Registration_User" msprop:Generator_UserParentTable="User" />
-      <msdata:Relationship name="FK_RegistrationService_ServicesService" msdata:parent="ServicesService" msdata:child="RegistrationService" msdata:parentkey="Id" msdata:childkey="Service_id" msprop:Generator_UserChildTable="RegistrationService" msprop:Generator_ChildPropName="GetRegistrationServiceRows" msprop:Generator_UserRelationName="FK_RegistrationService_ServicesService" msprop:Generator_ParentPropName="ServicesServiceRow" msprop:Generator_RelationVarName="relationFK_RegistrationService_ServicesService" msprop:Generator_UserParentTable="ServicesService" />
-      <msdata:Relationship name="FK_RegistrationService_User" msdata:parent="User" msdata:child="RegistrationService" msdata:parentkey="Id" msdata:childkey="User_id" msprop:Generator_UserChildTable="RegistrationService" msprop:Generator_ChildPropName="GetRegistrationServiceRows" msprop:Generator_UserRelationName="FK_RegistrationService_User" msprop:Generator_ParentPropName="UserRow" msprop:Generator_RelationVarName="relationFK_RegistrationService_User" msprop:Generator_UserParentTable="User" />
-      <msdata:Relationship name="FK_User_Gender" msdata:parent="Gender" msdata:child="User" msdata:parentkey="Id" msdata:childkey="Gender_Id" msprop:Generator_UserChildTable="User" msprop:Generator_ChildPropName="GetUserRows" msprop:Generator_UserRelationName="FK_User_Gender" msprop:Generator_RelationVarName="relationFK_User_Gender" msprop:Generator_UserParentTable="Gender" msprop:Generator_ParentPropName="GenderRow" />
+      <msdata:Relationship name="FK_Registration_User" msdata:parent="User" msdata:child="Registration" msdata:parentkey="Id" msdata:childkey="User_Id" msprop:Generator_UserChildTable="Registration" msprop:Generator_ChildPropName="GetRegistrationRows" msprop:Generator_UserRelationName="FK_Registration_User" msprop:Generator_RelationVarName="relationFK_Registration_User" msprop:Generator_UserParentTable="User" msprop:Generator_ParentPropName="UserRow" />
+      <msdata:Relationship name="FK_RegistrationService_ServicesService" msdata:parent="ServicesService" msdata:child="RegistrationService" msdata:parentkey="Id" msdata:childkey="Service_id" msprop:Generator_UserChildTable="RegistrationService" msprop:Generator_ChildPropName="GetRegistrationServiceRows" msprop:Generator_UserRelationName="FK_RegistrationService_ServicesService" msprop:Generator_RelationVarName="relationFK_RegistrationService_ServicesService" msprop:Generator_UserParentTable="ServicesService" msprop:Generator_ParentPropName="ServicesServiceRow" />
+      <msdata:Relationship name="FK_RegistrationService_User" msdata:parent="User" msdata:child="RegistrationService" msdata:parentkey="Id" msdata:childkey="User_id" msprop:Generator_UserChildTable="RegistrationService" msprop:Generator_ChildPropName="GetRegistrationServiceRows" msprop:Generator_UserRelationName="FK_RegistrationService_User" msprop:Generator_RelationVarName="relationFK_RegistrationService_User" msprop:Generator_UserParentTable="User" msprop:Generator_ParentPropName="UserRow" />
+      <msdata:Relationship name="FK_User_Gender" msdata:parent="Gender" msdata:child="User" msdata:parentkey="Id" msdata:childkey="Gender_Id" msprop:Generator_UserChildTable="User" msprop:Generator_ChildPropName="GetUserRows" msprop:Generator_UserRelationName="FK_User_Gender" msprop:Generator_ParentPropName="GenderRow" msprop:Generator_RelationVarName="relationFK_User_Gender" msprop:Generator_UserParentTable="Gender" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

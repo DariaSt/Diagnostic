@@ -17,6 +17,8 @@ namespace Sagan.Test
 
             Assert.IsTrue(trueResu);
             Assert.IsFalse(falseResu);
+
+           // Assert.AreNotEqual(old, newval);
         }
     }
 }
