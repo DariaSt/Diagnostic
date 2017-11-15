@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sagan.Test", "Sagan.Test\Sa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientRegistration.Test", "PatientRegistration.Test\PatientRegistration.Test.csproj", "{7FBAF4F0-860A-4582-84FD-893146564E69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filtr.Test", "Filtr.Test\Filtr.Test.csproj", "{16101DC5-E857-4093-98FE-AB98BDF79639}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedactPatient", "RedactPatient\RedactPatient.csproj", "{08D6BEB0-7522-493D-939E-99706FBD66B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{7FBAF4F0-860A-4582-84FD-893146564E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FBAF4F0-860A-4582-84FD-893146564E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FBAF4F0-860A-4582-84FD-893146564E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16101DC5-E857-4093-98FE-AB98BDF79639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16101DC5-E857-4093-98FE-AB98BDF79639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16101DC5-E857-4093-98FE-AB98BDF79639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16101DC5-E857-4093-98FE-AB98BDF79639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08D6BEB0-7522-493D-939E-99706FBD66B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D6BEB0-7522-493D-939E-99706FBD66B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D6BEB0-7522-493D-939E-99706FBD66B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D6BEB0-7522-493D-939E-99706FBD66B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
