@@ -18,14 +18,13 @@ namespace RedactPatient
         {
             View_UserTableAdapter view = new View_UserTableAdapter();
             FirstName=Select();
-            RedactFN = "NameName";
-              view.Update_User(User_id, RedactFN, LN, gender, date, email, Pass, 2, null);
-
-            // var trueResu = runMenu.TextBoxsProverka("", "", "");
-            // var falseResu = runMenu.TextBoxsProverka("rere", "Текстй", "dgdfg");
+            RedactFN = "newName";
+            view.Update_User(User_id, RedactFN, LN, gender, date, email, Pass, 2, null);
+            
+            
             FirstName = Select();
             Assert.IsTrue(FirstName==RedactFN);
-           // Assert.IsFalse(falseResu);
+           
         }
         public string Select()
         {
@@ -39,7 +38,7 @@ namespace RedactPatient
                 date = rows[0].DateOfBirth;
                 Pass = rows[0].Password;
                 Pass2 = rows[0].Password;
-                gender = int.Parse(rows[0].Gender);
+                gender = 1;
             }
             return FirstName;
         }
